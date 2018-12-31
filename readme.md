@@ -12,6 +12,9 @@ Algorithms questions and solutions written in Javascript, including test cases.
  But for multiples of 3 print 'fizz' instead of the number;
  for multiples of 5, print 'buzz';
  for numbers which are multiples of both 3 and 5, print 'fizzbuzz' - fizzbuzz.js
+* Chunk Array: Given an array and chunk size, divide the array into many subarrays where each subarray is of length size - chunk.js
+* Anagrams: Check to see if two strings are anagrams of each other - anagrams.js
+* Capitalize: Capitalize each word in a string - capitalize.js
 
  ## How to run
  ### In the 'js-algo' directory:
