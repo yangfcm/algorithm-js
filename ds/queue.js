@@ -18,6 +18,11 @@ class Queue {
   remove() {
     return this.queue.pop();
   }
+
+  // 'peek' method is to return the next element to be returned from the queue (without removing it)
+  peek() {
+    return this.queue[this.queue.length-1];
+  }
 }
 
 module.exports = Queue;

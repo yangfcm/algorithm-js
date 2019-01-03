@@ -45,6 +45,9 @@ Ways of organizing information with optimal 'runtime complexity' for adding or r
 JS natively implements severl data structures. But you still need to be familiar with 'inferior' data structure
 ### Typs of data structure
 * Queues: First-in-first-out data collection, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - queue.js
+* Combine two queues into one - weave.js
+* Stack: First-in-last-out data collection, which has methods equivalent to array.push() and array.pop() - stack.js
+* Create a queue using two stacks, instead of arrays - qfroms.js
 
  ## How to run
  ### In the 'js-algo' directory:
