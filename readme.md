@@ -21,6 +21,13 @@ Algorithms problems and solutions written in Javascript, including test cases.
 * Produce a spiral matrix - matrix.js
 * Print the n-th number in the fibonacci series - fibonacci.js
 
+## Data structure problems content
+* Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - queue.js
+* Combine two queues into one - weave.js
+* Implement a stack, which has methods equivalent to array.push() and array.pop() - stack.js
+* Create a queue using two stacks, instead of arrays - qfroms.js
+* Implement a linked list - linkedlist.js
+
 ## Runtime Complexity
 Describe the performance of an algorithm. <br>
 How much more processing power/time is required to run your algorithm if we double the inputs?<br>
@@ -44,10 +51,9 @@ How much more processing power/time is required to run your algorithm if we doub
 Ways of organizing information with optimal 'runtime complexity' for adding or removing records<br>
 JS natively implements severl data structures. But you still need to be familiar with 'inferior' data structure
 ### Typs of data structure
-* Queues: First-in-first-out data collection, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - queue.js
-* Combine two queues into one - weave.js
-* Stack: First-in-last-out data collection, which has methods equivalent to array.push() and array.pop() - stack.js
-* Create a queue using two stacks, instead of arrays - qfroms.js
+* Queues: First-in-first-out data collection.
+* Stack: First-in-last-out data collection.
+* Linked List: An ordered collection of data, which contains some amount of nodes. Each node contains some data and a reference to the next node. It has two special nodes, which are head node and tail node.
 
  ## How to run
  ### In the 'js-algo' directory:
