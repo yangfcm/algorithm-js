@@ -27,6 +27,9 @@ Algorithms problems and solutions written in Javascript, including test cases.
 * Implement a stack, which has methods equivalent to array.push() and array.pop() - stack.js
 * Create a queue using two stacks, instead of arrays - qfroms.js
 * Implement a linked list - linkedlist.js
+* Get the middle node of a linked list - midpoint.js
+* Check if a linked list is circular - circular.js
+* Return the nth(starting at 0) node from the tail in a linked list - fromlast.js
 
 ## Runtime Complexity
 Describe the performance of an algorithm. <br>
