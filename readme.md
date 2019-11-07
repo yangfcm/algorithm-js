@@ -25,6 +25,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Test if a given number is a prime(质数) - isprime.js
 - Test if a given array of numbers is sorted - issorted.js
 - Test if curly braces in a string is matched - isbalanced.js
+- Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - missing.js
 
 ## Data structure problems content
 
@@ -45,6 +46,8 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 
 - Create an event library out of the Events class. - events.js
 - Implement Array.prototype.filter method - filter.js
+- Implement Array.prototype.reduce method - reduce.js
+- Implement Array.prototype.indexOf method - indexof.js
 
 ## Sorting
 
