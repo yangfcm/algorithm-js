@@ -4,7 +4,8 @@
 
 Interview: Algorithms problems and solutions written in Javascript, including test cases.
 
-## Algorithms problems content
+## Algorithms problems content 
+`/algo`
 
 - Reverse a string - reversestring.js
 - Test a string is a palindrome(its reversed string is exactly the same as itself) - palindrome.js
@@ -28,7 +29,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - missing.js
 
 ## Data structure problems content
-
+`/ds`
 - Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - queue.js
 - Combine two queues into one - weave.js
 - Implement a stack, which has methods equivalent to array.push() and array.pop() - stack.js
@@ -43,7 +44,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Validate the binary search tree - bst-val.js
 
 ## JS-specific
-
+`/js`
 - Create an event library out of the Events class. - events.js
 - Implement Array.prototype.filter method - filter.js
 - Implement Array.prototype.reduce method - reduce.js
