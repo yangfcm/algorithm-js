@@ -28,6 +28,10 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Test if curly braces in a string is matched - isbalanced.js
 - Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - missing.js
 
+`/leetcode` - Algorithm problems and solutions in `Leetcode`
+* Return indices of the two numbers whose sum equals to a target - `twoSum.js`
+* Remove vowels of a string - `removeVowels.js`
+
 ## Data structure problems content
 `/ds`
 - Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - queue.js
