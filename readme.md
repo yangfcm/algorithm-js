@@ -31,32 +31,40 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 `/leetcode` - Algorithm problems and solutions in `Leetcode`
 * Return indices of the two numbers whose sum equals to a target - `twoSum.js`
 * Remove vowels of a string - `removeVowels.js`
+* Given an array with each number representing a stock price for one day, work out an algorithm to find the max profit - `maxProfit.js`
+* Given an array with sorted numbers, remove duplicated numbers in-place - `removeDuplicates.js`
+* Given an array, rotate the array to the right by k steps in-place - `rotateArray.js`
+* Gompute two arrays' intersection. - `intersect.js`
+* Given a non-empty array of digits representing a non-negative integer, plus one to the integer - `plusOne.js`
+* Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. - `moveZeroes.js`
+* Determine if a 9x9 Sudoku board is valid. - `validSudoku.js`
+* Rotate an image represented by a n*n array by 90 degrees (clockwise). - `rotateImage.js`
 
 ## Data structure problems content
 `/ds`
-- Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - queue.js
-- Combine two queues into one - weave.js
-- Implement a stack, which has methods equivalent to array.push() and array.pop() - stack.js
-- Create a queue using two stacks, instead of arrays - qfroms.js
-- Implement a linked list - linkedlist.js
-- Get the middle node of a linked list - midpoint.js
-- Check if a linked list is circular - circular.js
-- Return the nth(starting at 0) node from the tail in a linked list - fromlast.js
-- Implement a tree and using BFS and DFS to traverse a tree - tree.js
-- Get the width of each level of a tree - levelwidth.js
-- Implement a binary search tree - bst.js
-- Validate the binary search tree - bst-val.js
+- Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
+- Combine two queues into one - `weave.js`
+- Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
+- Create a queue using two stacks, instead of arrays - `qfroms.js`
+- Implement a linked list - `linkedlist.js`
+- Get the middle node of a linked list - `midpoint.js`
+- Check if a linked list is circular - `circular.js`
+- Return the nth(starting at 0) node from the tail in a linked list - `fromlast.js`
+- Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
+- Get the width of each level of a tree - `levelwidth.js`
+- Implement a binary search tree - `bst.js`
+- Validate the binary search tree - `bst-val.js`
 
 ## JS-specific
 `/js`
-- Create an event library out of the Events class. - events.js
-- Implement Array.prototype.filter method - filter.js
-- Implement Array.prototype.reduce method - reduce.js
-- Implement Array.prototype.indexOf method - indexof.js
+- Create an event library out of the Events class. - `events.js`
+- Implement Array.prototype.filter method - `filter.js`
+- Implement Array.prototype.reduce method - `reduce.js`
+- Implement Array.prototype.indexOf method - `indexof.js`
 
 ## Sorting
 
-- Implement the three most common sorting methods - sorting.js
+- Implement the three most common sorting methods - `sorting.js`
 
 ## Runtime Complexity
 
