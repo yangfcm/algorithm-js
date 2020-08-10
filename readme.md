@@ -1,47 +1,57 @@
-# JS Algorithms & Data structes problems and solutions
+# JS Algorithms & Data structures problems and solutions
 
 ## Intro
 
 Interview: Algorithms problems and solutions written in Javascript, including test cases.
 
-## Algorithms problems content 
-`/algo`
+## Algorithms problems content `/algo`
 
-- Reverse a string - reversestring.js
-- Test a string is a palindrome(its reversed string is exactly the same as itself) - palindrome.js
-- Reverse an integer - reverseint.js
-- Get the character that most commonly appears in a given string - maxchar.js
-- fizzbuzz, print the numbers from 1 to N.
+`/array`
+
+- Chunk Array: Given an array and chunk size, divide the array into many subarrays where each subarray is of length size - `chunk.js`
+- Produce a spiral matrix - `matrix.js`
+- Test if a given array of numbers is sorted - `issorted.js`
+- Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - `missing.js`
+- Return indices of the two numbers whose sum equals to a target - `twoSum.js`
+- Given an array with sorted numbers, remove duplicated numbers in-place - `removeDuplicates.js`
+- Given an array, rotate the array to the right by k steps in-place - `rotateArray.js`
+- Gompute two arrays' intersection. - `intersect.js`
+- Given a non-empty array of digits representing a non-negative integer, plus one to the integer - `plusOne.js`
+- Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. - `moveZeroes.js`
+- Determine if a 9x9 Sudoku board is valid. - `validSudoku.js`
+- Rotate an image represented by a n\*n array by 90 degrees (clockwise). - `rotateImage.js`
+
+`/dynamic`
+
+- Steps: Print a step shape with n levels using # character and space(s) on the right - `steps.js`
+- Pyramid: Print a pyramid shape with n levels using # character and space on its left and right side - `pyramid.js`
+- Max profit: Given an array with each number representing a stock price for one day, work out an algorithm to find the max profit - `maxProfit.js`
+
+`/math`
+
+- Fizzbuzz: print the numbers from 1 to N.
   But for multiples of 3 print 'fizz' instead of the number;
   for multiples of 5, print 'buzz';
-  for numbers which are multiples of both 3 and 5, print 'fizzbuzz' - fizzbuzz.js
-- Chunk Array: Given an array and chunk size, divide the array into many subarrays where each subarray is of length size - chunk.js
-- Anagrams: Check to see if two strings are anagrams of each other - anagrams.js
-- Capitalize: Capitalize each word in a string - capitalize.js
-- Steps: Print a step shape with n levels using # character and space(s) on the right - steps.js
-- Pyramid: Print a pyramid shape with n levels using # character and space on its left and right side - pyramid.js
-- Count the number of vowels used in a string - vowels.js
-- Produce a spiral matrix - matrix.js
-- Print the n-th number in the fibonacci series - fibonacci.js
-- Test if a given number is a prime(质数) - isprime.js
-- Test if a given array of numbers is sorted - issorted.js
-- Test if curly braces in a string is matched - isbalanced.js
-- Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - missing.js
+  for numbers which are multiples of both 3 and 5, print 'fizzbuzz' - `fizzbuzz.js`
+- Print the n-th number in the fibonacci series - `fibonacci.js`
+- Test if a given number is a prime(质数) - `isprime.js`
 
-`/leetcode` - Algorithm problems and solutions in `Leetcode`
-* Return indices of the two numbers whose sum equals to a target - `twoSum.js`
-* Remove vowels of a string - `removeVowels.js`
-* Given an array with each number representing a stock price for one day, work out an algorithm to find the max profit - `maxProfit.js`
-* Given an array with sorted numbers, remove duplicated numbers in-place - `removeDuplicates.js`
-* Given an array, rotate the array to the right by k steps in-place - `rotateArray.js`
-* Gompute two arrays' intersection. - `intersect.js`
-* Given a non-empty array of digits representing a non-negative integer, plus one to the integer - `plusOne.js`
-* Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. - `moveZeroes.js`
-* Determine if a 9x9 Sudoku board is valid. - `validSudoku.js`
-* Rotate an image represented by a n*n array by 90 degrees (clockwise). - `rotateImage.js`
+`/string`
+
+- Reverse a string - `reversestring.js`
+- Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
+- Reverse an integer - `reverseint.js`
+- Get the character that most commonly appears in a given string - `maxchar.js`
+- Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
+- Capitalize: Capitalize each word in a string - `capitalize.js`
+- Count the number of vowels used in a string - `vowels.js`
+- Remove vowels of a string - `removeVowels.js`
+- Test if curly braces in a string is matched - `isbalanced.js`
 
 ## Data structure problems content
+
 `/ds`
+
 - Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
 - Combine two queues into one - `weave.js`
 - Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
@@ -56,7 +66,9 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Validate the binary search tree - `bst-val.js`
 
 ## JS-specific
+
 `/js`
+
 - Create an event library out of the Events class. - `events.js`
 - Implement Array.prototype.filter method - `filter.js`
 - Implement Array.prototype.reduce method - `reduce.js`
