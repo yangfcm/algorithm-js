@@ -78,6 +78,12 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 
 - Implement the three most common sorting methods - `sorting.js`
 
+### Worse case runtime for three sorting methods:
+
+- Bubble sorting: n^2
+- Selection sorting: n^2
+- Merge sorting: n\*log(n)
+
 ## Runtime Complexity
 
 Describe the performance of an algorithm. <br>

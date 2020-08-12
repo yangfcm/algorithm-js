@@ -10,14 +10,13 @@ describe("Test queue.js", () => {
     expect(() => {
       q.add(1);
     }).not.toThrow();
+    expect(q.peek()).toBe(1);
   });
 
   test("can remove elements from a queue", () => {
     const q = new Queue();
-    expect(() => {
-      q.add(1);
-      q.remove();
-    }).not.toThrow();
+    q.add(1);
+    expect(q.remove()).toBe(1);
   });
 
   test("Order of elements is maintained", () => {
