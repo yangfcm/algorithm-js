@@ -41,12 +41,14 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Reverse a string - `reversestring.js`
 - Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
 - Reverse an integer - `reverseint.js`
+- Determine if a string has all unique characters - `isUnique.js`
 - Get the character that most commonly appears in a given string - `maxchar.js`
 - Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
 - Capitalize: Capitalize each word in a string - `capitalize.js`
 - Count the number of vowels used in a string - `vowels.js`
 - Remove vowels of a string - `removeVowels.js`
 - Test if curly braces in a string is matched - `isbalanced.js`
+- Check two strings are permutation - `checkPermutation.js`
 
 ## Data structure problems content
 
