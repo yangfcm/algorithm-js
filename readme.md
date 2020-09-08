@@ -66,6 +66,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Get the width of each level of a tree - `levelwidth.js`
 - Implement a binary search tree - `bst.js`
 - Validate the binary search tree - `bst-val.js`
+- Implement a hash table - `hashTable.js`
 
 ## JS-specific
 
