@@ -1,5 +1,5 @@
-const fromLast = require("../fromlast");
-const L = require("../linkedlist");
+const fromLast = require("../../linkedlist/fromlast");
+const L = require("../../linkedlist/linkedlist");
 const List = L.LinkedList;
 const Node = L.Node;
 

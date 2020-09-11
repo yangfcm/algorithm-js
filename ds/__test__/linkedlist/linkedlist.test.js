@@ -1,4 +1,4 @@
-const L = require("../linkedlist");
+const L = require("../../linkedlist/linkedlist");
 const List = L.LinkedList;
 const Node = L.Node;
 
@@ -291,7 +291,7 @@ describe("Test linkedlist.js", () => {
     l.insertLast(3);
     l.insertLast(4);
 
-    l.forEach(node => {
+    l.forEach((node) => {
       node.data += 10;
     });
 

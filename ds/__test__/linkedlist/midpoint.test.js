@@ -1,5 +1,5 @@
-const midpoint = require("../midpoint");
-const L = require("../linkedlist");
+const midpoint = require("../../linkedlist/midpoint");
+const L = require("../../linkedlist/linkedlist");
 const Node = L.Node;
 const LinkedList = L.LinkedList;
 

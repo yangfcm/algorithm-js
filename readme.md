@@ -62,15 +62,20 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Combine two queues into one - `weave.js`
 - Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
 - Create a queue using two stacks, instead of arrays - `qfroms.js`
-- Implement a linked list - `linkedlist.js`
-- Get the middle node of a linked list - `midpoint.js`
-- Check if a linked list is circular - `circular.js`
-- Return the nth(starting at 0) node from the tail in a linked list - `fromlast.js`
 - Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
 - Get the width of each level of a tree - `levelwidth.js`
 - Implement a binary search tree - `bst.js`
 - Validate the binary search tree - `bst-val.js`
 - Implement a hash table - `hashTable.js`
+
+`ds/linkedlist` - problems and solutions associated with linked list
+
+- Implement a linked list - `linkedlist.js`
+- Get the middle node of a linked list - `midpoint.js`
+- Check if a linked list is circular - `circular.js`
+- Return the nth(starting at 0) node from the tail in a linked list - `fromlast.js`
+- Remove duplicates from an unsofted linked list - `removeDuplicate.js`
+- Partition a linked list - `partition.js`
 
 ## JS-specific
 

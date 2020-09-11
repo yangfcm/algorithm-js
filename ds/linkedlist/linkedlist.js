@@ -157,11 +157,11 @@ class LinkedList {
 
   forEach(fn) {
     let node = this.head;
-    let counter = 0;
+    let index = 0;
     while (node) {
-      fn(node, counter);
+      fn(node, index);
       node = node.next;
-      counter++;
+      index++;
     }
   }
 
