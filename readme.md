@@ -53,6 +53,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Check if one string is one edit away from the other string - `oneAway.js`
 - Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
 - Compress a string - `stringCompression.js`
+- Sum two linked list - `sumLists.js`
 
 ## Data structure problems content
 
