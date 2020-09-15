@@ -1,5 +1,5 @@
-const weave = require("../weave");
-const Queue = require("../queue");
+const weave = require("../../stack_queue/weave");
+const Queue = require("../../stack_queue/queue");
 
 describe("Test weave.js", () => {
   test("Weave function defined", () => {

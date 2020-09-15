@@ -15,16 +15,24 @@ class Stack {
     this.stack = [];
   }
 
+  /** Add an item to stack */
   push(data) {
     this.stack.push(data);
   }
 
+  /** Remove the top item from the stack */
   pop() {
     return this.stack.pop();
   }
 
+  /** Return the top item in the stack */
   peek() {
     return this.stack[this.stack.length - 1];
+  }
+
+  /** Test if the stack is empty */
+  isEmpty() {
+    return this.stack.length === 0;
   }
 }
 

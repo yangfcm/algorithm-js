@@ -1,4 +1,4 @@
-const Queue = require("../qfroms");
+const Queue = require("../../stack_queue/qfroms");
 
 describe("Test qfroms.js", () => {
   test("Queue is defined", () => {

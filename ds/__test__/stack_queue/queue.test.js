@@ -1,4 +1,4 @@
-const Queue = require("../queue");
+const Queue = require("../../stack_queue/queue");
 
 describe("Test queue.js", () => {
   test("Queue class is defined", () => {

@@ -59,10 +59,6 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 
 `/ds`
 
-- Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
-- Combine two queues into one - `weave.js`
-- Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
-- Create a queue using two stacks, instead of arrays - `qfroms.js`
 - Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
 - Get the width of each level of a tree - `levelwidth.js`
 - Implement a binary search tree - `bst.js`
@@ -77,6 +73,13 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Return the nth(starting at 0) node from the tail in a linked list - `fromlast.js`
 - Remove duplicates from an unsofted linked list - `removeDuplicate.js`
 - Partition a linked list - `partition.js`
+
+`ds/stack_queue` - Problems and solutions associated with stacks and queues
+
+- Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
+- Combine two queues into one - `weave.js`
+- Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
+- Create a queue using two stacks, instead of arrays - `qfroms.js`
 
 ## JS-specific
 

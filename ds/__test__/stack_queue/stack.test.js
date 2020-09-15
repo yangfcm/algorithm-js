@@ -1,4 +1,4 @@
-const Stack = require("../stack");
+const Stack = require("../../stack_queue/stack");
 
 describe("Test stack.js", () => {
   test("Stack is defined", () => {

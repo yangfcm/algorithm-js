@@ -30,6 +30,11 @@ class Queue {
   peek() {
     return this.queue[this.queue.length - 1];
   }
+
+  /** Test if the queue is empty */
+  isEmpty() {
+    return this.queue.length === 0;
+  }
 }
 
 module.exports = Queue;
