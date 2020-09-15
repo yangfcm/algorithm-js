@@ -81,6 +81,8 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
 - Create a queue using two stacks, instead of arrays - `qfroms.js`
 - Get the minimum number in a stack - `getMin.js`
+- Sort a stack - `sortStack.js`
+- Implement an animal queue - `animalQueue.js`
 
 ## JS-specific
 
