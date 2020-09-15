@@ -80,6 +80,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Combine two queues into one - `weave.js`
 - Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
 - Create a queue using two stacks, instead of arrays - `qfroms.js`
+- Get the minimum number in a stack - `getMin.js`
 
 ## JS-specific
 
