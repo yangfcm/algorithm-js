@@ -1,5 +1,5 @@
-const bstVal = require("../bst-val");
-const Node = require("../bst");
+const bstVal = require("../../tree/bst-val");
+const Node = require("../../tree/bst");
 
 describe("Test bstVal.js", () => {
   test("Validate recognizes a valid BST", () => {

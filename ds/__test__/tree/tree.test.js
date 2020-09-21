@@ -1,4 +1,4 @@
-const T = require("../tree");
+const T = require("../../tree/tree");
 const Node = T.Node;
 const Tree = T.Tree;
 
@@ -41,7 +41,7 @@ describe("Test tree.js", () => {
     t.root.add("c");
     t.root.children[0].add("d");
 
-    t.traverseBFS(node => {
+    t.traverseBFS((node) => {
       letters.push(node.data);
     });
 
@@ -56,7 +56,7 @@ describe("Test tree.js", () => {
     t.root.add("d");
     t.root.children[0].add("c");
 
-    t.traverseDFS(node => {
+    t.traverseDFS((node) => {
       letters.push(node.data);
     });
 

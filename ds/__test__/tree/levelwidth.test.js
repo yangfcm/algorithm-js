@@ -1,5 +1,5 @@
-const levelwidth = require("../levelwidth");
-const { Node } = require("../tree");
+const levelwidth = require("../../tree/levelwidth");
+const { Node } = require("../../tree/tree");
 
 describe("Test levelwidth.js", () => {
   test("levelwidth function is defined", () => {

@@ -59,10 +59,6 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 
 `/ds`
 
-- Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
-- Get the width of each level of a tree - `levelwidth.js`
-- Implement a binary search tree - `bst.js`
-- Validate the binary search tree - `bst-val.js`
 - Implement a hash table - `hashTable.js`
 
 `ds/linkedlist` - problems and solutions associated with linked list
@@ -83,6 +79,13 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Get the minimum number in a stack - `getMin.js`
 - Sort a stack - `sortStack.js`
 - Implement an animal queue - `animalQueue.js`
+
+`ds/tree` - Problems and solutions associated with trees
+
+- Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
+- Get the width of each level of a tree - `levelwidth.js`
+- Implement a binary search tree - `bst.js`
+- Validate the binary search tree - `bst-val.js`
 
 ## JS-specific
 

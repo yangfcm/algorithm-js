@@ -1,4 +1,4 @@
-const Node = require("../bst");
+const Node = require("../../tree/bst");
 
 describe("Test bst.js", () => {
   test("Node is a constructor", () => {
