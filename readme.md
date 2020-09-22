@@ -86,6 +86,8 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Get the width of each level of a tree - `levelwidth.js`
 - Implement a binary search tree - `bst.js`
 - Validate the binary search tree - `bst-val.js`
+- Create a binary search tree with minimal height based on a ascend-sorted array - `minimalTree.js`
+- Create an array of all the nodes at each depth. - `listOfDepths.js`
 
 ## JS-specific
 
