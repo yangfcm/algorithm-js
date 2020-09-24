@@ -58,4 +58,37 @@ describe("Test Graph", () => {
     expect(directedGraph.getValueByIndex(3)).toBe("d");
     expect(directedGraph.getValueByIndex(4)).toBe("e");
   });
+
+  it("insert edge should work correctly", () => {
+    undirectedGraph.insertEdge(1, 2);
+    expect(undirectedGraph.getNumOfEdges()).toBe(6);
+    directedGraph.insertEdge(4, 2);
+    expect(directedGraph.getNumOfEdges()).toBe(7);
+  });
+
+  it("remove edge should work correctly", () => {
+    undirectedGraph.removeEdge(0, 1);
+    expect(undirectedGraph.getNumOfEdges()).toBe(4);
+    directedGraph.removeEdge(0, 1);
+    expect(directedGraph.getNumOfEdges()).toBe(5);
+  });
+
+  it("should get correct matrix that represents the graph", () => {
+    console.log(undirectedGraph.getMatrix());
+    console.log(directedGraph.getMatrix());
+    expect(undirectedGraph.getMatrix()).toEqual([
+      [0, 1, 0, 0, 1],
+      [1, 0, 0, 1, 0],
+      [0, 0, 0, 1, 1],
+      [0, 1, 1, 0, 0],
+      [1, 0, 1, 0, 0],
+    ]);
+    expect(directedGraph.getMatrix()).toEqual([
+      [0, 1, 0, 0, 1],
+      [0, 0, 0, 1, 0],
+      [0, 0, 0, 1, 1],
+      [0, 0, 0, 0, 0],
+      [1, 0, 0, 0, 0],
+    ]);
+  });
 });

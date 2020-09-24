@@ -51,8 +51,8 @@ class Graph {
 
   /**
    * Remove an edge between two vertexes
-   * @param {*} startVertexIndex the index of the starting vertex in vertex list
-   * @param {*} endVertexIndex the index of the end vertex in vertex list
+   * @param {number} startVertexIndex the index of the starting vertex in vertex list
+   * @param {number} endVertexIndex the index of the end vertex in vertex list
    */
   removeEdge(startVertexIndex, endVertexIndex) {
     if (this.matrix[startVertexIndex][endVertexIndex] !== 0) {
@@ -93,6 +93,13 @@ class Graph {
    */
   getWeight(startingVertexIndex, endVertexIndex) {
     return this.matrix[startingVertexIndex][endVertexIndex];
+  }
+
+  /**
+   * Get the matrix that represents the graph
+   */
+  getMatrix() {
+    return this.matrix;
   }
 
   /**
