@@ -74,8 +74,8 @@ describe("Test Graph", () => {
   });
 
   it("should get correct matrix that represents the graph", () => {
-    console.log(undirectedGraph.getMatrix());
-    console.log(directedGraph.getMatrix());
+    // console.log(undirectedGraph.getMatrix());
+    // console.log(directedGraph.getMatrix());
     expect(undirectedGraph.getMatrix()).toEqual([
       [0, 1, 0, 0, 1],
       [1, 0, 0, 1, 0],
@@ -90,5 +90,39 @@ describe("Test Graph", () => {
       [0, 0, 0, 0, 0],
       [1, 0, 0, 0, 0],
     ]);
+  });
+
+  it("should return the first adjacent of a vertex", () => {
+    expect(undirectedGraph.getFirstAdjacent(0)).toBe(1);
+    expect(undirectedGraph.getFirstAdjacent(1)).toBe(0);
+    expect(undirectedGraph.getFirstAdjacent(2)).toBe(3);
+    expect(undirectedGraph.getFirstAdjacent(3)).toBe(1);
+    expect(undirectedGraph.getFirstAdjacent(4)).toBe(0);
+
+    expect(directedGraph.getFirstAdjacent(0)).toBe(1);
+    expect(directedGraph.getFirstAdjacent(1)).toBe(3);
+    expect(directedGraph.getFirstAdjacent(2)).toBe(3);
+    expect(directedGraph.getFirstAdjacent(3)).toBe(-1);
+    expect(directedGraph.getFirstAdjacent(4)).toBe(0);
+  });
+
+  it("should return the next adjacent of a vertex", () => {
+    expect(undirectedGraph.getNextAdjacent(2, 3)).toBe(4);
+    expect(undirectedGraph.getNextAdjacent(3, 1)).toBe(2);
+    expect(undirectedGraph.getNextAdjacent(4, 0)).toBe(2);
+
+    expect(directedGraph.getNextAdjacent(2, 3)).toBe(4);
+    expect(directedGraph.getNextAdjacent(3, 1)).toBe(-1);
+    expect(directedGraph.getNextAdjacent(4, 0)).toBe(-1);
+  });
+
+  it("DFS search should work correctly", () => {
+    expect(undirectedGraph.searchDFS()).toEqual(["a", "b", "d", "c", "e"]);
+    expect(directedGraph.searchDFS()).toEqual(["a", "b", "d", "e", "c"]);
+  });
+
+  it("BFS search should work correctly", () => {
+    expect(undirectedGraph.searchBFS()).toEqual(["a", "b", "e", "d", "c"]);
+    expect(directedGraph.searchBFS()).toEqual(["a", "b", "e", "d", "c"]);
   });
 });

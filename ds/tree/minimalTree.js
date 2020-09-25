@@ -2,6 +2,12 @@
  * Given a sorted, increasing order array with unique integer elements,
  * write a function to create a binary search tree with minimal height.
  * Note: A minimal bst has about the same number of nodes on the left of each node as on the right.
+ * e.g. [1,2,3,4,5,6, 7] =>
+ *      4
+ *    /   \
+ *   2     6
+ *  / \   / \
+ * 1  3  5  7
  */
 
 /**
