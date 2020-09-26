@@ -1,4 +1,4 @@
-const HashTable = require("../hashTable");
+const HashTable = require("../../hash/hashTable");
 
 describe("Test init hash table", () => {
   test("HashTable class is defined", () => {
