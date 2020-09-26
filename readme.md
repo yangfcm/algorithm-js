@@ -89,6 +89,10 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Create a binary search tree with minimal height based on a ascend-sorted array - `minimalTree.js`
 - Create an array of all the nodes at each depth. - `listOfDepths.js`
 
+`ds/graph`
+
+- Implement a graph class and its relevant methods, including DFS and BFS - `graph.js`
+
 ## JS-specific
 
 `/js`
@@ -97,6 +101,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Implement Array.prototype.filter method - `filter.js`
 - Implement Array.prototype.reduce method - `reduce.js`
 - Implement Array.prototype.indexOf method - `indexof.js`
+- Use generator - `generator.js`
 
 ## Sorting
 
