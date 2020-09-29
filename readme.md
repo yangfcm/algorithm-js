@@ -105,7 +105,19 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 
 ## Sorting
 
+`/sorting`
+
 - Implement the three most common sorting methods - `sorting.js`
+
+## Searching
+
+`/searching`
+
+- Implement linear search - `linearSearch.js`
+- Implement binary search - `binarySearch.js`
+- Implmenet jump search - `jumpSearch.js`
+- Implement interpolation search - `interpolationSearch.js`
+- Implement exponential search - `exponentialSearch.js`
 
 ### Worse case runtime for three sorting methods:
 
