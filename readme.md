@@ -2,7 +2,7 @@
 
 ## Intro
 
-Interview: Algorithms problems and solutions written in Javascript, including test cases.
+Algorithms, Data Structure problems and solutions written in Javascript, including test cases.
 
 ## Algorithms problems content `/algo`
 
@@ -57,11 +57,11 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 
 ## Data structure problems content
 
-`/ds`
+`/ds/hash` - Problems and solutions associated with **hash table**
 
 - Implement a hash table - `hashTable.js`
 
-`ds/linkedlist` - problems and solutions associated with linked list
+`ds/linkedlist` - Problems and solutions associated with **linked list**
 
 - Implement a linked list - `linkedlist.js`
 - Get the middle node of a linked list - `midpoint.js`
@@ -70,7 +70,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Remove duplicates from an unsofted linked list - `removeDuplicate.js`
 - Partition a linked list - `partition.js`
 
-`ds/stack_queue` - Problems and solutions associated with stacks and queues
+`ds/stack_queue` - Problems and solutions associated with **stacks and queues**
 
 - Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
 - Combine two queues into one - `weave.js`
@@ -80,7 +80,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Sort a stack - `sortStack.js`
 - Implement an animal queue - `animalQueue.js`
 
-`ds/tree` - Problems and solutions associated with trees
+`ds/tree` - Problems and solutions associated with **trees**
 
 - Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
 - Get the width of each level of a tree - `levelwidth.js`
@@ -89,7 +89,7 @@ Interview: Algorithms problems and solutions written in Javascript, including te
 - Create a binary search tree with minimal height based on a ascend-sorted array - `minimalTree.js`
 - Create an array of all the nodes at each depth. - `listOfDepths.js`
 
-`ds/graph`
+`ds/graph` - Problems and solutions associated with **graph**
 
 - Implement a graph class and its relevant methods, including DFS and BFS - `graph.js`
 
