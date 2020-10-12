@@ -89,7 +89,6 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 4. Validate the binary search tree - `bst-val.js`
 5. Create a binary search tree with minimal height based on a ascend-sorted array - `minimalTree.js`
 6. Create an array of all the nodes at each depth. - `listOfDepths.js`
-7. Create a minimal BST from an ordered increasing integer array. - `minimalTree.js`
 
 `ds/graph` - Problems and solutions associated with **graph**
 
