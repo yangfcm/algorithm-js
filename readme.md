@@ -8,116 +8,118 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 `/array`
 
-- Chunk Array: Given an array and chunk size, divide the array into many subarrays where each subarray is of length size - `chunk.js`
-- Produce a spiral matrix - `matrix.js`
-- Test if a given array of numbers is sorted - `issorted.js`
-- Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - `missing.js`
-- Return indices of the two numbers whose sum equals to a target - `twoSum.js`
-- Given an array with sorted numbers, remove duplicated numbers in-place - `removeDuplicates.js`
-- Given an array, rotate the array to the right by k steps in-place - `rotateArray.js`
-- Gompute two arrays' intersection. - `intersect.js`
-- Given a non-empty array of digits representing a non-negative integer, plus one to the integer - `plusOne.js`
-- Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. - `moveZeroes.js`
-- Determine if a 9x9 Sudoku board is valid. - `validSudoku.js`
-- Rotate an image represented by a n\*n array by 90 degrees (clockwise). - `rotateImage.js`
+1. Chunk Array: Given an array and chunk size, divide the array into many subarrays where each subarray is of length size - `chunk.js`
+2. Gompute two arrays' intersection. - `intersect.js`
+3. Test if a given array of numbers is sorted - `issorted.js`
+4. Produce a spiral matrix - `matrix.js`
+5. Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - `missing.js`
+6. Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. - `moveZeroes.js`
+7. Given a non-empty array of digits representing a non-negative integer, plus one to the integer - `plusOne.js`
+8. Given an array with sorted numbers, remove duplicated numbers in-place - `removeDuplicates.js`
+9. Given an array, rotate the array to the right by k steps in-place - `rotateArray.js`
+10. Rotate an image represented by a n\*n array by 90 degrees (clockwise). - `rotateImage.js`
+11. Return indices of the two numbers whose sum equals to a target - `twoSum.js`
+12. Determine if a 9x9 Sudoku board is valid. - `validSudoku.js`
 
 `/dynamic`
 
-- Steps: Print a step shape with n levels using # character and space(s) on the right - `steps.js`
-- Pyramid: Print a pyramid shape with n levels using # character and space on its left and right side - `pyramid.js`
-- Max profit: Given an array with each number representing a stock price for one day, work out an algorithm to find the max profit - `maxProfit.js`
+1. Max profit: Given an array with each number representing a stock price for one day, work out an algorithm to find the max profit - `maxProfit.js`
+2. Pyramid: Print a pyramid shape with n levels using # character and space on its left and right side - `pyramid.js`
+3. Steps: Print a step shape with n levels using # character and space(s) on the right - `steps.js`
 
 `/math`
 
-- Fizzbuzz: print the numbers from 1 to N.
-  But for multiples of 3 print 'fizz' instead of the number;
-  for multiples of 5, print 'buzz';
-  for numbers which are multiples of both 3 and 5, print 'fizzbuzz' - `fizzbuzz.js`
-- Print the n-th number in the fibonacci series - `fibonacci.js`
-- Test if a given number is a prime(质数) - `isprime.js`
+1. Print the n-th number in the fibonacci series - `fibonacci.js`
+2. Fizzbuzz: print the numbers from 1 to N.
+   But for multiples of 3 print 'fizz' instead of the number;
+   for multiples of 5, print 'buzz';
+   for numbers which are multiples of both 3 and 5, print 'fizzbuzz' - `fizzbuzz.js`
+3. Test if a given number is a prime(质数) - `isprime.js`
 
 `/string`
 
-- Reverse a string - `reversestring.js`
-- Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
-- Reverse an integer - `reverseint.js`
-- Get the character that most commonly appears in a given string - `maxchar.js`
-- Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
-- Capitalize: Capitalize each word in a string - `capitalize.js`
-- Count the number of vowels used in a string - `vowels.js`
-- Remove vowels of a string - `removeVowels.js`
-- Test if curly braces in a string is matched - `isbalanced.js`
-- Determine if a string has all unique characters - `isUnique.js`
-- Check two strings are permutation - `checkPermutation.js`
-- Check if a string is a permutation of a palindrome - `palindromePermutation.js`
-- Check if one string is one edit away from the other string - `oneAway.js`
-- Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
-- Compress a string - `stringCompression.js`
-- Sum two linked list - `sumLists.js`
+1. Reverse a string - `reversestring.js`
+2. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
+3. Reverse an integer - `reverseint.js`
+4. Get the character that most commonly appears in a given string - `maxchar.js`
+5. Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
+6. Capitalize: Capitalize each word in a string - `capitalize.js`
+7. Count the number of vowels used in a string - `vowels.js`
+8. Remove vowels of a string - `removeVowels.js`
+9. Test if curly braces in a string is matched - `isbalanced.js`
+10. Determine if a string has all unique characters - `isUnique.js`
+11. Check two strings are permutation - `checkPermutation.js`
+12. Check if a string is a permutation of a palindrome - `palindromePermutation.js`
+13. Check if one string is one edit away from the other string - `oneAway.js`
+14. Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
+15. Compress a string - `stringCompression.js`
 
 ## Data structure problems content
 
 `/ds/hash` - Problems and solutions associated with **hash table**
 
-- Implement a hash table - `hashTable.js`
+1. Implement a hash table - `hashTable.js`
 
 `ds/linkedlist` - Problems and solutions associated with **linked list**
 
-- Implement a linked list - `linkedlist.js`
-- Get the middle node of a linked list - `midpoint.js`
-- Check if a linked list is circular - `circular.js`
-- Return the nth(starting at 0) node from the tail in a linked list - `fromlast.js`
-- Remove duplicates from an unsofted linked list - `removeDuplicate.js`
-- Partition a linked list - `partition.js`
+1. Implement a linked list - `linkedlist.js`
+2. Get the middle node of a linked list - `midpoint.js`
+3. Check if a linked list is circular - `circular.js`
+4. Return the nth(starting at 0) node from the tail in a linked list - `fromlast.js`
+5. Remove duplicates from an unsofted linked list - `removeDuplicate.js`
+6. Partition a linked list - `partition.js`
+7. Sum two linked list - `sumLists.js`
 
 `ds/stack_queue` - Problems and solutions associated with **stacks and queues**
 
-- Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
-- Combine two queues into one - `weave.js`
-- Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
-- Create a queue using two stacks, instead of arrays - `qfroms.js`
-- Get the minimum number in a stack - `getMin.js`
-- Sort a stack - `sortStack.js`
-- Implement an animal queue - `animalQueue.js`
+1. Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
+2. Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
+3. Combine two queues into one - `weave.js`
+4. Create a queue using two stacks, instead of arrays - `qfroms.js`
+5. Get the minimum number in a stack - `getMin.js`
+6. Sort a stack - `sortStack.js`
+7. Implement an animal queue - `animalQueue.js`
+8. Implement a stack of plates - `setOfStacks.js`
 
 `ds/tree` - Problems and solutions associated with **trees**
 
-- Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
-- Get the width of each level of a tree - `levelwidth.js`
-- Implement a binary search tree - `bst.js`
-- Validate the binary search tree - `bst-val.js`
-- Create a binary search tree with minimal height based on a ascend-sorted array - `minimalTree.js`
-- Create an array of all the nodes at each depth. - `listOfDepths.js`
+1. Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
+2. Get the width of each level of a tree - `levelwidth.js`
+3. Implement a binary search tree - `bst.js`
+4. Validate the binary search tree - `bst-val.js`
+5. Create a binary search tree with minimal height based on a ascend-sorted array - `minimalTree.js`
+6. Create an array of all the nodes at each depth. - `listOfDepths.js`
+7. Create a minimal BST from an ordered increasing integer array. - `minimalTree.js`
 
 `ds/graph` - Problems and solutions associated with **graph**
 
-- Implement a graph class and its relevant methods, including DFS and BFS - `graph.js`
+1. Implement a graph class and its relevant methods, including DFS and BFS - `graph.js`
 
 ## JS-specific
 
 `/js`
 
-- Create an event library out of the Events class. - `events.js`
-- Implement Array.prototype.filter method - `filter.js`
-- Implement Array.prototype.reduce method - `reduce.js`
-- Implement Array.prototype.indexOf method - `indexof.js`
-- Use generator - `generator.js`
+1. Create an event library out of the Events class. - `events.js`
+2. Implement Array.prototype.filter method - `filter.js`
+3. Implement Array.prototype.reduce method - `reduce.js`
+4. Implement Array.prototype.indexOf method - `indexof.js`
+5. Use generator - `generator.js`
 
 ## Sorting
 
 `/sorting`
 
-- Implement the three most common sorting methods - `sorting.js`
+1. Implement the three most common sorting methods - `sorting.js`
 
 ## Searching
 
 `/searching`
 
-- Implement linear search - `linearSearch.js`
-- Implement binary search - `binarySearch.js`
-- Implmenet jump search - `jumpSearch.js`
-- Implement interpolation search - `interpolationSearch.js`
-- Implement exponential search - `exponentialSearch.js`
+1. Implement linear search - `linearSearch.js`
+2. Implement binary search - `binarySearch.js`
+3. Implmenet jump search - `jumpSearch.js`
+4. Implement interpolation search - `interpolationSearch.js`
+5. Implement exponential search - `exponentialSearch.js`
 
 ### Worse case runtime for three sorting methods:
 
