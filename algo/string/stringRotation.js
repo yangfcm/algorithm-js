@@ -2,7 +2,8 @@
  * Assume you have a function isSubstring which checks if one word is a substring of another.
  * Given two strings, check if s2 is a rotation of s1 using only one call to isSubstring.
  * If a string is a rotation of another, it's a rotation at a particular point.
- * e.g. a rotation of "waterbottle" at character 3 means cutting this string at character 3 and putting the right half('erbottle') before the left half('wat')
+ * e.g. a rotation of "waterbottle" at character 3 means cutting this string at character 3 and 
+ * putting the right half('erbottle') before the left half('wat')
  * so the result is "erbottlewat"
  */
 
