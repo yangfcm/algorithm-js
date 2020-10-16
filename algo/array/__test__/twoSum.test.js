@@ -1,6 +1,6 @@
 const { twoSum1, twoSum2, twoSum3 } = require("../twoSum");
 
-describe("Test leetcode/twoSum.js", () => {
+describe("Test twoSum.js", () => {
   test("twoSum1, twoSum2 and twoSum3 functions defined", () => {
     expect(twoSum1).toBeDefined();
     expect(twoSum2).toBeDefined();

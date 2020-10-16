@@ -20,6 +20,7 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 10. Rotate an image represented by a n\*n array by 90 degrees (clockwise). - `rotateImage.js`
 11. Return indices of the two numbers whose sum equals to a target - `twoSum.js`
 12. Determine if a 9x9 Sudoku board is valid. - `validSudoku.js`
+13. Find out how many pairs of socks with matching colors(represented by numbers in an array) - `sockMerchant.js`
 
 `/dynamic`
 
