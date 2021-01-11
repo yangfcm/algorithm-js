@@ -38,4 +38,17 @@ function howSumSln2(target, numbers, memo = {}) {
   return null;
 }
 
-module.exports = { howSumSln1, howSumSln2 };
+function howSumSln3(target, numbers) {
+  const sumArr = new Array(target + 1).fill(null);
+  sumArr[0] = [];
+  for (let i = 0; i <= target; i++) {
+    if (sumArr[i] !== null) {
+      for (let num of numbers) {
+        sumArr[i + num] = [...sumArr[i], num];
+      }
+    }
+  }
+  return sumArr[target];
+}
+
+module.exports = { howSumSln1, howSumSln2, howSumSln3 };

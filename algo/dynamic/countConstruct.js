@@ -35,4 +35,17 @@ function solution2(target, strs, memo = {}) {
   return totalCount;
 }
 
-module.exports = { solution1, solution2 };
+function solution3(target, strs) {
+  const table = Array(target.length + 1).fill(0);
+  table[0] = 1;
+  for (let i = 0; i <= target.length; i++) {
+    for (let str of strs) {
+      if (target.slice(i, i + str.length) === str) {
+        table[i + str.length] += table[i];
+      }
+    }
+  }
+  return table[target.length];
+}
+
+module.exports = { solution1, solution2, solution3 };

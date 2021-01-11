@@ -35,4 +35,20 @@ function solution2(target, strs, memo = {}) {
   return result;
 }
 
-module.exports = { solution1, solution2 };
+function solution3(target, strs) {
+  const table = Array(target.length + 1)
+    .fill()
+    .map(() => []);
+  table[0] = [[]];
+  for (let i = 0; i <= target.length; i++) {
+    for (let str of strs) {
+      if (target.slice(i, i + str.length) === str) {
+        const newCombination = table[i].map((sub) => [...sub, str]);
+        table[i + str.length].push(...newCombination);
+      }
+    }
+  }
+  return table[target.length];
+}
+
+module.exports = { solution1, solution2, solution3 };

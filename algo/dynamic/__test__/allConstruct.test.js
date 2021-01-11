@@ -1,4 +1,4 @@
-const { solution1, solution2 } = require("../allConstruct");
+const { solution1, solution2, solution3 } = require("../allConstruct");
 
 describe("Test allConstruct.js", () => {
   test("solution1 and solution2 are both defined", () => {
@@ -50,5 +50,33 @@ describe("Test allConstruct.js", () => {
         "eeeeee",
       ])
     ).toEqual([]);
+  });
+
+  test("solution3 can return all construct and can handle big string", () => {
+    expect(solution3("purple", ["purp", "p", "ur", "le", "purpl"])).toEqual([
+      ["purp", "le"],
+      ["p", "ur", "p", "le"],
+    ]);
+    expect(
+      solution3("abcdef", ["ab", "abc", "cd", "def", "abcd", "ef", "c"])
+    ).toEqual([
+      ["abc", "def"],
+      ["ab", "c", "def"],
+      ["abcd", "ef"],
+      ["ab", "cd", "ef"],
+    ]);
+    expect(
+      solution3("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"])
+    ).toEqual([]);
+    // expect(
+    //   solution3("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", [
+    //     "e",
+    //     "ee",
+    //     "eee",
+    //     "eeee",
+    //     "eeeee",
+    //     "eeeeee",
+    //   ])
+    // ).toEqual([]);
   });
 });

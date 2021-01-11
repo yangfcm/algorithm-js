@@ -25,7 +25,27 @@ function gridTravelerSln2(m, n, memo = {}) {
   return memo[key];
 }
 
+// Solution 3
+function gridTravelerSln3(m, n) {
+  const travelArr = Array(m + 1)
+    .fill()
+    .map(() => Array(n + 1).fill(0)); // Create a two dimensional array m+1 by n+1 and filled it with 0.
+  travelArr[1][1] = 1; // set up starting value.
+  for (let i = 0; i <= m; i++) {
+    for (let j = 0; j <= n; j++) {
+      if (i <= 1 && j <= 1) {
+        continue;
+      }
+      const prevRow = i >= 1 ? travelArr[i - 1][j] : 0;
+      const prevCol = j >= 1 ? travelArr[i][j - 1] : 0;
+      travelArr[i][j] = prevRow + prevCol;
+    }
+  }
+  return travelArr[m][n];
+}
+
 module.exports = {
   gridTravelerSln1,
   gridTravelerSln2,
+  gridTravelerSln3,
 };

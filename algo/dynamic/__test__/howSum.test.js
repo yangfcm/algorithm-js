@@ -1,4 +1,4 @@
-const { howSumSln1, howSumSln2 } = require("../howSum");
+const { howSumSln1, howSumSln2, howSumSln3 } = require("../howSum");
 
 describe("Test canSum.js", () => {
   test("howSumSln1 function is defined", () => {
@@ -23,5 +23,14 @@ describe("Test canSum.js", () => {
     expect(howSumSln2(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
     expect(howSumSln2(300, [7, 14])).toBe(null);
     expect(howSumSln2(300, [286, 14])).toEqual([14, 286]);
+  });
+
+  test("howSumSln3 can return correct value and handle big number", () => {
+    expect(howSumSln3(7, [2, 3])).toEqual([3, 2, 2]);
+    expect(howSumSln3(7, [5, 3, 4, 7])).toEqual([4, 3]);
+    expect(howSumSln3(7, [2, 4])).toBe(null);
+    expect(howSumSln3(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
+    expect(howSumSln3(300, [7, 14])).toBe(null);
+    expect(howSumSln3(300, [286, 14])).toEqual([286, 14]);
   });
 });

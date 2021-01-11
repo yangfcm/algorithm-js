@@ -54,4 +54,20 @@ function bestSumSln2(target, numbers, memo = {}) {
   return shortestCombination;
 }
 
-module.exports = { bestSumSln1, bestSumSln2 };
+function bestSumSln3(target, numbers) {
+  const sumArr = new Array(target + 1).fill(null);
+  sumArr[0] = [];
+  for (let i = 0; i <= target; i++) {
+    if (sumArr[i] !== null) {
+      for (let num of numbers) {
+        const combination = [...sumArr[i], num];
+        if (!sumArr[i + num] || combination.length < sumArr[i + num].length) {
+          sumArr[i + num] = combination;
+        }
+      }
+    }
+  }
+  return sumArr[target];
+}
+
+module.exports = { bestSumSln1, bestSumSln2, bestSumSln3 };

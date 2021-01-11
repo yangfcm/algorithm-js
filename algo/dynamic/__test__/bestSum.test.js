@@ -1,4 +1,4 @@
-const { bestSumSln1, bestSumSln2 } = require("../bestSum");
+const { bestSumSln1, bestSumSln2, bestSumSln3 } = require("../bestSum");
 
 describe("Test canSum.js", () => {
   test("bestSumSln1 function is defined", () => {
@@ -20,5 +20,12 @@ describe("Test canSum.js", () => {
     expect(bestSumSln2(7, [5, 3, 4, 7])).toEqual([7]);
     expect(bestSumSln2(8, [2, 3, 5])).toEqual([5, 3]);
     expect(bestSumSln2(100, [2, 4, 5, 10, 25, 50])).toEqual([50, 50]);
+  });
+
+  test("bestSumSln3 can return the shortest sum and handle big number", () => {
+    expect(bestSumSln3(7, [2, 3])).toEqual([2, 2, 3]);
+    expect(bestSumSln3(7, [5, 3, 4, 7])).toEqual([7]);
+    expect(bestSumSln3(8, [2, 3, 5])).toEqual([3, 5]);
+    expect(bestSumSln3(100, [2, 4, 5, 10, 25, 50])).toEqual([50, 50]);
   });
 });

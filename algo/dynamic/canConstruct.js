@@ -37,4 +37,19 @@ function solution2(target, strs, memo = {}) {
   return false;
 }
 
-module.exports = { solution1, solution2 };
+function solution3(target, strs) {
+  const table = Array(target.length + 1).fill(false);
+  table[0] = true;
+  for (let i = 0; i <= target.length; i++) {
+    if (table[i] === true) {
+      for (let str of strs) {
+        if (target.slice(i, i + str.length) === str) {
+          table[i + str.length] = true;
+        }
+      }
+    }
+  }
+  return table[target.length];
+}
+
+module.exports = { solution1, solution2, solution3 };

@@ -1,4 +1,4 @@
-const { solution1, solution2 } = require("../canConstruct");
+const { solution1, solution2, solution3 } = require("../canConstruct");
 
 describe("Test canConstruct.js", () => {
   test("solution1 and solution2 are both defined", () => {
@@ -18,7 +18,7 @@ describe("Test canConstruct.js", () => {
     ).toBeTruthy();
   });
 
-  test("solution1 can return correct value and handle big string", () => {
+  test("solution2 can return correct value and handle big string", () => {
     expect(
       solution2("abcdef", ["ab", "abc", "cd", "def", "abcd"])
     ).toBeTruthy();
@@ -30,6 +30,28 @@ describe("Test canConstruct.js", () => {
     ).toBeTruthy();
     expect(
       solution2("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", [
+        "e",
+        "ee",
+        "eee",
+        "eeee",
+        "eeeee",
+        "eeeeee",
+      ])
+    ).toBeFalsy();
+  });
+
+  test("solution3 can return correct value and handle big string", () => {
+    expect(
+      solution3("abcdef", ["ab", "abc", "cd", "def", "abcd"])
+    ).toBeTruthy();
+    expect(
+      solution3("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"])
+    ).toBeFalsy();
+    expect(
+      solution3("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
+    ).toBeTruthy();
+    expect(
+      solution3("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef", [
         "e",
         "ee",
         "eee",

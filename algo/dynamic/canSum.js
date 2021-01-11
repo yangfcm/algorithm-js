@@ -33,7 +33,21 @@ function canSumSln2(target, numbers, memo = {}) {
   return false;
 }
 
+function canSumSln3(target, numbers) {
+  const targetArr = new Array(target + 1).fill(false);
+  targetArr[0] = true;
+  for (let i = 0; i <= target; i++) {
+    if (targetArr[i] === true) {
+      for (let num of numbers) {
+        targetArr[i + num] = true;
+      }
+    }
+  }
+  return targetArr[target];
+}
+
 module.exports = {
   canSumSln1,
   canSumSln2,
+  canSumSln3,
 };
