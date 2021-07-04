@@ -8,25 +8,14 @@
  * @return {number[]}
  */
 function intersect(nums1, nums2) {
-  let smaller;
-  let bigger;
-  if (nums1.length < nums2.length) {
-    // Compare the size of two arrays, and put the smaller array in smaller,
-    // and bigger array in bigger
-    smaller = nums1;
-    bigger = nums2;
-  } else {
-    smaller = nums2;
-    bigger = nums1;
-  }
   const interscetArr = [];
-  for (let i = 0; i < smaller.length; i++) {
-    // Iterate smaller array, if the element in smaller array can be found in bigger array
-    // It is one element in intersection and meanwhile remove the element from bigger array to avoid duplication
-    let foundIndex = bigger.indexOf(smaller[i]);
+  for (let i = 0; i < nums1.length; i++) {
+    // Iterate one of the array, if the element in the array can be found in the other array
+    // It is exactly the element in intersection and meanwhile remove the element from the other array to avoid futher duplication
+    let foundIndex = nums2.indexOf(nums1[i]);
     if (foundIndex >= 0) {
-      interscetArr.push(bigger[foundIndex]);
-      bigger.splice(foundIndex, 1);
+      interscetArr.push(nums2[foundIndex]);
+      nums2.splice(foundIndex, 1);
     }
   }
   return interscetArr;
