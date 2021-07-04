@@ -1,17 +1,17 @@
-const isSorted = require("../issorted");
+const { solution } = require("../issorted");
 
 describe("Test issorted.js", () => {
-  test("should function is defined", () => {
-    expect(isSorted).toBeDefined();
+  test("solution function is defined", () => {
+    expect(solution).toBeDefined();
   });
 
   test("array is sorted", () => {
     const sortedArray = [-Infinity, -5, 0, 3, 9];
-    expect(isSorted(sortedArray)).toBeTruthy;
+    expect(solution(sortedArray)).toBeTruthy;
   });
 
   test("array is unsorted", () => {
     const unsorted = [3, 9, -3, 10];
-    expect(isSorted(unsorted)).toBeFalsy;
+    expect(solution(unsorted)).toBeFalsy;
   });
 });

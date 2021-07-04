@@ -1,7 +1,7 @@
 /**
  * issorted - Return true or false, indicating whether the given array of numbers is sorted.
  */
-function issorted(array) {
+function solution(array) {
   if (array.length <= 1) return true;
   for (let i = 0; i < array.length; i++) {
     let current = array[i];
@@ -13,4 +13,4 @@ function issorted(array) {
   return true;
 }
 
-module.exports = issorted;
+module.exports = { solution };

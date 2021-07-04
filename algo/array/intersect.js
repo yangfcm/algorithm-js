@@ -7,7 +7,7 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
-function intersect(nums1, nums2) {
+function solution(nums1, nums2) {
   const interscetArr = [];
   for (let i = 0; i < nums1.length; i++) {
     // Iterate one of the array, if the element in the array can be found in the other array
@@ -21,4 +21,4 @@ function intersect(nums1, nums2) {
   return interscetArr;
 }
 
-module.exports = intersect;
+module.exports = { solution };

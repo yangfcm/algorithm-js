@@ -9,7 +9,7 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 `/array`
 
 1. Chunk Array: Given an array and chunk size, divide the array into many subarrays where each subarray is of length size - `chunk.js`
-2. Gompute two arrays' intersection. - `intersect.js`
+2. Compute two arrays' intersection. - `intersect.js`
 3. Test if a given array of numbers is sorted - `issorted.js`
 4. Produce a spiral matrix - `matrix.js`
 5. Missing Number: Take an unsorted array of unique numbers from to n and return the missing number in the sequence - `missing.js`
