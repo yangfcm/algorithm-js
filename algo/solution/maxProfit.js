@@ -5,7 +5,7 @@
  * @param {number[]} prices
  * @return {number}
  */
-function maxProfit(prices) {
+function solution(prices) {
   let profit = 0;
   let holding = false;
   let buyPrice = 0;
@@ -29,4 +29,4 @@ function maxProfit(prices) {
   return profit;
 }
 
-module.exports = maxProfit;
+module.exports = { solution };

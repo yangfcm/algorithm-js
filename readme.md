@@ -6,7 +6,7 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 ## Algorithms problems content `/algo`
 
-`/array`
+`/array` - Problems and solutions about arrays.
 
 1. `chunk.js`
 
@@ -60,13 +60,9 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
     Determine if a 9x9 Sudoku board is valid.
 
-`/dynamic`
+`/dynamic` - Dynamic problems and solutions, usually associated with recursive calls.
 
-1. Max profit: Given an array with each number representing a stock price for one day, work out an algorithm to find the max profit - `maxProfit.js`
-2. Pyramid: Print a pyramid shape with n levels using # character and space on its left and right side - `pyramid.js`
-3. Steps: Print a step shape with n levels using # character and space(s) on the right - `steps.js`
-
-`/math`
+`/math` - Algorithm to solve math problems.
 
 1. Print the n-th number in the fibonacci series - `fibonacci.js`
 2. Fizzbuzz: print the numbers from 1 to N.
@@ -75,23 +71,37 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
    for numbers which are multiples of both 3 and 5, print 'fizzbuzz' - `fizzbuzz.js`
 3. Test if a given number is a prime(质数) - `isprime.js`
 
-`/string`
+`/solution` - Generic algorithm problems and solutions
 
-1. Reverse a string - `reversestring.js`
-2. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
-3. Reverse an integer - `reverseint.js`
-4. Get the character that most commonly appears in a given string - `maxchar.js`
-5. Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
-6. Capitalize: Capitalize each word in a string - `capitalize.js`
-7. Count the number of vowels used in a string - `vowels.js`
-8. Remove vowels of a string - `removeVowels.js`
-9. Test if curly braces in a string is matched - `isbalanced.js`
-10. Determine if a string has all unique characters - `isUnique.js`
-11. Check two strings are permutation - `checkPermutation.js`
-12. Check if a string is a permutation of a palindrome - `palindromePermutation.js`
-13. Check if one string is one edit away from the other string - `oneAway.js`
-14. Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
-15. Compress a string - `stringCompression.js`
+1. `maxProfit.js`
+
+   Max profit: Given an array with each number representing a stock price for one day, work out an algorithm to find the max profit.
+
+2. `pyramid.js`
+
+   Pyramid: Print a pyramid shape with n levels using # character and space on its left and right side.
+
+3. `steps.js`
+
+   Steps: Print a step shape with n levels using # character and space(s) on the right.
+
+`/string` - Problems and solutions about string manipulation.
+
+4. Reverse a string - `reversestring.js`
+5. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
+6. Reverse an integer - `reverseint.js`
+7. Get the character that most commonly appears in a given string - `maxchar.js`
+8. Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
+9. Capitalize: Capitalize each word in a string - `capitalize.js`
+10. Count the number of vowels used in a string - `vowels.js`
+11. Remove vowels of a string - `removeVowels.js`
+12. Test if curly braces in a string is matched - `isbalanced.js`
+13. Determine if a string has all unique characters - `isUnique.js`
+14. Check two strings are permutation - `checkPermutation.js`
+15. Check if a string is a permutation of a palindrome - `palindromePermutation.js`
+16. Check if one string is one edit away from the other string - `oneAway.js`
+17. Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
+18. Compress a string - `stringCompression.js`
 
 ## Data structure problems content
 
@@ -135,7 +145,7 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 ## JS-specific
 
-`/js`
+`/js` - Implement JS built-in functions.
 
 1. Create an event library out of the Events class. - `events.js`
 2. Implement Array.prototype.filter method - `filter.js`
@@ -145,13 +155,13 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 ## Sorting
 
-`/sorting`
+`/sorting` - Solutions to sort an array.
 
 1. Implement the three most common sorting methods - `sorting.js`
 
 ## Searching
 
-`/searching`
+`/searching` - Solutions to find out a given element from an array.
 
 1. Implement linear search - `linearSearch.js`
 2. Implement binary search - `binarySearch.js`

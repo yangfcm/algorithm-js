@@ -1,4 +1,4 @@
-const pyramid = require("../pyramid");
+const { solution } = require("../pyramid");
 
 describe("Test pyramid.js", () => {
   beforeEach(() => {
@@ -10,18 +10,18 @@ describe("Test pyramid.js", () => {
   });
 
   test("pyramid is a function", () => {
-    expect(typeof pyramid).toEqual("function");
+    expect(typeof solution).toEqual("function");
   });
 
   test("prints a pryamid for n = 2", () => {
-    pyramid(2);
+    solution(2);
     expect(console.log.mock.calls[0][0]).toEqual(" # ");
     expect(console.log.mock.calls[1][0]).toEqual("###");
     expect(console.log.mock.calls.length).toEqual(2);
   });
 
   test("prints a pryamid for n = 3", () => {
-    pyramid(3);
+    solution(3);
     expect(console.log.mock.calls[0][0]).toEqual("  #  ");
     expect(console.log.mock.calls[1][0]).toEqual(" ### ");
     expect(console.log.mock.calls[2][0]).toEqual("#####");
@@ -29,7 +29,7 @@ describe("Test pyramid.js", () => {
   });
 
   test("prints a pryamid for n = 4", () => {
-    pyramid(4);
+    solution(4);
     expect(console.log.mock.calls[0][0]).toEqual("   #   ");
     expect(console.log.mock.calls[1][0]).toEqual("  ###  ");
     expect(console.log.mock.calls[2][0]).toEqual(" ##### ");
