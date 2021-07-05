@@ -7,26 +7,25 @@
  */
 
 // Solution 1 - Use recursive implementation
-function gridTravelerSln1(m, n) {
+function solution1(m, n) {
   if (m === 1 && n === 1) return 1;
   if (m === 0 || n === 0) return 0;
-  return gridTravelerSln1(m - 1, n) + gridTravelerSln1(m, n - 1);
+  return solution1(m - 1, n) + solution1(m, n - 1);
 }
 
 // Solution 2 - Use memorization
-function gridTravelerSln2(m, n, memo = {}) {
+function solution2(m, n, memo = {}) {
   const key = m + "," + n;
   if (key in memo) return memo[key];
 
   if (m === 1 && n === 1) return 1;
   if (m === 0 || n === 0) return 0;
-  memo[key] =
-    gridTravelerSln2(m - 1, n, memo) + gridTravelerSln2(m, n - 1, memo);
+  memo[key] = solution2(m - 1, n, memo) + solution2(m, n - 1, memo);
   return memo[key];
 }
 
 // Solution 3
-function gridTravelerSln3(m, n) {
+function solution3(m, n) {
   const travelArr = Array(m + 1)
     .fill()
     .map(() => Array(n + 1).fill(0)); // Create a two dimensional array m+1 by n+1 and filled it with 0.
@@ -45,7 +44,7 @@ function gridTravelerSln3(m, n) {
 }
 
 module.exports = {
-  gridTravelerSln1,
-  gridTravelerSln2,
-  gridTravelerSln3,
+  solution1,
+  solution2,
+  solution3,
 };

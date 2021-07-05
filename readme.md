@@ -87,21 +87,21 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 `/string` - Problems and solutions about string manipulation.
 
-4. Reverse a string - `reversestring.js`
-5. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
-6. Reverse an integer - `reverseint.js`
-7. Get the character that most commonly appears in a given string - `maxchar.js`
-8. Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
-9. Capitalize: Capitalize each word in a string - `capitalize.js`
-10. Count the number of vowels used in a string - `vowels.js`
-11. Remove vowels of a string - `removeVowels.js`
-12. Test if curly braces in a string is matched - `isbalanced.js`
-13. Determine if a string has all unique characters - `isUnique.js`
-14. Check two strings are permutation - `checkPermutation.js`
-15. Check if a string is a permutation of a palindrome - `palindromePermutation.js`
-16. Check if one string is one edit away from the other string - `oneAway.js`
-17. Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
-18. Compress a string - `stringCompression.js`
+1. Reverse a string - `reversestring.js`
+2. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
+3. Reverse an integer - `reverseint.js`
+4. Get the character that most commonly appears in a given string - `maxchar.js`
+5. Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
+6. Capitalize: Capitalize each word in a string - `capitalize.js`
+7. Count the number of vowels used in a string - `vowels.js`
+8. Remove vowels of a string - `removeVowels.js`
+9. Test if curly braces in a string is matched - `isbalanced.js`
+10. Determine if a string has all unique characters - `isUnique.js`
+11. Check two strings are permutation - `checkPermutation.js`
+12. Check if a string is a permutation of a palindrome - `palindromePermutation.js`
+13. Check if one string is one edit away from the other string - `oneAway.js`
+14. Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
+15. Compress a string - `stringCompression.js`
 
 ## Data structure problems content
 
