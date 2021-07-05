@@ -14,7 +14,7 @@
  * The most direct and obvious one
  * Time complexity: O(n2)
  */
-function twoSum1(nums, target) {
+function solution1(nums, target) {
   for (let i = 0; i < nums.length - 1; i++) {
     for (let j = i + 1; j < nums.length; j++) {
       if (nums[i] + nums[j] === target) {
@@ -29,7 +29,7 @@ function twoSum1(nums, target) {
  * Create an object to record the number(key) and its index(value)
  * And check if each element's complement(target - nums[i]) exists
  */
-function twoSum2(nums, target) {
+function solution2(nums, target) {
   const map = {};
   for (let i = 0; i < nums.length; i++) {
     map[nums[i]] = i;
@@ -46,7 +46,7 @@ function twoSum2(nums, target) {
 /**
  * Same idea as above solution, but use one loop
  */
-function twoSum3(nums, target) {
+function solution3(nums, target) {
   const map = {};
   for (let i = 0; i < nums.length; i++) {
     let complement = target - nums[i];
@@ -58,7 +58,7 @@ function twoSum3(nums, target) {
 }
 
 module.exports = {
-  twoSum1,
-  twoSum2,
-  twoSum3
+  solution1,
+  solution2,
+  solution3,
 };

@@ -1,19 +1,19 @@
-const matrix = require("../matrix");
+const { solution } = require("../matrix");
 
 describe("Test matrix.js", () => {
   test("matrix function is defined", () => {
-    expect(matrix).toBeDefined();
+    expect(solution).toBeDefined();
   });
 
   test("matrix produces a 2x2 array", () => {
-    const m = matrix(2);
+    const m = solution(2);
     expect(m.length).toEqual(2);
     expect(m[0]).toEqual([1, 2]);
     expect(m[1]).toEqual([4, 3]);
   });
 
   test("matrix produces a 3x3 array", () => {
-    const m = matrix(3);
+    const m = solution(3);
     expect(m.length).toEqual(3);
     expect(m[0]).toEqual([1, 2, 3]);
     expect(m[1]).toEqual([8, 9, 4]);
@@ -21,7 +21,7 @@ describe("Test matrix.js", () => {
   });
 
   test("matrix produces a 4x4 array", () => {
-    const m = matrix(4);
+    const m = solution(4);
     expect(m.length).toEqual(4);
     expect(m[0]).toEqual([1, 2, 3, 4]);
     expect(m[1]).toEqual([12, 13, 14, 5]);

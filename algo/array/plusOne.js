@@ -5,7 +5,7 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-function plusOne(digits) {
+function solution(digits) {
   for (let i = digits.length - 1; i >= 0; i--) {
     if (digits[i] < 9) {
       digits[i] += 1;
@@ -21,4 +21,4 @@ function plusOne(digits) {
   return digits;
 }
 
-module.exports = plusOne;
+module.exports = { solution };

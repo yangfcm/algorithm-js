@@ -5,9 +5,9 @@
 				Output: [5,6,7,1,2,3,4]
  * @param {number[]} nums
  * @param {number} k
- * @return {array} the array after being rotated.
+ * @return {void} 
  */
-function rotateArray(nums, k) {
+function solution1(nums, k) {
   if (k < 0) {
     throw Exception("Step must be a positive integer");
   }
@@ -16,11 +16,10 @@ function rotateArray(nums, k) {
     const popedNum = nums.pop();
     nums.unshift(popedNum);
   }
-  return nums;
 }
 
 /** Alternative solution - 1 */
-function rotateArray1(nums, k) {
+function solution2(nums, k) {
   if (k < 0) {
     throw Exception("Step must be a positive integer");
   }
@@ -32,7 +31,6 @@ function rotateArray1(nums, k) {
     }
     nums[0] = lastNum;
   }
-  return nums;
 }
 
-module.exports = { rotateArray, rotateArray1 };
+module.exports = { solution1, solution2 };

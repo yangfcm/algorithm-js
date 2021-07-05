@@ -20,7 +20,7 @@
  * @param {number[][]} matrix
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
-function rotateImage(matrix) {
+function solution(matrix) {
   const n = matrix.length; // Get the size of array
   for (let i = 0; i < Math.floor(n / 2); i++) {
     // i represents the i-th layer of the matrix from outside to inside.
@@ -37,7 +37,6 @@ function rotateImage(matrix) {
       matrix[j][n - 1 - i] = temp;
     }
   }
-  return matrix;
 }
 
-module.exports = rotateImage;
+module.exports = { solution };

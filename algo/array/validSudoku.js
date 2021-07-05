@@ -33,7 +33,7 @@
  * @param {character[][]} board
  * @return {boolean}
  */
-function validSudoku(board) {
+function solution(board) {
   const n = board.length;
   for (let i = 0; i < n; i++) {
     const row = [];
@@ -84,4 +84,4 @@ function validSudoku(board) {
 //   return false;
 // }
 
-module.exports = validSudoku;
+module.exports = { solution };

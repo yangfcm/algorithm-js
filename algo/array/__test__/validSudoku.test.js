@@ -1,8 +1,8 @@
-const validSudoku = require("../validSudoku");
+const { solution } = require("../validSudoku");
 
 describe("Test validSudoku.js", () => {
   test("validSudoku function is defined", () => {
-    expect(validSudoku).toBeDefined();
+    expect(solution).toBeDefined();
   });
 
   test("Function returns true if given array is a valid sudoku", () => {
@@ -15,9 +15,9 @@ describe("Test validSudoku.js", () => {
       ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
       [".", "6", ".", ".", ".", ".", "2", "8", "."],
       [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-      [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+      [".", ".", ".", ".", "8", ".", ".", "7", "9"],
     ];
-    expect(validSudoku(arr)).toBe(true);
+    expect(solution(arr)).toBe(true);
   });
 
   test("Function returns false if array is an invalid sudoku(duplication in column)", () => {
@@ -30,9 +30,9 @@ describe("Test validSudoku.js", () => {
       ["7", ".", ".", ".", "9", ".", ".", ".", "6"],
       [".", "6", ".", ".", ".", ".", "2", "8", "."],
       [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-      [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+      [".", ".", ".", ".", "8", ".", ".", "7", "9"],
     ];
-    expect(validSudoku(arr)).toBe(false);
+    expect(solution(arr)).toBe(false);
   });
 
   test("Function returns true if given array is a valid sudoku(duplication in box)", () => {
@@ -45,8 +45,8 @@ describe("Test validSudoku.js", () => {
       ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
       [".", "6", ".", ".", ".", ".", "2", "8", "."],
       [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-      [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+      [".", ".", ".", ".", "8", ".", ".", "7", "9"],
     ];
-    expect(validSudoku(arr)).toBe(false);
+    expect(solution(arr)).toBe(false);
   });
 });

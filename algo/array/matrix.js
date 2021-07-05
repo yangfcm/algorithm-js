@@ -1,7 +1,7 @@
 // Matrix
-// Write a function that accepts an integer n 
+// Write a function that accepts an integer n
 // and returns a N x N spiral matrix. (What is spiral matrix, see the example below)
-// e.g. 
+// e.g.
 //   matrix(2)
 //     [[1, 2],
 //     [4, 3]]
@@ -30,36 +30,40 @@
  *   Decrement end row
  *   ...repeat for other two sides
  */
-function matrix(n) {
+function solution(n) {
   const results = new Array(n);
-  let startRow = startCol = 0;
-  let endRow = endCol = n-1;
+  let startRow = (startCol = 0);
+  let endRow = (endCol = n - 1);
   // let currentRow = currentCol = 0;
   let counter = 1;
-  for(i=0; i<n; i++) {
-    results[i] = new Array(n);  // Create a n*n empty array
+  for (i = 0; i < n; i++) {
+    results[i] = new Array(n); // Create a n*n empty array
   }
 
-  while(startCol <= endCol && startRow <= endRow) {
-    for(let i=startCol; i<= endCol; i++) {  // From-left-to-right row
+  while (startCol <= endCol && startRow <= endRow) {
+    for (let i = startCol; i <= endCol; i++) {
+      // From-left-to-right row
       results[startRow][i] = counter;
       counter++;
     }
     startRow++;
-    
-    for(let i=startRow; i<= endRow; i++) {  // From-top-to-bottom column
+
+    for (let i = startRow; i <= endRow; i++) {
+      // From-top-to-bottom column
       results[i][endCol] = counter;
       counter++;
     }
     endCol--;
-    
-    for(let i=endCol; i>= startCol; i--) {  // From-right-to-left row
+
+    for (let i = endCol; i >= startCol; i--) {
+      // From-right-to-left row
       results[endRow][i] = counter;
       counter++;
     }
     endRow--;
 
-    for(let i=endRow; i >= startRow; i--) { // From-bottom-to-top column
+    for (let i = endRow; i >= startRow; i--) {
+      // From-bottom-to-top column
       results[i][startCol] = counter;
       counter++;
     }
@@ -70,4 +74,4 @@ function matrix(n) {
 
 // console.log(matrix(4));
 
-module.exports = matrix;
+module.exports = { solution };
