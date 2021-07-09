@@ -107,7 +107,7 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
    Test if a given number is a prime(质数)
 
-`/solution` - Generic algorithm problems and solutions
+`/assorted` - Assorted algorithm problems and solutions
 
 1. `maxProfit.js`
 
