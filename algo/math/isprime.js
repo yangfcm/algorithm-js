@@ -1,7 +1,7 @@
 /**
  * isPrime - Return true or false, indicating whether is a given number is a prime(质数)
  */
-function isPrime(number) {
+function solution(number) {
   if (number < 2) {
     return false;
   }
@@ -14,4 +14,4 @@ function isPrime(number) {
   return true;
 }
 
-module.exports = isPrime;
+module.exports = { solution };

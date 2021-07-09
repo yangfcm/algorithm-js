@@ -1,31 +1,31 @@
-const isPrime = require("../isprime");
+const { solution } = require("../isprime");
 
-describe("Test isprime.js", () => {
+describe("Test solution.js", () => {
   test("should function is defined", () => {
-    expect(isPrime).toBeDefined();
+    expect(solution).toBeDefined();
   });
 
   test("0 is not a prime", () => {
-    expect(isPrime(0)).toBeFalsy;
+    expect(solution(0)).toBeFalsy;
   });
 
   test("1 is not a prime", () => {
-    expect(isPrime(1)).toBeFalsy;
+    expect(solution(1)).toBeFalsy;
   });
 
   test("2 is not a prime", () => {
-    expect(isPrime(2)).toBeFalsy;
+    expect(solution(2)).toBeFalsy;
   });
 
   test("3 is a prime", () => {
-    expect(isPrime(3)).toBeTruthy;
+    expect(solution(3)).toBeTruthy;
   });
 
   test("17 is a prime", () => {
-    expect(isPrime(17)).toBeTruthy;
+    expect(solution(17)).toBeTruthy;
   });
 
   test("10000 is not a prime", () => {
-    expect(isPrime(10000)).toBeFalsy;
+    expect(solution(10000)).toBeFalsy;
   });
 });

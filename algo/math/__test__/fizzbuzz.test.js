@@ -1,18 +1,18 @@
-const fizzBuzz = require("../fizzbuzz");
+const { solution } = require("../fizzbuzz.js");
 
-describe("Test fizzbuzz.js", () => {
-  test("fizzBuzz function defined", () => {
-    expect(fizzBuzz).toBeDefined();
+describe("Test solution.js", () => {
+  test("solution function defined", () => {
+    expect(solution).toBeDefined();
   });
 
-  test("Calling fizzbuzz with `5` prints out 5 statements", () => {
-    fizzBuzz(5);
+  test("Calling solution with `5` prints out 5 statements", () => {
+    solution(5);
 
     expect(console.log.mock.calls.length).toEqual(5);
   });
 
-  test("Calling fizzbuzz with 15 prints out the correct values", () => {
-    fizzBuzz(15);
+  test("Calling solution with 15 prints out the correct values", () => {
+    solution(15);
 
     expect(console.log.mock.calls[0][0]).toEqual(1);
     expect(console.log.mock.calls[1][0]).toEqual(2);
