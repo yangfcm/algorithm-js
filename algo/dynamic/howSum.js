@@ -5,13 +5,13 @@
  * You may use an element of the array as many times as needed.
  * Assum all input numbers are non-negative.
  */
-function howSumSln1(target, numbers) {
+function solution1(target, numbers) {
   if (target === 0) return [];
   if (target < 0) return null;
 
   for (let num of numbers) {
     const remainder = target - num;
-    const remainderResult = howSumSln1(remainder, numbers);
+    const remainderResult = solution1(remainder, numbers);
     if (remainderResult !== null) {
       return [...remainderResult, num];
     }
@@ -20,14 +20,14 @@ function howSumSln1(target, numbers) {
   return null;
 }
 
-function howSumSln2(target, numbers, memo = {}) {
+function solution2(target, numbers, memo = {}) {
   if (target in memo) return memo[target];
   if (target === 0) return [];
   if (target < 0) return null;
 
   for (let num of numbers) {
     const remainder = target - num;
-    const remainderResult = howSumSln2(remainder, numbers, memo);
+    const remainderResult = solution2(remainder, numbers, memo);
     if (remainderResult !== null) {
       memo[target] = [...remainderResult, num];
       return memo[target];
@@ -38,7 +38,7 @@ function howSumSln2(target, numbers, memo = {}) {
   return null;
 }
 
-function howSumSln3(target, numbers) {
+function solution3(target, numbers) {
   const sumArr = new Array(target + 1).fill(null);
   sumArr[0] = [];
   for (let i = 0; i <= target; i++) {
@@ -51,4 +51,4 @@ function howSumSln3(target, numbers) {
   return sumArr[target];
 }
 
-module.exports = { howSumSln1, howSumSln2, howSumSln3 };
+module.exports = { solution1, solution2, solution3 };

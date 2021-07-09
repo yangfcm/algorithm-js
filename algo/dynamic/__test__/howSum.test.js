@@ -1,36 +1,36 @@
-const { howSumSln1, howSumSln2, howSumSln3 } = require("../howSum");
+const { solution1, solution2, solution3 } = require("../howSum");
 
 describe("Test canSum.js", () => {
-  test("howSumSln1 function is defined", () => {
-    expect(howSumSln1).toBeDefined();
+  test("solution1 function is defined", () => {
+    expect(solution1).toBeDefined();
   });
 
-  test("howSumSln2 function is defined", () => {
-    expect(howSumSln2).toBeDefined();
+  test("solution2 function is defined", () => {
+    expect(solution2).toBeDefined();
   });
 
-  test("howSumSln1 can return correct value", () => {
-    expect(howSumSln1(7, [2, 3])).toEqual([3, 2, 2]);
-    expect(howSumSln1(7, [5, 3, 4, 7])).toEqual([4, 3]);
-    expect(howSumSln1(7, [2, 4])).toBe(null);
-    expect(howSumSln1(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
+  test("solution1 can return correct value", () => {
+    expect(solution1(7, [2, 3])).toEqual([3, 2, 2]);
+    expect(solution1(7, [5, 3, 4, 7])).toEqual([4, 3]);
+    expect(solution1(7, [2, 4])).toBe(null);
+    expect(solution1(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
   });
 
-  test("howSumSln2 can return correct value and handle big number", () => {
-    expect(howSumSln2(7, [2, 3])).toEqual([3, 2, 2]);
-    expect(howSumSln2(7, [5, 3, 4, 7])).toEqual([4, 3]);
-    expect(howSumSln2(7, [2, 4])).toBe(null);
-    expect(howSumSln2(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
-    expect(howSumSln2(300, [7, 14])).toBe(null);
-    expect(howSumSln2(300, [286, 14])).toEqual([14, 286]);
+  test("solution2 can return correct value and handle big number", () => {
+    expect(solution2(7, [2, 3])).toEqual([3, 2, 2]);
+    expect(solution2(7, [5, 3, 4, 7])).toEqual([4, 3]);
+    expect(solution2(7, [2, 4])).toBe(null);
+    expect(solution2(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
+    expect(solution2(300, [7, 14])).toBe(null);
+    expect(solution2(300, [286, 14])).toEqual([14, 286]);
   });
 
-  test("howSumSln3 can return correct value and handle big number", () => {
-    expect(howSumSln3(7, [2, 3])).toEqual([3, 2, 2]);
-    expect(howSumSln3(7, [5, 3, 4, 7])).toEqual([4, 3]);
-    expect(howSumSln3(7, [2, 4])).toBe(null);
-    expect(howSumSln3(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
-    expect(howSumSln3(300, [7, 14])).toBe(null);
-    expect(howSumSln3(300, [286, 14])).toEqual([286, 14]);
+  test("solution3 can return correct value and handle big number", () => {
+    expect(solution3(7, [2, 3])).toEqual([3, 2, 2]);
+    expect(solution3(7, [5, 3, 4, 7])).toEqual([4, 3]);
+    expect(solution3(7, [2, 4])).toBe(null);
+    expect(solution3(8, [2, 3, 5])).toEqual([2, 2, 2, 2]);
+    expect(solution3(300, [7, 14])).toBe(null);
+    expect(solution3(300, [286, 14])).toEqual([286, 14]);
   });
 });

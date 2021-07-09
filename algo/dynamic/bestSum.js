@@ -5,7 +5,7 @@
  * You may use an element of the array as many times as needed.
  * Assum all input numbers are non-negative.
  */
-function bestSumSln1(target, numbers) {
+function solution1(target, numbers) {
   if (target === 0) return [];
   if (target < 0) return null;
 
@@ -13,7 +13,7 @@ function bestSumSln1(target, numbers) {
 
   for (let num of numbers) {
     const remainder = target - num;
-    const remainderCombination = bestSumSln1(remainder, numbers);
+    const remainderCombination = solution1(remainder, numbers);
     if (remainderCombination !== null) {
       const combination = [...remainderCombination, num];
       if (
@@ -28,7 +28,7 @@ function bestSumSln1(target, numbers) {
   return shortestCombination;
 }
 
-function bestSumSln2(target, numbers, memo = {}) {
+function solution2(target, numbers, memo = {}) {
   if (target in memo) return memo[target];
   if (target === 0) return [];
   if (target < 0) return null;
@@ -37,7 +37,7 @@ function bestSumSln2(target, numbers, memo = {}) {
 
   for (let num of numbers) {
     const remainder = target - num;
-    const remainderCombination = bestSumSln2(remainder, numbers, memo);
+    const remainderCombination = solution2(remainder, numbers, memo);
     if (remainderCombination !== null) {
       const combination = [...remainderCombination, num];
       if (
@@ -54,7 +54,7 @@ function bestSumSln2(target, numbers, memo = {}) {
   return shortestCombination;
 }
 
-function bestSumSln3(target, numbers) {
+function solution3(target, numbers) {
   const sumArr = new Array(target + 1).fill(null);
   sumArr[0] = [];
   for (let i = 0; i <= target; i++) {
@@ -70,4 +70,4 @@ function bestSumSln3(target, numbers) {
   return sumArr[target];
 }
 
-module.exports = { bestSumSln1, bestSumSln2, bestSumSln3 };
+module.exports = { solution1, solution2, solution3 };
