@@ -123,12 +123,18 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 `/string` - Problems and solutions about string manipulation.
 
-1. Reverse a string - `reversestring.js`
-2. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
-3. Reverse an integer - `reverseint.js`
-4. Get the character that most commonly appears in a given string - `maxchar.js`
-5. Anagrams: Check to see if two strings are anagrams of each other - `anagrams.js`
-6. Capitalize: Capitalize each word in a string - `capitalize.js`
+1. `anagrams.js`
+
+   Anagrams: Check to see if two strings are anagrams of each other
+
+2. `capitalize.js`
+
+   Capitalize: Capitalize each word in a string
+
+3. Reverse a string - `reversestring.js`
+4. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
+5. Reverse an integer - `reverseint.js`
+6. Get the character that most commonly appears in a given string - `maxchar.js`
 7. Count the number of vowels used in a string - `vowels.js`
 8. Remove vowels of a string - `removeVowels.js`
 9. Test if curly braces in a string is matched - `isbalanced.js`
