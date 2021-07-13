@@ -1,20 +1,20 @@
 /**
- * Problem: Anagram
- * Check to see if two provided strings are anagrams of each other.
+ * @name Anagram
+ * @description Check to see if two provided strings are anagrams of each other.
  * One string is an anagram of the other if it uses the same characters in the same quantity.
  * Only conside characters, not spaces or punctuation.
  * Conside capital letters to be the same as lower case
- * e.g. anagrams('rail safety', 'fairy tales') --> true
- * anagrams('RAIL! SAFETY!', 'fairy tales')  --> true
- * angagrams('Hi, there', 'Bye, there') --> false
+ * @example anagrams('rail safety', 'fairy tales') -> true
+ * anagrams('RAIL! SAFETY!', 'fairy tales')  -> true
+ * angagrams('Hi, there', 'Bye, there') -> false
  */
 
 /**
  * @name solution1
  * @param {string} str1
  * @param {string} str2
- * @returns {boolean}
- * @summary Remove spaces, punctuations from strings(use regular expression) and covert strings to lower case.
+ * @returns {boolean} true if str1 and str2 are anagrams of each other, otherwise false.
+ * @description Remove spaces, punctuations from strings(use regular expression) and covert strings to lower case.
  * Create two character maps(object) of both strings, just as what we did in maxchar.js.
  * Compare the length of two character maps and their values.
  */
@@ -38,8 +38,8 @@ function solution1(str1, str2) {
  * @name solution2
  * @param {string} str1
  * @param {string} str2
- * @returns {boolean}
- * @summary Split string to array, sort it alphabetically and joint it back to a string, then compare the two strings
+ * @returns {boolean} true if str1 and str2 are anagrams of each other, otherwise false.
+ * @description Split string to array, sort it alphabetically and joint it back to a string, then compare the two strings
  */
 function solution2(str1, str2) {
   const sortedStr1 = cleanStr(str1).split("").sort().join("");

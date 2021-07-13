@@ -1,14 +1,14 @@
 /**
- * Problem: Capitalize
- * Given a string, capitalize the first letter of each word in the string then return the capitalized string.
- * e.g. capitalize('it is so good!') --> It Is So Good
+ * @name Capitalize
+ * @description Given a string, capitalize the first letter of each word in the string then return the capitalized string.
+ * @example capitalize('it is so good!') -> It Is So Good
  */
 
 /**
  * @name solution1
  * @param {string} str
- * @returns {string}
- * @summary Split the string by spaces to an array(Each word is an element of the array).
+ * @returns {string} a string that capitalizes the first letter of each word in str
+ * @description Split the string by spaces to an array(Each word is an element of the array).
  * Iterate the array and uppcase the first letter of each word.
  * Join the array to a string and return it.
  */
@@ -26,8 +26,8 @@ function solution1(str) {
 /**
  * @name solution2
  * @param {string} str
- * @returns {string}
- * @summary Create an empty string
+ * @returns {string} a string that capitalizes the first letter of each word in str
+ * @description Create an empty string
  * Iterate each character in the string
  * Capitalize the fist letter and add it to 'result'
  * If the character to the left is a space, capitalize it and add it to 'result'

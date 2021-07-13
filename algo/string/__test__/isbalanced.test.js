@@ -1,31 +1,31 @@
-const isBalanced = require("../isbalanced");
+const { solution } = require("../isbalanced");
 
 describe("Test algo/isbalanced.js", () => {
   test("should function is defined", () => {
-    expect(isBalanced).toBeDefined();
+    expect(solution).toBeDefined();
   });
 
   test("string '}{' is not balanced", () => {
-    expect(isBalanced("}{")).toBeFalsy();
+    expect(solution("}{")).toBeFalsy();
   });
 
   test("string '{{}' is not balanced", () => {
-    expect(isBalanced("{}}")).toBeFalsy();
+    expect(solution("{}}")).toBeFalsy();
   });
 
   test("string '{}{}' is balanced", () => {
-    expect(isBalanced("{}{}")).toBeTruthy();
+    expect(solution("{}{}")).toBeTruthy();
   });
 
   test("string 'foo { bar { baz } boo }' is balanced", () => {
-    expect(isBalanced("foo { bar { baz } boo }")).toBeTruthy();
+    expect(solution("foo { bar { baz } boo }")).toBeTruthy();
   });
 
   test("string 'foo { bar { baz }' is not balanced", () => {
-    expect(isBalanced("foo { bar { baz }")).toBeFalsy();
+    expect(solution("foo { bar { baz }")).toBeFalsy();
   });
 
   test("string '' is not balanced", () => {
-    expect(isBalanced("foo { bar } }")).toBeFalsy();
+    expect(solution("foo { bar } }")).toBeFalsy();
   });
 });

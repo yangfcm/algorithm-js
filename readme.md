@@ -131,15 +131,28 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
    Capitalize: Capitalize each word in a string
 
-3. Reverse a string - `reversestring.js`
-4. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
-5. Reverse an integer - `reverseint.js`
-6. Get the character that most commonly appears in a given string - `maxchar.js`
-7. Count the number of vowels used in a string - `vowels.js`
-8. Remove vowels of a string - `removeVowels.js`
-9. Test if curly braces in a string is matched - `isbalanced.js`
-10. Determine if a string has all unique characters - `isUnique.js`
-11. Check two strings are permutation - `checkPermutation.js`
+3. `checkPermutation.js`
+
+   Check two strings are permutation
+
+4. `isbalanced.js`
+
+   Test if curly braces in a string is matched
+
+5. `isUnique.js`
+
+   Determine if a string has all unique characters
+
+6. `maxchar.js`
+
+   Get the character that most commonly appears in a given string
+
+7. Reverse a string - `reversestring.js`
+8. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
+9. Reverse an integer - `reverseint.js`
+
+10. Count the number of vowels used in a string - `vowels.js`
+11. Remove vowels of a string - `removeVowels.js`
 12. Check if a string is a permutation of a palindrome - `palindromePermutation.js`
 13. Check if one string is one edit away from the other string - `oneAway.js`
 14. Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
