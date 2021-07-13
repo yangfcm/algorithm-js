@@ -1,16 +1,16 @@
-const isPalindromePermutation = require("../palindromePermutation");
+const { solution } = require("../palindromePermutation");
 
 describe("Test isPalindromePermutation", () => {
   test("isPalindromePermutation function defined", () => {
-    expect(isPalindromePermutation).toBeDefined();
+    expect(solution).toBeDefined();
   });
 
   test("return true if the string is a permutation of a palindrome", () => {
-    expect(isPalindromePermutation("Tact Coa")).toBe(true);
-    expect(isPalindromePermutation("aaaabbbbbbccdde")).toBe(true);
+    expect(solution("Tact Coa")).toBe(true);
+    expect(solution("aaaabbbbbbccdde")).toBe(true);
   });
 
   test("return false if it is not", () => {
-    expect(isPalindromePermutation("abcdabcdcd")).toBe(false);
+    expect(solution("abcdabcdcd")).toBe(false);
   });
 });

@@ -1,12 +1,12 @@
-const removeVowels = require("../removeVowels");
+const { solution } = require("../removeVowels");
 
 describe("Test removeVowels.js", () => {
   test("removeVowels function is defined", () => {
-    expect(removeVowels).toBeDefined();
+    expect(solution).toBeDefined();
   });
 
   test("Test function, test string='I love apples and bananas'", () => {
     const str = "I love apples and bananas";
-    expect(removeVowels(str)).toBe(" lv ppls nd bnns");
+    expect(solution(str)).toBe(" lv ppls nd bnns");
   });
 });

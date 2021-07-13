@@ -1,13 +1,21 @@
 /**
- * There are three types of edits that can be performed on a string:
+ * @name oneAway
+ * @description There are three types of edits that can be performed on a string:
  * insert a character, remove a character or replace a character.
- * Given two strings, check if they are one edit(or zero edit) away.
- * e.g. pale, ple -> true(remove a character)
+ * Given two strings, check if they are one edit(or zero edit) away to the other string.
+ * @example pale, ple -> true(remove a character)
  * pale, pales -> true(add a character)
  * pale, bale -> true(replace a character)
  * pale, bake -> false
  */
-const oneAway = (str1, str2) => {
+
+/**
+ * @name solution
+ * @param {string} str1
+ * @param {string} str2
+ * @returns {boolean} true if str1 is one edit away to str2, otherwise false
+ */
+const solution = (str1, str2) => {
   const charDiff = Math.abs(str1.length - str2.length);
   // If two strings length are different and their difference is bigger than one.
   // Return false early.
@@ -58,4 +66,4 @@ const oneAway = (str1, str2) => {
   }
 };
 
-module.exports = oneAway;
+module.exports = { solution };

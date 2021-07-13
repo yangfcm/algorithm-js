@@ -1,23 +1,14 @@
-const vowels = require("../vowels");
+const { solution } = require("../vowels");
 
 describe("Test vowels.js", () => {
-  test("vowels function is defined", () => {
-    expect(vowels).toBeDefined();
+  test("solution function is defined", () => {
+    expect(solution).toBeDefined();
   });
 
   test("returns the number of vowels used", () => {
-    expect(vowels("aeiou")).toEqual(5);
-  });
-
-  test("returns the number of vowels used", () => {
-    expect(vowels("abcdefghijklmnopqrstuvwxyz")).toEqual(5);
-  });
-
-  test("returns the number of vowels used", () => {
-    expect(vowels("bcdfghjkl")).toEqual(0);
-  });
-
-  test("returns the number of vowels used", () => {
-    expect(vowels("I like to eat cheese.")).toEqual(9);
+    expect(solution("aeiou")).toEqual(5);
+    expect(solution("abcdefghijklmnopqrstuvwxyz")).toEqual(5);
+    expect(solution("bcdfghjkl")).toEqual(0);
+    expect(solution("I like to eat cheese.")).toEqual(9);
   });
 });

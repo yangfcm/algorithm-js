@@ -1,21 +1,21 @@
-const oneAway = require("../oneAway");
+const { solution } = require("../oneAway");
 
 describe("Test oneAway", () => {
   test("oneAway function should be defined", () => {
-    expect(oneAway).toBeDefined();
+    expect(solution).toBeDefined();
   });
 
   test("return true if two strings are one edit away", () => {
-    expect(oneAway("pale", "pales")).toBe(true);
-    expect(oneAway("pale", "pal")).toBe(true);
-    expect(oneAway("pale", "bale")).toBe(true);
-    expect(oneAway("pales", "pals")).toBe(true);
-    expect(oneAway("pales", "pales")).toBe(true);
+    expect(solution("pale", "pales")).toBe(true);
+    expect(solution("pale", "pal")).toBe(true);
+    expect(solution("pale", "bale")).toBe(true);
+    expect(solution("pales", "pals")).toBe(true);
+    expect(solution("pales", "pales")).toBe(true);
   });
 
   test("return false if two strings are more than one edits away", () => {
-    expect(oneAway("pale", "bake")).toBe(false);
-    expect(oneAway("johnson", "john")).toBe(false);
-    expect(oneAway("pale", "pad")).toBe(false);
+    expect(solution("pale", "bake")).toBe(false);
+    expect(solution("johnson", "john")).toBe(false);
+    expect(solution("pale", "pad")).toBe(false);
   });
 });

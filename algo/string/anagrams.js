@@ -1,5 +1,5 @@
 /**
- * @name Anagram
+ * @name anagram
  * @description Check to see if two provided strings are anagrams of each other.
  * One string is an anagram of the other if it uses the same characters in the same quantity.
  * Only conside characters, not spaces or punctuation.

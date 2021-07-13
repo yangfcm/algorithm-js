@@ -147,16 +147,41 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
    Get the character that most commonly appears in a given string
 
-7. Reverse a string - `reversestring.js`
-8. Test a string is a palindrome(its reversed string is exactly the same as itself) - `palindrome.js`
-9. Reverse an integer - `reverseint.js`
+7. `oneAway.js`
 
-10. Count the number of vowels used in a string - `vowels.js`
-11. Remove vowels of a string - `removeVowels.js`
-12. Check if a string is a permutation of a palindrome - `palindromePermutation.js`
-13. Check if one string is one edit away from the other string - `oneAway.js`
-14. Check if one string is the rotation of the other string, using isSubString function - `stringRotation.js`
-15. Compress a string - `stringCompression.js`
+   Check if one string is one edit away from the other string
+
+8. `palindrome.js`
+
+   Test a string is a palindrome(its reversed string is exactly the same as itself)
+
+9. `palindromePermutation.js`
+
+   Check if a string is a permutation of a palindrome
+
+10. `removeVowels.js`
+
+    Remove vowels of a string
+
+11. `reverseint.js`
+
+    Reverse an integer
+
+12. `reversestring.js`
+
+    Reverse a string
+
+13. `stringCompression.js`
+
+    Compress a string
+
+14. `stringRotation.js`
+
+    Check if one string is the rotation of the other string, using isSubString function
+
+15. `vowels.js`
+
+    Count the number of vowels used in a string
 
 ## Data structure problems content
 
