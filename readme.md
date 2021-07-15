@@ -227,27 +227,53 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 `/js` - Implement JS built-in functions.
 
-1. Create an event library out of the Events class. - `events.js`
-2. Implement Array.prototype.filter method - `filter.js`
-3. Implement Array.prototype.reduce method - `reduce.js`
-4. Implement Array.prototype.indexOf method - `indexof.js`
-5. Use generator - `generator.js`
+1. `events.js`
+
+   Create an event library out of the Events class
+
+2. `filter.js`
+
+   Implement Array.prototype.filter method
+
+3. `reduce.js`
+
+   Implement Array.prototype.reduce method
+
+4. `indexof.js`
+
+   Implement Array.prototype.indexOf method
 
 ## Sorting
 
 `/sorting` - Solutions to sort an array.
 
-1. Implement the three most common sorting methods - `sorting.js`
+1. `sorting.js`
+
+   Implement the three most common sorting methods
 
 ## Searching
 
 `/searching` - Solutions to find out a given element from an array.
 
-1. Implement linear search - `linearSearch.js`
-2. Implement binary search - `binarySearch.js`
-3. Implmenet jump search - `jumpSearch.js`
-4. Implement interpolation search - `interpolationSearch.js`
-5. Implement exponential search - `exponentialSearch.js`
+1. `linearSearch.js`
+
+   Implement linear search
+
+2. `binarySearch.js`
+
+   Implement binary search
+
+3. `jumpSearch.js`
+
+   Implmenet jump search
+
+4. `interpolationSearch.js`
+
+   Implement interpolation search
+
+5. `exponentialSearch.js`
+
+   Implement exponential search
 
 ### Worse case runtime for three sorting methods:
 

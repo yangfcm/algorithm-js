@@ -1,18 +1,30 @@
 /**
- * Implement interpolation search
+ * @name interpolationSearch
+ * @param {array} arr
+ * @param {any} val
+ * @returns {number} the index of val in arr if val is found, otherwise return -1.
+ * @description Implement interpolation search
+ * Given a uniformly distributed sorted array, serach a given element using interpolation search
+ * The Interpolation Search is an improvement over Binary Search for instances,
+ * where the values in a sorted array are uniformly distributed.
+ * Binary Search always goes to the middle element to check.
+ * On the other hand, interpolation search may go to different locations
+ * according to the value of the key being searched. For example,
+ * if the value of the key is closer to the last element,
+ * interpolation search is likely to start search toward the end side.
  */
-const interpolationSearch = (arr, val, low, high) => {
-  let lo = low || 0;
-  let hi = high || arr.length - 1;
+const interpolationSearch = (arr, val, low = 0, high = arr.length - 1) => {
   let pos;
-  if (lo <= hi && val >= arr[lo] && val <= arr[hi]) {
-    pos = lo + Math.floor(((hi - lo) / (arr[hi] - arr[lo])) * (val - arr[lo]));
+  if (low <= high && val >= arr[low] && val <= arr[high]) {
+    pos =
+      low +
+      Math.floor(((high - low) / (arr[high] - arr[low])) * (val - arr[low]));
     if (arr[pos] === val) {
       return pos;
     } else if (arr[pos] < val) {
-      return interpolationSearch(arr, val, pos + 1, hi);
+      return interpolationSearch(arr, val, pos + 1, high);
     } else {
-      return interpolationSearch(arr, val, lo, pos - 1);
+      return interpolationSearch(arr, val, low, pos - 1);
     }
   }
   return -1;
