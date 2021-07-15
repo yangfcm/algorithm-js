@@ -251,6 +251,12 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
    Implement the three most common sorting methods
 
+### Three most common ways of sorting:
+
+- Bubble sorting O(n^2) Easy
+- Selection sorting O(n^2) Easy
+- Merge sorting O(n\*log(n)) Difficult
+
 ## Searching
 
 `/searching` - Solutions to find out a given element from an array.
@@ -274,12 +280,6 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 5. `exponentialSearch.js`
 
    Implement exponential search
-
-### Worse case runtime for three sorting methods:
-
-- Bubble sorting: n^2
-- Selection sorting: n^2
-- Merge sorting: n\*log(n)
 
 ## Runtime Complexity
 
@@ -318,34 +318,6 @@ JS natively implements severl data structures. But you still need to be familiar
 - Tree: A collection of data with multiple levels or hierachies. The node structor in a tree is similar to the node in linked list but tree also has some special nodes: parent node, child node, sibling node, root node etc. A common operation of tree is iteration. Unlike other types of data structure whose data has an order, tree doesn't. So it can have two ways of iteration: Breadth-First algorithm(广度优先) and Depth-First algorithm(深度优先)
 - Binary Tree: A tree, with every node having two or zero children. The two children nodes are called left node and right node.
 - Binary Search Tree: A binary tree and every node's value is greater than its left value and less than its right value.
-
-## How to design a twitter
-
-This question can be asked about any webapp services, like how to design a blog, ebay, twitter, etc.
-
-### Guidance to answer the questions:
-
-- No right answer
-- Every interviewer expects a different answer
-- Focus is usually on the data model
-- Don't mention specific technologies
-- Draw stuff
-- Talk
-
-### Best strategies
-
-- Identify two core features
-- Possible implementation
-- Identify and address difficulties
-- Solutions for scaling, like caching, load balancer, etc.
-
-## Sorting Algorithm
-
-Three most common ways of sorting:
-
-- Bubble sorting O(n^2) Easy
-- Selection sorting O(n^2) Easy
-- Merge sorting O(n\*log(n)) Difficult
 
 ## How to run
 
