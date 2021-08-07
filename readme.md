@@ -185,43 +185,119 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
 ## Data structure problems content
 
+### What is data structure
+
+Ways of organizing information with optimal 'runtime complexity' for adding or removing records<br>
+JS natively implements severl data structures. But you still need to be familiar with 'inferior' data structure
+
+### Typs of data structure
+
+- Queues: First-in-first-out data collection.
+- Stack: First-in-last-out data collection.
+- Linked List: An ordered collection of data, which contains some amount of nodes. Each node contains some data and a reference to the next node. It has two special nodes, which are head node and tail node.
+- Tree: A collection of data with multiple levels or hierachies. The node structor in a tree is similar to the node in linked list but tree also has some special nodes: parent node, child node, sibling node, root node etc. A common operation of tree is iteration. Unlike other types of data structure whose data has an order, tree doesn't. So it can have two ways of iteration: Breadth-First algorithm(广度优先) and Depth-First algorithm(深度优先)
+- Binary Tree: A tree, with every node having two or zero children. The two children nodes are called left node and right node.
+- Binary Search Tree: A binary tree and every node's value is greater than its left value and less than its right value.
+
 `/ds/hash` - Problems and solutions associated with **hash table**
 
-1. Implement a hash table - `hashTable.js`
+1. `hashTable.js`
+
+   Implement a hash table
 
 `ds/linkedlist` - Problems and solutions associated with **linked list**
 
-1. Implement a linked list - `linkedlist.js`
-2. Get the middle node of a linked list - `midpoint.js`
-3. Check if a linked list is circular - `circular.js`
-4. Return the nth(starting at 0) node from the tail in a linked list - `fromlast.js`
-5. Remove duplicates from an unsofted linked list - `removeDuplicate.js`
-6. Partition a linked list - `partition.js`
-7. Sum two linked list - `sumLists.js`
+1. `linkedlist.js`
+
+   Implement a linked list
+
+2. `midpoint.js`
+
+   Get the middle node of a linked list
+
+3. `circular.js`
+
+   Check if a linked list is circular
+
+4. `fromlast.js`
+
+   Return the nth(starting at 0) node from the tail in a linked list
+
+5. `removeDuplicate.js`
+
+   Remove duplicates from an unsofted linked list
+
+6. `partition.js`
+
+   Partition a linked list
+
+7. `sumLists.js`
+
+   Sum two linked list
 
 `ds/stack_queue` - Problems and solutions associated with **stacks and queues**
 
-1. Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation - `queue.js`
-2. Implement a stack, which has methods equivalent to array.push() and array.pop() - `stack.js`
-3. Combine two queues into one - `weave.js`
-4. Create a queue using two stacks, instead of arrays - `qfroms.js`
-5. Get the minimum number in a stack - `getMin.js`
-6. Sort a stack - `sortStack.js`
-7. Implement an animal queue - `animalQueue.js`
-8. Implement a stack of plates - `setOfStacks.js`
+1. `queue.js`
+
+   Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation
+
+2. `stack.js`
+
+   Implement a stack, which has methods equivalent to array.push() and array.pop()
+
+3. `weave.js`
+
+   Combine two queues into one
+
+4. `qfroms.js`
+
+   Create a queue using two stacks, instead of arrays
+
+5. `getMin.js`
+
+   Get the minimum number in a stack
+
+6. `sortStack.js`
+
+   Sort a stack
+
+7. `animalQueue.js`
+
+   Implement an animal queue
+
+8. `setOfStacks.js`
+
+   Implement a stack of plates
 
 `ds/tree` - Problems and solutions associated with **trees**
 
-1. Implement a tree and using BFS and DFS to traverse a tree - `tree.js`
-2. Get the width of each level of a tree - `levelwidth.js`
-3. Implement a binary search tree - `bst.js`
-4. Validate the binary search tree - `bst-val.js`
-5. Create a binary search tree with minimal height based on a ascend-sorted array - `minimalTree.js`
-6. Create an array of all the nodes at each depth. - `listOfDepths.js`
+1. `tree.js`
+
+   Implement a tree and using BFS and DFS to traverse a tree
+
+2. `levelwidth.js`
+
+   Get the width of each level of a tree
+
+3. `bst.js`
+
+   Implement a binary search tree
+
+4. `bst-val.js`
+
+   Validate the binary search tree
+
+5. `minimalTree.js`
+
+   Create a binary search tree with minimal height based on a ascend-sorted array
+
+6. `listOfDepths.js`
+
+   Create an array of all the nodes at each depth.
 
 `ds/graph` - Problems and solutions associated with **graph**
 
-1. Implement a graph class and its relevant methods, including DFS and BFS - `graph.js`
+1. Implement a graph class and its relevant methods, including DFS and BFS `graph.js`
 
 ## JS-specific
 
@@ -304,20 +380,6 @@ How much more processing power/time is required to run your algorithm if we doub
 - Two nested for loops iterating over different collections -> O(n\*m)
 - Sorting -> O(n\*log(n))
 - Searching a sorted array -> O(log(n))
-
-## Data Structure
-
-Ways of organizing information with optimal 'runtime complexity' for adding or removing records<br>
-JS natively implements severl data structures. But you still need to be familiar with 'inferior' data structure
-
-### Typs of data structure
-
-- Queues: First-in-first-out data collection.
-- Stack: First-in-last-out data collection.
-- Linked List: An ordered collection of data, which contains some amount of nodes. Each node contains some data and a reference to the next node. It has two special nodes, which are head node and tail node.
-- Tree: A collection of data with multiple levels or hierachies. The node structor in a tree is similar to the node in linked list but tree also has some special nodes: parent node, child node, sibling node, root node etc. A common operation of tree is iteration. Unlike other types of data structure whose data has an order, tree doesn't. So it can have two ways of iteration: Breadth-First algorithm(广度优先) and Depth-First algorithm(深度优先)
-- Binary Tree: A tree, with every node having two or zero children. The two children nodes are called left node and right node.
-- Binary Search Tree: A binary tree and every node's value is greater than its left value and less than its right value.
 
 ## How to run
 

@@ -2,6 +2,21 @@
  * Graph data structure
  * Implement a Graph class.
  * Use a two-dimentaional array to represent a graph
+ * @method insertVertex
+ * @method insertEdge
+ * @method removeEdge
+ * @method getNumOfVertexes
+ * @method getNumOfEdges
+ * @method getValueByIndex
+ * @method getWeight
+ * @method getMatrix
+ * @method print
+ * @method getFirstAdjacent
+ * @method getNextAdjacent
+ * @method searchDFSVertex
+ * @method searchDFS
+ * @method searchBFSVertex
+ * @method searchBFS
  */
 class Graph {
   /**
