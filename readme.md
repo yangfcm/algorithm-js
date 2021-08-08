@@ -143,43 +143,47 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
    Determine if a string has all unique characters
 
-6. `maxchar.js`
+6. `makeAnagrams.js`
+
+   Determine the minimum number of characters deletions required to make two strings anagrams.
+
+7. `maxchar.js`
 
    Get the character that most commonly appears in a given string
 
-7. `oneAway.js`
+8. `oneAway.js`
 
    Check if one string is one edit away from the other string
 
-8. `palindrome.js`
+9. `palindrome.js`
 
    Test a string is a palindrome(its reversed string is exactly the same as itself)
 
-9. `palindromePermutation.js`
+10. `palindromePermutation.js`
 
-   Check if a string is a permutation of a palindrome
+    Check if a string is a permutation of a palindrome
 
-10. `removeVowels.js`
+11. `removeVowels.js`
 
     Remove vowels of a string
 
-11. `reverseint.js`
+12. `reverseint.js`
 
     Reverse an integer
 
-12. `reversestring.js`
+13. `reversestring.js`
 
     Reverse a string
 
-13. `stringCompression.js`
+14. `stringCompression.js`
 
     Compress a string
 
-14. `stringRotation.js`
+15. `stringRotation.js`
 
     Check if one string is the rotation of the other string, using isSubString function
 
-15. `vowels.js`
+16. `vowels.js`
 
     Count the number of vowels used in a string
 
