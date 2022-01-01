@@ -209,7 +209,7 @@ JS natively implements severl data structures. But you still need to be familiar
 
    Implement a hash table
 
-`ds/linkedlist` - Problems and solutions associated with **linked list**
+`/ds/linkedlist` - Problems and solutions associated with **linked list**
 
 1. `linkedlist.js`
 
@@ -239,7 +239,7 @@ JS natively implements severl data structures. But you still need to be familiar
 
    Sum two linked list
 
-`ds/stack_queue` - Problems and solutions associated with **stacks and queues**
+`/ds/stack_queue` - Problems and solutions associated with **stacks and queues**
 
 1. `queue.js`
 
@@ -273,7 +273,7 @@ JS natively implements severl data structures. But you still need to be familiar
 
    Implement a stack of plates
 
-`ds/tree` - Problems and solutions associated with **trees**
+`/ds/tree` - Problems and solutions associated with **trees**
 
 1. `tree.js`
 
@@ -299,7 +299,7 @@ JS natively implements severl data structures. But you still need to be familiar
 
    Create an array of all the nodes at each depth.
 
-`ds/graph` - Problems and solutions associated with **graph**
+`/ds/graph` - Problems and solutions associated with **graph**
 
 1. Implement a graph class and its relevant methods, including DFS and BFS `graph.js`
 

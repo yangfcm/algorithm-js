@@ -1,8 +1,7 @@
 /**
- * Array Chunk
- * Given an array and chunk size, divide the array into many subarrays
- * where each subarray is of length size.
- * e.g. chunk([1, 2, 3, 4], 2) -> [[1, 2], [3, 4]]
+ * @name chunk(array)
+ * @description Given an array and chunk size, divide the array into many subarrays where each subarray is of length size.
+ * @example chunk([1, 2, 3, 4], 2) -> [[1, 2], [3, 4]]
  * chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
  * chunk([1, 2, 3, 4, 5, 6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]]
  * chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
@@ -10,8 +9,11 @@
  */
 
 /**
- * Solution 1:
- * Create an empty array to hold chunks called 'chunked'
+ * @name solution1
+ * @param {array} array
+ * @param {number} size
+ * @returns {array} an array of chunked arrays
+ * @description Create an empty array to hold chunks called 'chunked'
  * For each element in the original 'unchunked' array, retrieve the last element in 'chunked'
  * If last element does not exist or if its length is equal to chunk size, push a new chunk
  * into 'chunked' with the current element.
