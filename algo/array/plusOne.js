@@ -1,9 +1,15 @@
-/** Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
- * e.g. Input: [1,2,3]
- * Output: [1,2,4]
- * Explanation: The array represents the integer 123
+/**
+ * @name plusOne
+ * @description Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+ * @example [1,2,3] -> [1,2,4]
+ * [1, 9, 9] -> [2, 0, 0]
+ * [9, 9, 9] -> [1, 0, 0, 0]
+ */
+
+/**
+ * @name solution
  * @param {number[]} digits
- * @return {number[]}
+ * @return {number[]} An array of numbers that represent the number in parameter added by 1.
  */
 function solution(digits) {
   for (let i = digits.length - 1; i >= 0; i--) {

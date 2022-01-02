@@ -1,15 +1,23 @@
 /**
- * MISSING NUMBER
- * Take an unsorted array of unique numbers from 1 to n.
+ * @name missing
+ * @description Take an unsorted array of unique numbers from 1 to n.
  * Return the missing number in the sequence or undefined if there is no missing number
  * There are either no missing numbers or exactly one missing number.
  * Do it in O(N) time.
- * e.g. [1, 4, 3, 5] => 2
+ * @example [1, 4, 3, 5] => 2
  * [2, 3, 4, 1] => undefined
  * [] => undefined
  */
 
-/** Solution 1 */
+/**
+ * @name solution1
+ * @param {number[]} array
+ * @returns number or undefined
+ * @description Sum the array and keep track of the maximum number in it.
+ * Now, with the maximum number, we can calculate what we should expect the sum to be.
+ * If the expected sum equals to the sum of the array, it means there's no missing number.
+ * Otherwise, the missing number is exactly the difference between expected sum and the sum of array.
+ */
 function solution1(array) {
   // sum the array and keep track of the maximum number in it
   let max = array[0];
@@ -33,8 +41,11 @@ function solution1(array) {
   }
 }
 
-/** Solution 2 */
-/** Find the max number of the array
+/**
+ * @name solution2
+ * @param {number[]} array
+ * @returns number or undefined
+ * @description Find the max number of the array
  * If max number equals array's length, it means no missing number so return undefined
  * Otherwise, increment i from 1 to max; if i doesn't exist in the array, i is exactly the missing number.
  */

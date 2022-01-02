@@ -1,10 +1,11 @@
 /**
- * Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+ * @name validSudoku
+ * @description Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
  * 1 - Each row must contain the digits 1-9 without repetition.
  * 2 - Each column must contain the digits 1-9 without repetition.
  * 3 - Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
  * The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
- * e.g. Input:
+ * @example Input:
 	[
 		["5","3",".",".","7",".",".",".","."],
 		["6",".",".","1","9","5",".",".","."],
@@ -30,8 +31,12 @@
 		[".",".",".",".","8",".",".","7","9"]
 	]
 	Output: false
- * @param {character[][]} board
- * @return {boolean}
+ */
+
+/**
+ * @name solution
+ * @param {number[][]} board A 9 x 9 array that represents a possible Sudoku game.
+ * @returns {boolean} True if the board is a valid Sudoku, false otherwise.
  */
 function solution(board) {
   const n = board.length;
@@ -68,20 +73,5 @@ function solution(board) {
   }
   return true;
 }
-
-// /** Given an array, return true if there is duplicate number, otherwise return false */
-// function hasDuplicate(arr) {
-//   const helpArr = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (typeof arr[i] === "number") {
-//       if (helpArr.indexOf(arr[i]) === -1) {
-//         helpArr.push(arr[i]);
-//       } else {
-//         return true;
-//       }
-//     }
-//   }
-//   return false;
-// }
 
 module.exports = { solution };

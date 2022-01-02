@@ -1,11 +1,16 @@
-/** Given two arrays, write a function to compute their intersection.
+/**
+ * @name intersect
+ * @description Given two arrays, write a function to compute their intersection.
  * Each element in the result should appear as many times as it shows in both arrays.
  * The result can be in any order.
- * e.g. Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
-				Output: [4,9]
+ * @example nums1 = [4,9,5], nums2 = [9,4,9,8,4], intersect(nums1, nums2) -> [4, 9]
+ */
+
+/**
+ * @name solution
  * @param {number[]} nums1
  * @param {number[]} nums2
- * @return {number[]}
+ * @return {number[]} intersection of nums1 and nums2
  */
 function solution(nums1, nums2) {
   const interscetArr = [];

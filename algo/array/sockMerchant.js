@@ -1,9 +1,17 @@
 /**
- * Given an array of integers representing the color of each sock,
+ * @name sockeMerchant
+ * @description Given an array of integers representing the color of each sock,
  * determine how many pairs of socks with matching colors there are.
- * For example, there are n = 7 socks with colors arr=[1,2,1,2,1,3,2].
+ * @example There are n = 7 socks with colors arr=[1,2,1,2,1,3,2].
  * There is one pair of color 1 and one of color 2.
  * There are three odd socks left, one of each color. So the number of pairs is 2.
+ */
+
+/**
+ * @name solution1
+ * @param {number[]} arr
+ * @returns {number} The pairs of matched socks
+ * @summary Iterate through the array and find out each pair.
  */
 function solution1(arr) {
   const socksArr = arr;
@@ -20,7 +28,12 @@ function solution1(arr) {
   return pairs;
 }
 
-// Another solution
+/**
+ * @name solution1
+ * @param {number[]} arr
+ * @returns {number} The pairs of matched socks
+ * @summary Use char-number map
+ */
 function solution2(arr) {
   const socksMap = {};
   let pairs = 0;

@@ -1,7 +1,9 @@
-/** You are given an n x n 2D matrix representing an image.
+/**
+ * @name rotateImage
+ * @description You are given an n x n 2D matrix representing an image.
  * Rotate the image by 90 degrees (clockwise).
  * You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
- * e.g. 
+ * @example 
  * Given input matrix =
 		[
 			[ 5, 1, 9,11],
@@ -17,8 +19,12 @@
 			[12, 6, 8, 9],
 			[16, 7,10,11]
 		]
- * @param {number[][]} matrix
- * @return {void} Do not return anything, modify matrix in-place instead.
+ */
+
+/**
+ * @name solution
+ * @param {number[][]} matrix a N x N 2D array
+ * @returns {void} Rotate matrix array in-place.
  */
 function solution(matrix) {
   const n = matrix.length; // Get the size of array

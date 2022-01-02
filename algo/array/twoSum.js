@@ -1,18 +1,19 @@
 /**
- * Given an array of integers, return indices of the two numbers such that
- * they add up to a specific target.
- * Assume each input would have excactly one solution and you cannot use the same element twice
- * e.g.
- * Given nums = [2, 7, 11, 15], target = 9
+ * @name twoSum
+ * @description Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+ * Assume each input would have excactly one solution and you cannot use the same element twice.
+ * @example Given nums = [2, 7, 11, 15], target = 9
  * Because nums[0] + nums[1] = 2 + 7 = 9
  * return [0, 1]
  */
 
-/** Solution 1
- * Loop through each element and see if there is another element
- * that add up to target number.
- * The most direct and obvious one
- * Time complexity: O(n2)
+/**
+ * @name solution1
+ * @param {array} nums
+ * @param {number} target The target number.
+ * @returns {array} The array with two elements which sum up to target.
+ * @description Loop through each element and see if there is another element that add up to target number.
+ * The most direct and obvious one. Time complexity: O(n2)
  */
 function solution1(nums, target) {
   for (let i = 0; i < nums.length - 1; i++) {
@@ -25,8 +26,11 @@ function solution1(nums, target) {
 }
 
 /**
- * Solution2:
- * Create an object to record the number(key) and its index(value)
+ * @name solution2
+ * @param {array} nums
+ * @param {number} target The target number.
+ * @returns {array} The array with two elements which sum up to target.
+ * @description Create an object to record the number(key) and its index(value)
  * And check if each element's complement(target - nums[i]) exists
  */
 function solution2(nums, target) {
@@ -44,7 +48,11 @@ function solution2(nums, target) {
 }
 
 /**
- * Same idea as above solution, but use one loop
+ * @name solution3
+ * @param {array} nums
+ * @param {number} target The target number.
+ * @returns {array} The array with two elements which sum up to target.
+ * @description Same idea as above solution, but use one loop
  */
 function solution3(nums, target) {
   const map = {};

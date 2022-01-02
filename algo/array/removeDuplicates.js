@@ -1,8 +1,13 @@
 /**
- * Given a sorted array nums, remove the duplicates *in-place* such that each element appear only once and return the new length.
- * e.g. Given nums = [0,0,1,1,1,2,2,3,3,4], return length = 5
+ * @name removeDuplicates
+ * @description Given a sorted array nums, remove the duplicates *in-place* such that each element appear only once and return the new length.
+ * @example [0,0,1,1,1,2,2,3,3,4] -> [0, 1, 2, 3, 4] and length = 5.
+ */
+
+/**
+ * @name solution
  * @param {number[]} nums
- * @return {number}
+ * @return {number} the lenght of the array after duplicated numbers are removed.
  */
 function solution(nums) {
   // if (nums.length === 0) return 0;

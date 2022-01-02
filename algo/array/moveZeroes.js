@@ -1,10 +1,15 @@
 /**
- * Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+ * @name moveZeroes
+ * @description Given an array of numbers, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
  * In-place operation
- * e.g. Input: [0,1,0,3,12]
-				Output: [1,3,12,0,0]
+ * @example array: [0,1,0,3,12] -> [1,3,12,0,0]
+ */
+
+/**
+ * @name solution
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
+ * @description Move 0 to the end of the array.
  */
 function solution(nums) {
   let trailingZero = true;
