@@ -1,9 +1,14 @@
 /**
- * Say you have an array for which the ith element is the price of a given stock on day i.
+ * @name maxProfit
+ * @description Say you have an array for which the ith element is the price of a given stock on day i.
  * Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
- * e.g. [7, 1, 5, 3, 6, 4] => 7 ( (5-1) + (6-3) = 7 )
+ * @example [7, 1, 5, 3, 6, 4] => 7 ( (5-1) + (6-3) = 7 )
+ */
+
+/**
+ * @name solution
  * @param {number[]} prices
- * @return {number}
+ * @returns {number} maxProfit
  */
 function solution(prices) {
   let profit = 0;

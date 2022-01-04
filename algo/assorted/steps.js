@@ -1,24 +1,29 @@
-// STEPS
-// Write a function that accepts a positive number n
-// The function should console log a step shape with n levels using # character.
-// Make sure the step has spaces on the right side
-// e.g.
-// steps(2) -->
-// '# '
-// '##'
-//   steps(3)
-//       '#  '
-//       '## '
-//       '###'
-//   steps(4)
-//       '#   '
-//       '##  '
-//       '### '
-//       '####'
+/**
+ * @name steps
+ * @description Write a function that accepts a positive number n
+ * The function should console log a step shape with n levels using # character.
+ * Make sure the step has spaces on the right side
+ * @example
+ * steps(2)
+ *       '# '
+ *       '##'
+ *   steps(3)
+ *       '#  '
+ *       '## '
+ *       '###'
+ *   steps(4)
+ *       '#   '
+ *       '##  '
+ *       '### '
+ *       '####'
+ */
 
 // Solution:
 /**
- * From 0 to n
+ * @name solution
+ * @param {number} n
+ * @returns {void}
+ * @description From 0 to n
  *   Create an empty string, 'stair'
  *   From 0 to n
  *     IF the current column is equal to or less than the current row

@@ -1,21 +1,24 @@
-// PYRAMID
-// Write a function that accepts a position number
-// The function should console log a pyramid shape with N levels
-// using # character and space(s) on both left and right side.
-// e.g.
-//   pyramid(1)
-//       '#'
-//   pyramid(2)
-//       ' # '
-//       '###'
-//   pyramid(3)
-//       '  #  '
-//       ' ### '
-//       '#####'
+/**
+ * @name pyramid
+ * @description Write a function that accepts a position number and print a pyramid shape with N levels,
+ * using # character and space(s) on both left and right side.
+ * @example
+ *   pyramid(1)
+ *       '#'
+ *   pyramid(2)
+ *       ' # '
+ *       '###'
+ *   pyramid(3)
+ *       '  #  '
+ *       ' ### '
+ *       '#####'
+ */
 
 /**
- * Solution:
- * From 0 to n(iterate through rows)
+ * @name solution
+ * @param {number} n
+ * @returns {void}
+ * @description From 0 to n(iterate through rows)
  *   Create an empty string, 'level'
  *   From 0 to 2n-1 (columns)
  *   IF the column should have a '#'
