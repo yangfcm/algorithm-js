@@ -1,4 +1,9 @@
-const { bubbleSort, selectionSort, mergeSort } = require("../sorting");
+const {
+  bubbleSort,
+  selectionSort,
+  mergeSort,
+  countingSort,
+} = require("../sorting");
 
 describe("Test sorting.js", () => {
   function getArray() {
@@ -19,5 +24,11 @@ describe("Test sorting.js", () => {
 
   test("Merge sort an array", () => {
     expect(mergeSort(getArray())).toEqual(getSortedArray());
+  });
+
+  test("Count sort an array", () => {
+    const arr = [4, 20, 1, 1, 12, 6, 24, 12, 8, 9];
+    sortedArr = [1, 1, 4, 6, 8, 9, 12, 12, 20, 24];
+    expect(countingSort(arr)).toEqual(sortedArr);
   });
 });
