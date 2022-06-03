@@ -8,67 +8,31 @@ const { LinkedList } = require("./linkedlist");
  *
  * Then suppose the digits are stored in forward order. Repeat the above problem
  * e.g. (6 -> 1 -> 7) + (2 -> 9 -> 5) => 617+295 = 912 => 9 -> 1 -> 2
- * Difficult: Do not convert to number. How to do that?
+ * Do not convert to number! and consider the case that two lists have different length.
  */
-const sumListsRev = (list1, list2) => {
-  const num1 = convertListToNumber(list1, -1);
-  const num2 = convertListToNumber(list2, -1);
-  const sum = num1 + num2;
-  return convertNumberToList(sum, -1);
-};
+const sumLists = (list1, list2) => {
+  const sumList = new LinkedList();
+  size1 = list1.size();
+  size2 = list2.size();
+  maxSize = size1 > size2 ? size1 : size2;
+  node1 = list1.head;
+  node2 = list2.head;
 
-const sumListsFwd = (list1, list2) => {
-  const num1 = convertListToNumber(list1, 1);
-  const num2 = convertListToNumber(list2, 1);
-  const sum = num1 + num2;
-  return convertNumberToList(sum, 1);
-};
+  for (let i = 0; i < maxSize; i++) {
+    digit1 = node1 ? node1.data : 0;
+    digit2 = node2 ? node2.data : 0;
+    lastNode = sumList.getLast();
+    lastDigit = lastNode ? lastNode.data : 0;
+    sumList.removeLast();
 
-/**
- * Convert a linked list to a number, if direction is a number bigger than or equal 0, then convert it forwardly.
- * If direction is a number less than 0, convert it reversely.
- * e.g. list (7 -> 1 -> 6) direction 1 => 716, list (7 -> 1 -> 6) direction -1 => 617
- * @param {LinkedList} list
- * @param {number} direction
- */
-const convertListToNumber = (list, direction = 1) => {
-  let numberStr = "";
-  list.forEach((node, index) => {
-    numberStr =
-      direction >= 0
-        ? numberStr + node.data.toString()
-        : node.data.toString() + numberStr;
-  });
-  return Number(numberStr);
-};
+    digitSum = digit1 + digit2 + lastDigit;
+    sumList.insertLast(digitSum % 10);
+    sumList.insertLast(Math.floor(digitSum / 10));
 
-/**
- * Convert a number to a linked list, if direction is a number bigger than or equal 0, then convert it forwardly.
- * If direction is a number less than 0, convert it reversely.
- * e.g. number 912 direction 1 => 9 -> 1 -> 2, direction -1 => 2 -> 1 -> 9
- * @param {number} number
- * @param {number} direction
- */
-const convertNumberToList = (number, direction = 1) => {
-  if (typeof number !== "number") {
-    throw new Error("First argument must be a number");
+    if (!!node1) node1 = node1.next;
+    if (!!node2) node2 = node2.next;
   }
-  if (typeof direction !== "number") {
-    throw new Error("Second argument must be a number");
-  }
-  const numberStr = number.toString();
-  const list = new LinkedList();
-  for (let numChar of numberStr) {
-    if (direction >= 0) {
-      list.insertLast(Number(numChar));
-    } else {
-      list.insertFirst(Number(numChar));
-    }
-  }
-  return list;
+  return sumList;
 };
 
-module.exports = {
-  sumListsRev,
-  sumListsFwd,
-};
+module.exports = sumLists;
