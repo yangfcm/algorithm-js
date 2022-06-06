@@ -194,7 +194,7 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 Ways of organizing information with optimal 'runtime complexity' for adding or removing records<br>
 JS natively implements severl data structures. But you still need to be familiar with 'inferior' data structure
 
-### Typs of data structure
+### Types of data structure
 
 - Queues: First-in-first-out data collection.
 - Stack: First-in-last-out data collection.
