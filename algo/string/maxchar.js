@@ -1,14 +1,10 @@
 /**
  * @name maxchar
- * @description given a string, return the character that is most commonly used in the string.
+ * @description Given a string, return the character that is most commonly used in the string.
  * @example 'abccccccdd' -> c
- */
-
-/**
- * @name solution
  * @param {string} str 
  * @returns {string} A character that is mostly used in str.
- * @description Create a character map(object) to record the count each character the string.
+ * @solution Create a character map(object) to record the count each character the string.
   e.g. 'aabccc' => {'a': 2, 'b': 1, 'c': 3} 
   Then iterate the object and return the key with the largest value.
  */

@@ -4,14 +4,12 @@
  * required to make str1 and str2 anagrams. The strings str1 and str2 consist of lowercase English letters [a-z].
  * @example makeAnagrams('abcd','dcefg') -> 5
  * delete a, b from 'abcd' and delete e,f,g from 'dcefg' to make 'cd' and 'dc', which are anagrams. That is 5 deletions.
- * @link https://www.hackerrank.com/challenges/ctci-making-anagrams/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=strings
- */
-
-/**
- * @name solution
+ * @link https://www.hackerrank.com/challenges/ctci-making-anagrams/problem
  * @param {string} str1
  * @param {string} str2
  * @returns {number} The minimum number of characters deletions to make str1 and str2 anagrams
+ * @solution Use charMaps for str1 and str2, compare each key and increment the difference for each key.
+ * The total difference is just the minmum deletions required to make str1 and str2 anagrams.
  */
 function solution(str1, str2) {
   const letters = "abcdefghijklmnopqrstuvwxyz";

@@ -3,20 +3,16 @@
  * @description Check to see if two provided strings are anagrams of each other.
  * One string is an anagram of the other if it uses the same characters in the same quantity.
  * Only conside characters, not spaces or punctuation.
- * Conside capital letters to be the same as lower case
+ * Conside capital letters to be the same as lower case.
  * @example anagrams('rail safety', 'fairy tales') -> true
  * anagrams('RAIL! SAFETY!', 'fairy tales')  -> true
  * angagrams('Hi, there', 'Bye, there') -> false
- */
-
-/**
- * @name solution1
  * @param {string} str1
  * @param {string} str2
- * @returns {boolean} true if str1 and str2 are anagrams of each other, otherwise false.
- * @description Remove spaces, punctuations from strings(use regular expression) and covert strings to lower case.
- * Create two character maps(object) of both strings, just as what we did in maxchar.js.
- * Compare the length of two character maps and their values.
+ * @returns {boolean} True if str1 and str2 are anagrams of each other, otherwise false.
+ * @solution Remove spaces, punctuations from strings(use regular expression) and covert strings to lower case.
+ * Create two character maps(object) of both strings, where the key is the character of the string and value is the occurrence of the character in the string.
+ * If str1 is the anagram of str2, the two character maps should have exact same key-value pairs.
  */
 function solution1(str1, str2) {
   const charMap1 = strToCharMap(str1);
@@ -35,11 +31,11 @@ function solution1(str1, str2) {
 }
 
 /**
- * @name solution2
+ * @name anagram
  * @param {string} str1
  * @param {string} str2
- * @returns {boolean} true if str1 and str2 are anagrams of each other, otherwise false.
- * @description Split string to array, sort it alphabetically and joint it back to a string, then compare the two strings
+ * @returns {boolean} True if str1 and str2 are anagrams of each other, otherwise false.
+ * @solution Split string to array, sort it alphabetically and joint it back to a string, then compare the two strings.
  */
 function solution2(str1, str2) {
   const sortedStr1 = cleanStr(str1).split("").sort().join("");
@@ -49,11 +45,11 @@ function solution2(str1, str2) {
 
 /**
  * @name strToCharMap
- * @param {string} str
- * @returns {Object}
- * @summary Convert a string to a character map.
+ * @description Convert a string to a character map.
  * Its key is the letter in the string and its value is the number of occurence of the letter in the string.
  * @example banana -> {'b': 1, 'a': 3, 'n': 2 }
+ * @param {string} str
+ * @returns {Object}
  */
 function strToCharMap(str) {
   const charMap = {};
@@ -68,9 +64,9 @@ function strToCharMap(str) {
 
 /**
  * @name cleanStr
+ * @description Remove spaces and punctuations of a string and convert it to lowercase
  * @param {string} str
  * @returns {string}
- * @summary Remove spaces and punctuations of a string and convert it to lowercase
  */
 function cleanStr(str) {
   return str.replace(/[^\w]/g, "").toLowerCase();

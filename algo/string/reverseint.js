@@ -1,13 +1,12 @@
 /**
  * @name reverseInt
  * @description Reverse an integer number
- * @example reverseInt(521) = 125, reverseInt(-521) = -125, reverseInt(1200) = 21
- */
-
-/**
- * @name solution
+ * @example reverseInt(521) -> 125, reverseInt(-521) -> -125, reverseInt(1200) -> 21
  * @param {number} int
- * @returns {number} a reversed integer number of int
+ * @returns {number} A reversed integer number of int
+ * @solution It looks easy, but there are a couple of edge cases to consider:
+ * 1. You must keep the sign of the original number, like -521.
+ * 2. Consider the number which has trailing zeros, like 1200.
  */
 function solution(int) {
   try {

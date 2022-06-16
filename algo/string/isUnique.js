@@ -1,13 +1,9 @@
 /**
  * @name IsUnique
  * @description Given a string, determine if it has all unique characters.
- */
-
-/**
- * @name solution
  * @param {string} str
  * @returns true if str has all unique characters, otherwise false.
- * @description Create a character map(object) to record the count each character of the string.
+ * @solution Create a character map(object) to record the count each character of the string.
  * Then iterate the object to see if there is a character with the count > 1
  */
 const solution = (str) => {

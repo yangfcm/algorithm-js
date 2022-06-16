@@ -1,12 +1,8 @@
 /**
  * @name removeVowels
  * @description Given a string, remove the vowels from the string and return the string without vowels
- */
-
-/**
- * @name solution
  * @param {string} str
- * @returns {string} a string of the str without vowels
+ * @returns {string} A sub-string of the str without vowels
  */
 function solution(str) {
   let strWithoutVowel = "";

@@ -1,21 +1,29 @@
-const { solution } = require("../oneAway");
+const { solution1, solution2 } = require("../oneAway");
 
 describe("Test oneAway", () => {
   test("oneAway function should be defined", () => {
-    expect(solution).toBeDefined();
+    expect(solution1).toBeDefined();
   });
 
   test("return true if two strings are one edit away", () => {
-    expect(solution("pale", "pales")).toBe(true);
-    expect(solution("pale", "pal")).toBe(true);
-    expect(solution("pale", "bale")).toBe(true);
-    expect(solution("pales", "pals")).toBe(true);
-    expect(solution("pales", "pales")).toBe(true);
+    expect(solution1("pale", "pales")).toBe(true);
+    expect(solution1("pale", "pal")).toBe(true);
+    expect(solution1("pale", "bale")).toBe(true);
+    expect(solution1("pales", "pals")).toBe(true);
+    expect(solution1("pales", "pales")).toBe(true);
+    expect(solution2("pale", "pales")).toBe(true);
+    expect(solution2("pale", "pal")).toBe(true);
+    expect(solution2("pale", "bale")).toBe(true);
+    expect(solution2("pales", "pals")).toBe(true);
+    expect(solution2("pales", "pales")).toBe(true);
   });
 
   test("return false if two strings are more than one edits away", () => {
-    expect(solution("pale", "bake")).toBe(false);
-    expect(solution("johnson", "john")).toBe(false);
-    expect(solution("pale", "pad")).toBe(false);
+    expect(solution1("pale", "bake")).toBe(false);
+    expect(solution1("johnson", "john")).toBe(false);
+    expect(solution1("pale", "pad")).toBe(false);
+    expect(solution2("pale", "bake")).toBe(false);
+    expect(solution2("johnson", "john")).toBe(false);
+    expect(solution2("pale", "pad")).toBe(false);
   });
 });
