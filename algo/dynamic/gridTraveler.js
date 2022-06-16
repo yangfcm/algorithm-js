@@ -1,19 +1,40 @@
 /**
- * Say that you are a traveler on a 2D grid.
+ * @name gridTraveler
+ * @description Say that you are a traveler on a 2D grid.
  * You begin in the top-left corner and end in the bottom-right corner.
  * You may only move down or right.
- *
- * Create algorithm to calculate how many routes you can travel to the goal on a grid with dimensions m*n.
+ * Calculate how many routes you can travel to the goal on a grid with dimensions m*n.
+ * @example m = 2, n = 3
+ * It creates a 2 x 3 grid, which looks like this:
+ * +---+---+---+
+ * + a +   +   +
+ * +---+---+---+
+ * +   +   + b +
+ * +---+---+---+
+ * To travel from a to b, you can have 3 routes in total as below:
+ * R -> R -> D
+ * R -> D -> R
+ * D -> R -> R
+ * R - right, D - down.
+ * @param {number} m
+ * @param {number} n
+ * @returns {number} How many routes to travel from the top-left corner of a 2D grid to the bottom-right corner.
+ * @solution Use recursive
  */
-
-// Solution 1 - Use recursive implementation
 function solution1(m, n) {
   if (m === 1 && n === 1) return 1;
   if (m === 0 || n === 0) return 0;
   return solution1(m - 1, n) + solution1(m, n - 1);
 }
 
-// Solution 2 - Use memorization
+/**
+ * @name gridTraveler
+ * @param {number} m
+ * @param {number} n
+ * @param {object} memo
+ * @returns {number}
+ * @solution Use a memo table as a cache to the previous calculation result.
+ */
 function solution2(m, n, memo = {}) {
   const key = m + "," + n;
   if (key in memo) return memo[key];
@@ -24,7 +45,13 @@ function solution2(m, n, memo = {}) {
   return memo[key];
 }
 
-// Solution 3
+/**
+ * @name gridTraveler
+ * @param {number} m
+ * @param {number} n
+ * @returns {number}
+ * @solution Create a 2-D array to save the previous calculation result.
+ */
 function solution3(m, n) {
   const travelArr = Array(m + 1)
     .fill()

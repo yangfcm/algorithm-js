@@ -1,9 +1,13 @@
 /**
- * Write a function allConstruct(target, strs) that accepts a target string and an array of strings.
- * The function should return a 2D array containing all of the ways that the target can be
- * constructed by concatenating elements of the strs array.
+ * @name allConstruct
+ * @description Given a target string and an array of strings, return a 2D array containing all of the ways that
+ * the target can be constructed by concatenating elements of the strs array.
  * You may use elements in strs as many times as needed.
- * e.g. allConstruct('purple', ['purp', 'p', 'ur', 'le', 'purpl' ]) ->  [['purp','le'], ['p','ur','p','le']]
+ * @example target = 'purple' strs = ['purp', 'p', 'ur', 'le', 'purpl' ] ->  [['purp','le'], ['p','ur','p','le']
+ * @param {string} target
+ * @param {string[]} strs
+ * @returns {string[][]}
+ * @solution Use recursive.
  */
 function solution1(target, strs) {
   if (target === "") return [[]];
@@ -19,6 +23,12 @@ function solution1(target, strs) {
   return result;
 }
 
+/**
+ * @param {string} target
+ * @param {string[]} strs
+ * @returns {string[][]}
+ * @solution Use recursive with memo as a cache to the previous calculations..
+ */
 function solution2(target, strs, memo = {}) {
   if (target in memo) return memo[target];
   if (target === "") return [[]];
@@ -35,6 +45,12 @@ function solution2(target, strs, memo = {}) {
   return result;
 }
 
+/**
+ * @param {string} target
+ * @param {string[]} strs
+ * @returns {string[][]}
+ * @solution Use a 2-D array to save the previous calculation.
+ */
 function solution3(target, strs) {
   const table = Array(target.length + 1)
     .fill()

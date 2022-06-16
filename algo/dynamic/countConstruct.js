@@ -1,9 +1,14 @@
 /**
- * Write a function countConstruct(target, strs) that accepts a target string and an array of strings.
- * The function should return the number of ways that the target can be
- * constructed by concatenating elements of the strs array.
+ * @name countConstruct
+ * @description Given a target string and an array of strings, return the number of ways that
+ * the target can be constructed by concatenating elements of the strs array.
  * You may use elements in strs as many times as needed.
- * e.g. countConstruct('purple', ['purp', 'p', 'ur', 'le', 'purpl' ]) -> 2 i.e. 'purp' + 'le', 'p'+'ur'+'p'+'le'
+ * @example target = 'purple', strs = ['purp', 'p', 'ur', 'le', 'purpl' ]) -> 2
+ * There are two ways of constructing purple: 'purp' + 'le', 'p'+'ur'+'p'+'le', so 2 is our answer.
+ * @param {string} target
+ * @param {string[]} strs
+ * @returns {number}
+ * @solution Use recursive.
  */
 function solution1(target, strs) {
   if (target === "") {
@@ -19,6 +24,12 @@ function solution1(target, strs) {
   return totalCount;
 }
 
+/**
+ * @param {string} target
+ * @param {string[]} strs
+ * @returns {number}
+ * @solution Use recursive with memo as a cache to the previous calculations.
+ */
 function solution2(target, strs, memo = {}) {
   if (target in memo) return memo[target];
   if (target === "") {
@@ -35,6 +46,12 @@ function solution2(target, strs, memo = {}) {
   return totalCount;
 }
 
+/**
+ * @param {string} target
+ * @param {string[]} strs
+ * @returns {number}
+ * @solution Use a 2-D array to save the previous calculation.
+ */
 function solution3(target, strs) {
   const table = Array(target.length + 1).fill(0);
   table[0] = 1;
