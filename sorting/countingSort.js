@@ -1,7 +1,7 @@
 /**
  * @name countingSort
  * @param {array} arr
- * @returns {array} the sorted array
+ * @returns {array} The sorted array
  * @description Implement counting sort.
  */
 function countingSort(arr) {
