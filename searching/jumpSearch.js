@@ -1,11 +1,10 @@
 /**
  * @name jumpSearch
+ * @description Given a sorted array, serach a given element using jump search.
  * @param {array} arr
  * @param {any} val
  * @returns {number} the index of val in arr if val is found, otherwise return -1.
- * @description Implement jump search
- * Given a sorted array, serach a given element using jump search.
- * The basic idea is to check fewer elements (than linear search) by
+ * @description The basic idea is to check fewer elements (than linear search) by
  * jumping ahead by fixed steps or skipping some elements in place of searching all elements.
  * The optimal step size is the square root of array's length.
  * Let’s consider the following array: (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610). Length of the array is 16. Jump search will find the value of 55 with the following steps assuming that the block size to be jumped is 4.
@@ -14,6 +13,7 @@
  * STEP 3: Jump from index 8 to index 12;
  * STEP 4: Since the element at index 12 is greater than 55 we will jump back a step to come to index 8.
  * STEP 5: Perform linear search from index 8 to get the element 55.
+ * @reference https://www.geeksforgeeks.org/jump-search/
  */
 const jumpSearch = (arr, val) => {
   const len = arr.length; // total number of elements in arr.

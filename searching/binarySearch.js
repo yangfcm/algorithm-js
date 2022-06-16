@@ -1,16 +1,17 @@
 /**
  * @name binarySearch
+ * @description Implement binary search
+ * Given a *sorted* array, search a given element val in the array
  * @param {array} arr
  * @param {any} val
  * @param {number} start
  * @param {number} end
- * @returns the index of val in arr if val is found, otherwise return -1.
- * @description Implement binary search
- * Given a *sorted* array, search a given element val in the array
- * As you search a value from a sorted array, you can start from the middle.
+ * @returns The index of val in arr if val is found, otherwise return -1.
+ * @solution As you search a value from a sorted array, you can start from the middle.
  * If the value to search is bigger than the middle element, you search for the first half;
  * If the value to search is smaller than the middle element, you search for the second half.
  * Recursivly run the algorithm above until you find it or not find.
+ * @reference https://www.geeksforgeeks.org/binary-search/
  */
 const binarySearch = (arr, val, start = 0, end = arr.length) => {
   if (end >= start) {
