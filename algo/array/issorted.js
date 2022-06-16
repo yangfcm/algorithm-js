@@ -1,12 +1,10 @@
 /**
  * @name issorted
  * @description Given an array of numbers, return true or false, indicating whether the array is sorted.
- */
-
-/**
- * @name solution
  * @param {number[]} array
- * @returns {boolean} true if array is sorted ascendingly, false otherwise.
+ * @returns {boolean} True if array is sorted ascendingly, false otherwise.
+ * @solution Iterate an array, if the next element is smaller than the current element, return false early.
+ * When the iteration finishes, it means the array is sorted so return true.
  */
 function solution(array) {
   if (array.length <= 1) return true;

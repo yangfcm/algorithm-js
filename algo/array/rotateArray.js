@@ -1,17 +1,14 @@
 /**
  * @name rotateArray
  * @description Given an array, rotate the array to the right by k steps, where k is non-negative.
- * @example  [1,2,3,4,5,6,7], k = 3 -> [5,6,7,1,2,3,4]
- * The 1st rotate: [7, 1, 2, 3, 4, 5, 6] (The last number 7 is moved to the top of the array)
- * The 2nd rotate: [6,7,1,2,3,4,5](Then, the last number 6 is moved to the top of the array)
- * The 3rd rotate: [5,6,7,1,2,3,4].
- */
-
-/**
+ * @example  [1, 2, 3, 4, 5, 6, 7], k = 3 -> [5, 6, 7, 1, 2, 3, 4]
+ * The 1st rotate: [7, 1, 2, 3, 4, 5, 6](The last number 7 is moved to the top of the array)
+ * The 2nd rotate: [6, 7, 1, 2, 3, 4, 5](Then, the last number 6 is moved to the top of the array)
+ * The 3rd rotate: [5, 6, 7, 1, 2, 3, 4].
  * @name solution
- * @param {number[]} nums
- * @param {number} k
- * @return {void} The array is rotated to the right by k steps
+ * @param {number[]} nums An array of numbers
+ * @param {number} k The steps to rotate
+ * @return {undefined} The array is rotated to the right by k steps
  */
 function solution1(nums, k) {
   if (k < 0) {
@@ -24,7 +21,13 @@ function solution1(nums, k) {
   }
 }
 
-/** Alternative solution */
+/**
+ * @name rotateArray
+ * @name solution
+ * @param {number[]} nums An array of numbers
+ * @param {number} k The steps to rotate
+ * @return {undefined} The array is rotated to the right by k steps
+ */
 function solution2(nums, k) {
   if (k < 0) {
     throw Exception("Step must be a positive integer");

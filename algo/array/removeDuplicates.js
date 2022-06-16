@@ -1,27 +1,11 @@
 /**
  * @name removeDuplicates
  * @description Given a sorted array nums, remove the duplicates *in-place* such that each element appear only once and return the new length.
- * @example [0,0,1,1,1,2,2,3,3,4] -> [0, 1, 2, 3, 4] and length = 5.
- */
-
-/**
- * @name solution
+ * @example removeDuplicates([0,0,1,1,1,2,2,3,3,4]) -> [0, 1, 2, 3, 4] and length = 5.
  * @param {number[]} nums
  * @return {number} the lenght of the array after duplicated numbers are removed.
  */
 function solution(nums) {
-  // if (nums.length === 0) return 0;
-  // let length = 1;
-  // let current = nums[0];
-  // for (let i = 0; i < nums.length - 1; i++) {
-  //   if (current != nums[i + 1]) {
-  //     current = nums[i + 1];
-  //     length++;
-  //   }
-  // }
-  // return length;
-  // Above solution only returns the length of an array after duplicates are removed, but didn't actually remove the duplicate elements.
-
   let current = nums[nums.length - 1];
   for (let i = nums.length - 2; i >= 0; i--) {
     if (nums[i] === current) {

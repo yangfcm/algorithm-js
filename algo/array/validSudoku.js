@@ -31,12 +31,9 @@
 		[".",".",".",".","8",".",".","7","9"]
 	]
 	Output: false
- */
-
-/**
- * @name solution
  * @param {number[][]} board A 9 x 9 array that represents a possible Sudoku game.
  * @returns {boolean} True if the board is a valid Sudoku, false otherwise.
+ * @solution Validate each row, each column and each sub-box. As long as one of them doesn't pass the validation, return false early.
  */
 function solution(board) {
   const n = board.length;
