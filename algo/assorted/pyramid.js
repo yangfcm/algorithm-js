@@ -12,13 +12,9 @@
  *       '  #  '
  *       ' ### '
  *       '#####'
- */
-
-/**
- * @name solution
  * @param {number} n
- * @returns {void}
- * @description From 0 to n(iterate through rows)
+ * @returns {undefined}
+ * @solution From 0 to n(iterate through rows)
  *   Create an empty string, 'level'
  *   From 0 to 2n-1 (columns)
  *   IF the column should have a '#'

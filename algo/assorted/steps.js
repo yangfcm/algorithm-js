@@ -16,14 +16,9 @@
  *       '##  '
  *       '### '
  *       '####'
- */
-
-// Solution:
-/**
- * @name solution
  * @param {number} n
- * @returns {void}
- * @description From 0 to n
+ * @returns {undefined}
+ * @solution From 0 to n
  *   Create an empty string, 'stair'
  *   From 0 to n
  *     IF the current column is equal to or less than the current row

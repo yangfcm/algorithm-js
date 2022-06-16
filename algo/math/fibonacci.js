@@ -1,10 +1,10 @@
-// Fibonacci
-// Print out the n-th number in the fibonacci series
-// e.g. fibonacci(4) -> 3
-
 /**
- * Solution 1 - Use recursive function
- * Time complexity: O(2^n)
+ * @name fibonacci
+ * @description Return the n-th number in the fibonacci series.
+ * @example
+ * @param {number} n
+ * @returns {number} The n-th number in the fibonacci series.
+ * @solution Use recursive function. Time complexity: O(2^n)
  */
 function solution1(n) {
   if (n < 2) {
@@ -13,8 +13,10 @@ function solution1(n) {
   return solution1(n - 1) + solution1(n - 2);
 }
 
-/** Solution 2
- * Time complexity: O(n)
+/**
+ * @param {number} n
+ * @returns {number}
+ * @solution Use an array to save each fibonacci number so that you can iterate through it once.
  */
 function solution2(n) {
   const fiboArr = [0, 1];
@@ -27,7 +29,9 @@ function solution2(n) {
 }
 
 /**
- * Solution 3 - Use recursive function with memorization to reduce time complexity
+ * @param {number} n
+ * @returns {number}
+ * @solution  Use recursive function with memorization to reduce time complexity
  * Store the arguments of each function call along with the result.
  * If the function is called again with the same arguments, return the precomputed result,
  * rather than running the function again.
@@ -55,8 +59,9 @@ function normalFib(n) {
 const solution3 = memorize(normalFib);
 
 /**
- * Solution 4:
- * Alternative solution to solution 3 but much more succinct
+ * @param {number} n
+ * @returns {number}
+ * @solution Alternative solution to solution 3 but much more succinct
  */
 function solution4(n, ac1 = 1, ac2 = 1) {
   if (n <= 2) {

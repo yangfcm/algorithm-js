@@ -1,5 +1,8 @@
 /**
- * isPrime - Return true or false, indicating whether is a given number is a prime(质数)
+ * @name isprime
+ * @description Check if a given number is a prime number or not.
+ * @param {number} number
+ * @returns {boolean} True if the number is a prime number otherwise false.
  */
 function solution(number) {
   if (number < 2) {
