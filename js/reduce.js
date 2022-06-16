@@ -1,14 +1,10 @@
 /**
  * @name reduce
- * @description implement array's built-in reduce method.
- */
-
-/**
- * @name reduce
+ * @description Implement array's built-in reduce method.
  * @param {array} array
  * @param {function} reducerFn
  * @param {any} initialValue
- * @returns {any} the accumulator of the values from array that calculated by reducerFn.
+ * @returns {any} The accumulator of the values from array that calculated by reducerFn.
  */
 function reduce(array, reducerFn, initialValue) {
   let accumulator;

@@ -1,7 +1,8 @@
 /**
- * Graph data structure
- * Implement a Graph class.
- * Use a two-dimentaional array to represent a graph
+ * @name Graph
+ * @description Implement a Graph class and its commonly-used methods.
+ * Use a two-dimentaional N*N array to represent a graph.
+ * The values in the array indicate the route(weight) between the two nodes.
  * @method insertVertex
  * @method insertEdge
  * @method removeEdge
@@ -20,7 +21,8 @@
  */
 class Graph {
   /**
-   * Constructor - Initialize a graph class
+   * @name Constructor
+   * @description Initialize a graph class
    * @param {array} vertexList - The array of vertex values.
    * @param {boolean} undirected - If the graph is directed, undirected by default.
    */
@@ -38,7 +40,8 @@ class Graph {
   }
 
   /**
-   * Add a vertex
+   * @name insertVertex
+   * @description Add a vertex
    * @param {any} vertexValue - the value of vertex.
    */
   insertVertex(vertexValue) {
@@ -46,7 +49,8 @@ class Graph {
   }
 
   /**
-   * Add an edge between two vertexes
+   * @name insertEdge
+   * @description Add an edge between two vertexes
    * @param {number} startVertexIndex the index of the starting vertex in vertex list
    * @param {number} endVertexIndex the index of the end vertex in vertex list
    * @param {number} weight the weight of the edge, set 1 by default
@@ -67,7 +71,8 @@ class Graph {
   }
 
   /**
-   * Remove an edge between two vertexes
+   * @name removeEdge
+   * @description Remove an edge between two vertexes
    * @param {number} startVertexIndex the index of the starting vertex in vertex list
    * @param {number} endVertexIndex the index of the end vertex in vertex list
    */
@@ -82,21 +87,24 @@ class Graph {
   }
 
   /**
-   * Get the number of vertexes of the graph
+   * @name getNumOfVertexes
+   * @description Get the number of vertexes of the graph
    */
   getNumOfVertexes() {
     return this.vertexList.length;
   }
 
   /**
-   * Get the number of edges
+   * @name getNumOfEdges
+   * @description Get the number of edges
    */
   getNumOfEdges() {
     return this.numberOfEdges;
   }
 
   /**
-   * Get the value of the vertex based on its index
+   * @name getValueByIndex
+   * @description Get the value of the vertex based on its index
    * @param {number} index
    */
   getValueByIndex(index) {
@@ -104,7 +112,8 @@ class Graph {
   }
 
   /**
-   * Get the weight of the edge from one vertex to another
+   * @name getWeight
+   * @description Get the weight of the edge from one vertex to another
    * @param {number} startingVertexIndex
    * @param {number} endVertexIndex
    */
@@ -113,14 +122,16 @@ class Graph {
   }
 
   /**
-   * Get the matrix that represents the graph
+   * @name getMatrix
+   * @description Get the matrix that represents the graph
    */
   getMatrix() {
     return this.matrix;
   }
 
   /**
-   * Print the graph on console
+   * @name print
+   * @description Print the graph on console
    */
   print() {
     let maxLength = this.vertexList[0].length;
@@ -160,7 +171,8 @@ class Graph {
   }
 
   /**
-   * Given the index of a vertex, get its adjacent vertex.
+   * @name getFirstAdjacent
+   * @description Given the index of a vertex, get its adjacent vertex.
    * @param {number} index
    * @returns {number} The index of the adjacent vertex. If not found, return -1;
    */
@@ -174,7 +186,8 @@ class Graph {
   }
 
   /**
-   * Given the index of a vertex(v1), get its adjacent vertex starting from v2
+   * @name getNextAdjacent
+   * @description Given the index of a vertex(v1), get its adjacent vertex starting from v2
    * @param {number} v1
    * @param {number} v2
    */
@@ -188,7 +201,8 @@ class Graph {
   }
 
   /**
-   * DFS searching for a particular vertex at index.
+   * @name searchDFSVertex
+   * @description DFS searching for a particular vertex at index.
    * @param {number} index
    */
   searchDFSVertex(index) {
@@ -209,7 +223,8 @@ class Graph {
   }
 
   /**
-   * Do DFS searching for a whole graph.
+   * @name searchDFS
+   * @description Do DFS searching for a whole graph.
    */
   searchDFS() {
     this.graphArr = []; // Reset graphArr.
@@ -223,7 +238,8 @@ class Graph {
   }
 
   /**
-   * BFS searching for a particular vertex at index.
+   * @name searchBFSVertex
+   * @description BFS searching for a particular vertex at index.
    * @param {number} index
    */
   searchBFSVertex(index) {
@@ -248,7 +264,10 @@ class Graph {
     return this.graphArr;
   }
 
-  /** Do BFS searching for a whole graph */
+  /**
+   * @name searchBFS
+   * @description Do BFS searching for a whole graph
+   */
   searchBFS() {
     this.graphArr = [];
     this.isVisited = new Array(this.getNumOfVertexes()).fill(false);
@@ -260,10 +279,5 @@ class Graph {
     return this.graphArr;
   }
 }
-
-// const graph = new Graph(["a", "b", "c"]);
-// graph.insertEdge(0, 1);
-// graph.print();
-// console.log(graph.matrix);
 
 module.exports = Graph;
