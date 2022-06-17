@@ -1,7 +1,11 @@
 const { Node, LinkedList } = require("./linkedlist");
 
 /**
- * Add a method to LinkedList to remove duplicate node from the linked list.
+ * @name removeDuplicate
+ * @description Add a method to LinkedList to remove duplicate node from the linked list.
+ * @returns {undefined}
+ * @solution Use an array to store the data that appears in the linked list.
+ * Iterate through the linked list, if current node data appears in the array, remove it.
  */
 LinkedList.prototype.removeDuplicate = function () {
   if (!this.head) {

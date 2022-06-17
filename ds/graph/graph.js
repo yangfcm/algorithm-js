@@ -25,6 +25,7 @@ class Graph {
    * @description Initialize a graph class
    * @param {array} vertexList - The array of vertex values.
    * @param {boolean} undirected - If the graph is directed, undirected by default.
+   * @returns {undefined}
    */
   constructor(vertexList, undirected = true) {
     if (vertexList) this.numberOfEdges = 0; // How many edges in the graph
@@ -43,6 +44,7 @@ class Graph {
    * @name insertVertex
    * @description Add a vertex
    * @param {any} vertexValue - the value of vertex.
+   * @returns {undefined}
    */
   insertVertex(vertexValue) {
     this.vertexList.push(vertexValue);
@@ -50,10 +52,11 @@ class Graph {
 
   /**
    * @name insertEdge
-   * @description Add an edge between two vertexes
+   * @description Add an edge between two vertexes. Consider the graph is directed or undirected.
    * @param {number} startVertexIndex the index of the starting vertex in vertex list
    * @param {number} endVertexIndex the index of the end vertex in vertex list
    * @param {number} weight the weight of the edge, set 1 by default
+   * @returns {undefined}
    */
   insertEdge(startVertexIndex, endVertexIndex, weight = 1) {
     if (typeof weight !== "number" || weight <= 0) {
@@ -72,9 +75,10 @@ class Graph {
 
   /**
    * @name removeEdge
-   * @description Remove an edge between two vertexes
+   * @description Remove an edge between two vertexes. Consider the graph is directed or undirected.
    * @param {number} startVertexIndex the index of the starting vertex in vertex list
    * @param {number} endVertexIndex the index of the end vertex in vertex list
+   * @returns {undefined}
    */
   removeEdge(startVertexIndex, endVertexIndex) {
     if (this.matrix[startVertexIndex][endVertexIndex] !== 0) {
@@ -89,6 +93,7 @@ class Graph {
   /**
    * @name getNumOfVertexes
    * @description Get the number of vertexes of the graph
+   * @returns {number}
    */
   getNumOfVertexes() {
     return this.vertexList.length;
@@ -97,6 +102,7 @@ class Graph {
   /**
    * @name getNumOfEdges
    * @description Get the number of edges
+   * @returns {number}
    */
   getNumOfEdges() {
     return this.numberOfEdges;
@@ -106,6 +112,7 @@ class Graph {
    * @name getValueByIndex
    * @description Get the value of the vertex based on its index
    * @param {number} index
+   * @returns {any}
    */
   getValueByIndex(index) {
     return this.vertexList[index];
@@ -116,6 +123,7 @@ class Graph {
    * @description Get the weight of the edge from one vertex to another
    * @param {number} startingVertexIndex
    * @param {number} endVertexIndex
+   * @returns {number}
    */
   getWeight(startingVertexIndex, endVertexIndex) {
     return this.matrix[startingVertexIndex][endVertexIndex];
@@ -124,6 +132,7 @@ class Graph {
   /**
    * @name getMatrix
    * @description Get the matrix that represents the graph
+   * @returns {array[][]}
    */
   getMatrix() {
     return this.matrix;
@@ -132,6 +141,7 @@ class Graph {
   /**
    * @name print
    * @description Print the graph on console
+   * @returns {undefined}
    */
   print() {
     let maxLength = this.vertexList[0].length;
@@ -190,6 +200,7 @@ class Graph {
    * @description Given the index of a vertex(v1), get its adjacent vertex starting from v2
    * @param {number} v1
    * @param {number} v2
+   * @returns {number}
    */
   getNextAdjacent(v1, v2) {
     for (let k = v2 + 1; k < this.vertexList.length; k++) {
@@ -204,6 +215,7 @@ class Graph {
    * @name searchDFSVertex
    * @description DFS searching for a particular vertex at index.
    * @param {number} index
+   * @returns {array}
    */
   searchDFSVertex(index) {
     const vertexArr = [];
@@ -225,6 +237,7 @@ class Graph {
   /**
    * @name searchDFS
    * @description Do DFS searching for a whole graph.
+   * @returns {array}
    */
   searchDFS() {
     this.graphArr = []; // Reset graphArr.
@@ -241,6 +254,7 @@ class Graph {
    * @name searchBFSVertex
    * @description BFS searching for a particular vertex at index.
    * @param {number} index
+   * @returns {array}
    */
   searchBFSVertex(index) {
     const queue = []; // A queue to record the sequence of visiting.
@@ -267,6 +281,7 @@ class Graph {
   /**
    * @name searchBFS
    * @description Do BFS searching for a whole graph
+   * @returns {array}
    */
   searchBFS() {
     this.graphArr = [];

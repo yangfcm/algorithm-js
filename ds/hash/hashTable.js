@@ -1,3 +1,8 @@
+/**
+ * @name HashTable
+ * @description Implement HashTable class and its commonly-used methods
+ * There're some interesting topics that deserve consideration when you are implementing it, like key hash, resize and key collision etc.
+ */
 class HashTable {
   constructor() {
     this.table = []; // The entire hash table.
@@ -6,9 +11,10 @@ class HashTable {
   }
 
   /**
-   * Hash function: given the key and hash it
+   * @name hash
+   * @description Given the key and hash it. There are many hash algorithms available. This is just one of them.
    * @param {string} key
-   * @returns {number} the number hashed
+   * @returns {number} A number hashed
    */
   hash(key) {
     let hash = 0;
@@ -21,10 +27,12 @@ class HashTable {
   }
 
   /**
-   * Add a key-value pair into the hash table
+   * @name put
+   * @description Add a key-value pair into the hash table.
+   * Need to resize if required.
    * @param {string} key
    * @param {any} value
-   * @returns {any} the value added to the hash table
+   * @returns {any} The value added to the hash table
    */
   put(key, value) {
     const index = this.hash(key);
@@ -56,9 +64,10 @@ class HashTable {
   }
 
   /**
-   * Given the key, get the value associated with the key
+   * @name get
+   * @description Given the key, get the value associated with the key
    * @param {string} key
-   * @returns {any} the value associated with the key, if the key doesn't exist return null.
+   * @returns {any} The value associated with the key, if the key doesn't exist return null.
    */
   get(key) {
     const index = this.hash(key);
@@ -77,9 +86,11 @@ class HashTable {
   }
 
   /**
-   * Given the key, remove the node associated with the key
+   * @name remove
+   * @description Given the key, remove the node associated with the key.
+   * Need to resize if required.
    * @param {string} key
-   * @returns {any} the value associated with the key to remove, if the key doesn't exist, return null.
+   * @returns {any} The value associated with the key to remove, if the key doesn't exist, return null.
    */
   remove(key) {
     const index = this.hash(key);
@@ -105,8 +116,11 @@ class HashTable {
   }
 
   /**
-   * Resize the hash table
+   * @name resize
+   * @description Resize the hash table.
+   * It's not just about change *size*, you should also recalculate the hash value for each key-value pair and put them in the new hash table.
    * @param {number} newSize
+   * @returns {undefined}
    */
   resize(newSize) {
     const oldTable = this.table;
@@ -125,7 +139,10 @@ class HashTable {
     });
   }
 
-  /** Print the entire hash table */
+  /**
+   * @name print
+   * @description Print the entire hash table
+   */
   print() {
     console.log(this.table);
   }

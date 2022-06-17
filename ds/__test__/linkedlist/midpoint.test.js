@@ -4,8 +4,12 @@ const Node = L.Node;
 const LinkedList = L.LinkedList;
 
 describe("Test midpoint.js", () => {
-  test("midepoint function is defined", () => {
+  test("midpoint function is defined", () => {
     expect(midpoint).toBeDefined();
+  });
+
+  test("midpoint returns null if linked list is empty", () => {
+    expect(midpoint(new LinkedList())).toBe(null);
   });
 });
 

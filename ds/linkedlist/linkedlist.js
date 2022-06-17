@@ -1,10 +1,13 @@
-// Implement classes Node and Linked List
-// For more details see: linkedlist.html
-
+/**
+ * @name Node
+ * @description Implement Node class for linked list.
+ * It has property: data and next which references the next node in linked list.
+ * For more details see: linkedlist.html
+ */
 class Node {
   /**
-   * @param data the data saved in the node
-   * @param next reference next Node in linked list
+   * @param {any} data the data saved in the node
+   * @param {Node} next reference next Node in linked list
    */
   constructor(data, next = null) {
     this.data = data;
@@ -12,19 +15,33 @@ class Node {
   }
 }
 
+/**
+ * @name LinkedList
+ * @description Implement LinkedList class.
+ */
 class LinkedList {
   constructor() {
     this.head = null; // head property is a refernce to Node object in linked list
     // It has value null by default.
   }
 
+  /**
+   * @name insertFirst
+   * @description Insert a node to the head of a linked list.
+   * @param {any} data
+   * @returns {undefined}
+   */
   insertFirst(data) {
-    // Insert a node to the head of a linked list
     // const node = new Node(data, this.head);
     // this.head = node;
     this.insertAt(data, 0); // Reuse the exiting method in the class
   }
 
+  /**
+   * @name size
+   * @description Get the size of a linked list. i.e. how many elements.
+   * @returns {number} The number of elements.
+   */
   size() {
     // Get the size of a linked list
     let count = 0;
@@ -36,11 +53,20 @@ class LinkedList {
     return count;
   }
 
+  /**
+   * @name getFirst
+   * @description Get the first node of a linked list.
+   * @returns {Node}
+   */
   getFirst() {
-    // Get the first node in a linked list
     return this.head;
   }
 
+  /**
+   * @name getLast
+   * @description Get the last node of a linked list.
+   * @returns {Node}
+   */
   getLast() {
     // Get the last node in a linked list
     // if(!this.head) {
@@ -55,13 +81,21 @@ class LinkedList {
     return this.getAt(this.size() - 1);
   }
 
+  /**
+   * @name clear
+   * @description Empty the linked list. i.e. Set the head as null.
+   * @returns {undefined}
+   */
   clear() {
-    // Empty the linked list (Set head as null)
     this.head = null;
   }
 
+  /**
+   * @name removeFirst
+   * @description Remove the first node of a linked list.
+   * @returns {undefined}
+   */
   removeFirst() {
-    // Remove the first node of a linked list.
     if (!this.head) {
       // If the linked list is empty, nothing to remove.
       return;
@@ -69,8 +103,12 @@ class LinkedList {
     this.head = this.head.next;
   }
 
+  /**
+   * @name removeLast
+   * @description Remove the last node of a linked list (Set the last second node's next property as null)
+   * @returns
+   */
   removeLast() {
-    // Remove the last node of a linked list (Set the last two node's next property as null)
     if (!this.head) {
       // If the linked list is empty, nothing to remove.
       return;
@@ -87,8 +125,13 @@ class LinkedList {
     node.next = null;
   }
 
+  /**
+   * @name insertLast
+   * @description Append a node to the tail of a linked list
+   * @param {any} data
+   * @returns {undefined}
+   */
   insertLast(data) {
-    // Append a node to the tail of a linked list
     const last = this.getLast();
     if (last) {
       last.next = new Node(data);
@@ -97,11 +140,13 @@ class LinkedList {
     }
   }
 
+  /**
+   * @name getAt
+   * @description Get the node at a given index.
+   * @param {number} index
+   * @returns {Node}
+   */
   getAt(index) {
-    // Get the node at a given index
-    // if(!this.head) {
-    //   return null;
-    // }    // Redundant code
     let counter = 0;
     let node = this.head;
     while (node) {
@@ -114,6 +159,12 @@ class LinkedList {
     return null; // The index is out of bounds or list is empty
   }
 
+  /**
+   * @name removeAt
+   * @description Remove the node at a given index
+   * @param {number} index
+   * @returns {undefined}
+   */
   removeAt(index) {
     // Remove the node with a given index
     if (!this.head) {
@@ -135,6 +186,13 @@ class LinkedList {
     previous.next = node.next;
   }
 
+  /**
+   * @name insertAt
+   * @description Insert a node at a particular position with give index.
+   * @param {any} data
+   * @param {number} index
+   * @returns {undefined}
+   */
   insertAt(data, index) {
     // Add a node at a given index
     if (!this.head) {
@@ -155,6 +213,11 @@ class LinkedList {
     previous.next = node;
   }
 
+  /**
+   * @name forEach
+   * @description Iterate through the linked list and apply function to each node.
+   * @param {function} fn
+   */
   forEach(fn) {
     let node = this.head;
     let index = 0;
