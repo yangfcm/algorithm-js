@@ -7,7 +7,7 @@
  * There are three odd socks left, one of each color. So the number of pairs is 2.
  * @param {number[]} arr
  * @returns {number} The pairs of matched socks
- * @summary Iterate through the array and find out each pair.
+ * @solution Iterate through the array and find out each pair.
  */
 function solution1(arr) {
   const socksArr = arr;

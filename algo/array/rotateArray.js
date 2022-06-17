@@ -5,7 +5,6 @@
  * The 1st rotate: [7, 1, 2, 3, 4, 5, 6](The last number 7 is moved to the top of the array)
  * The 2nd rotate: [6, 7, 1, 2, 3, 4, 5](Then, the last number 6 is moved to the top of the array)
  * The 3rd rotate: [5, 6, 7, 1, 2, 3, 4].
- * @name solution
  * @param {number[]} nums An array of numbers
  * @param {number} k The steps to rotate
  * @return {undefined} The array is rotated to the right by k steps
@@ -22,8 +21,6 @@ function solution1(nums, k) {
 }
 
 /**
- * @name rotateArray
- * @name solution
  * @param {number[]} nums An array of numbers
  * @param {number} k The steps to rotate
  * @return {undefined} The array is rotated to the right by k steps
