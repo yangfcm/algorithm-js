@@ -1,7 +1,6 @@
 /**
  * @name fibonacci
  * @description Return the n-th number in the fibonacci series.
- * @example
  * @param {number} n
  * @returns {number} The n-th number in the fibonacci series.
  * @solution Use recursive function. Time complexity: O(2^n)

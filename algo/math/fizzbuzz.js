@@ -4,8 +4,7 @@
  * But for multiples of 3 print 'fizz' instead of the number,
  * for multiples of 5, print 'buzz',
  * for numbers which are multiples of both 3 and 5, print 'fizzbuzz'
- * For example:
- *   fizzbuzz(5) ->
+ * @example fizzbuzz(5) ->
  *   1
  *   2
  *   fizz

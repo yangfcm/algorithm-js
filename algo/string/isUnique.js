@@ -1,5 +1,5 @@
 /**
- * @name IsUnique
+ * @name isUnique
  * @description Given a string, determine if it has all unique characters.
  * @param {string} str
  * @returns true if str has all unique characters, otherwise false.
