@@ -1,36 +1,34 @@
 /**
- * Given a binary tree, create an array of all the nodes at each level.
+ * @name listOfDepths
+ * @description Given a binary tree, create an array of all the nodes at each level.
  * If you have a tree with N levels, you'll have N arrays.
- * --- Example
+ * @example
  * Given:
- *     0
- *   /   \
- *  1     3
- * / \   /
- *4  6  5
+ *      0
+ *    /   \
+ *   1     3
+ *  / \   /
+ * 4  6  5
  * Answer: [[Node(0)], [Node(1), Node(3)], [Node(4), Node(6), Node(5)]]
  */
-class Node {
-  constructor(data) {
-    this.data = data;
-    this.left = null;
-    this.right = null;
-  }
-}
+
+const Node = require("./bst");
 
 /**
- * Create a list for nodes on each level
+ * @name
+ * @description Create a list for nodes on each level of the tree
  * @param {Node} root
  * @returns {array} lists
  */
-const createLevelList = (root) => {
+const listOfDepths = (root) => {
   const lists = [];
   createLevelListHelper(root, lists, 0);
   return lists;
 };
 
 /**
- * Helper function as above.
+ * @name createLevelListHelper
+ * @description Helper function for creating a list of tree
  * @param {Node} root
  * @param {array} lists
  * @param {number} level
@@ -51,7 +49,7 @@ const createLevelListHelper = (root, lists, level) => {
 };
 
 /** An alternative solution to the problem */
-const createLevelListAlt = (root) => {
+const listOfDepthsAlt = (root) => {
   const lists = [];
   let current = [];
   if (root) {
@@ -73,4 +71,4 @@ const createLevelListAlt = (root) => {
   return lists;
 };
 
-module.exports = { Node, createLevelList, createLevelListAlt };
+module.exports = { Node, listOfDepths, listOfDepthsAlt };

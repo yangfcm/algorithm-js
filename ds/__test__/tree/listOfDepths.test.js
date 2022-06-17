@@ -1,10 +1,7 @@
-const {
-  Node,
-  createLevelList,
-  createLevelListAlt,
-} = require("../../tree/listOfDepths");
+const Node = require("../../tree/bst");
+const { listOfDepths, listOfDepthsAlt } = require("../../tree/listOfDepths");
 
-describe("Test createLevelList", () => {
+describe("Test listOfDepths", () => {
   let testTree1;
   beforeEach(() => {
     testTree1 = new Node(0);
@@ -20,7 +17,7 @@ describe("Test createLevelList", () => {
   });
 
   it("Solution should create a list for nodes on each level correctly", () => {
-    const lists = createLevelList(testTree1);
+    const lists = listOfDepths(testTree1);
     expect(lists[0][0].data).toBe(0);
     expect(lists[1][0].data).toBe(1);
     expect(lists[1][1].data).toBe(3);
@@ -30,7 +27,7 @@ describe("Test createLevelList", () => {
   });
 
   it("The alternative solution should create a list for nodes on each level correctly", () => {
-    const lists = createLevelListAlt(testTree1);
+    const lists = listOfDepthsAlt(testTree1);
     expect(lists[0][0].data).toBe(0);
     expect(lists[1][0].data).toBe(1);
     expect(lists[1][1].data).toBe(3);

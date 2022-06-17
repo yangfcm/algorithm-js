@@ -1,17 +1,16 @@
 /**
- * Given a sorted, increasing order array with unique integer elements,
+ * @name minimalTree
+ * @description Given a sorted, increasing order array with unique integer elements,
  * write a function to create a binary search tree with minimal height.
  * Note: A minimal bst has about the same number of nodes on the left of each node as on the right.
- * e.g. [1,2,3,4,5,6, 7] =>
+ * @example [1,2,3,4,5,6, 7] =>
  *      4
  *    /   \
  *   2     6
  *  / \   / \
  * 1  3  5  7
- */
-
-/**
- * Solution: The middle of each subsection of the array becomes the root of the node.
+ *
+ * @solution The middle of each subsection of the array becomes the root of the node.
  * The left half of the array will become the left subtree
  * and the right half of the array will become the right subtree.
  */

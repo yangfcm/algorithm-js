@@ -1,7 +1,10 @@
-/*
- * Implement a queue data structure using two stacks instead of using array.
+const Stack = require("./stack");
+
+/**
+ * @name qfroms
+ * @description Implement a queue data structure using two stacks instead of using array.
  * Queue should implement the methods of 'add', 'remove' and 'peek'
- * --- Examples
+ * @example
  *     const q = new Queue();
  *     q.add(1);
  *     q.add(2);
@@ -9,9 +12,6 @@
  *     q.remove(); // returns 1
  *     q.remove(); // returns 2
  */
-
-const Stack = require("./stack");
-
 class Queue {
   constructor() {
     this.stack1 = new Stack();

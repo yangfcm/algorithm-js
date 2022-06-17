@@ -1,13 +1,11 @@
 const Stack = require("./stack");
 
 /**
- * Add a method to Stack, which returns the minimum element.
+ * @name getMin
+ * @description Add a method to Stack, which returns the minimum element.
  * (All elements in stack are number)
- */
-
-/**
- * Solution1: Use a temporary stack to save the items in original stack
- * and compare each number.
+ * @returns {number}
+ * @solution Use a temporary stack to save the items in original stack and compare each number.
  * The runtime for this solution is O(n) - n is the size of stack.
  */
 Stack.prototype.getMin = function () {
@@ -33,8 +31,8 @@ Stack.prototype.getMin = function () {
 };
 
 /**
- * Solution 2: Add a property minNum to Stack class
- * and check if it is the minimum one when adding number to the stack.
+ * @returns {number}
+ * @solution Add a property minNum to Stack class and check if it is the minimum one when adding number to the stack.
  * The runtime for this solution is O(1)
  */
 class StackWithMin extends Stack {
