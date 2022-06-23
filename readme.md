@@ -327,17 +327,25 @@ JS natively implements severl data structures. But you still need to be familiar
 
 `/sorting` - Solutions to sort an array.
 
-1. `sorting.js`
+1. `bubbleSort.js`
 
-   Implement the three most common sorting methods:
-
-   - Bubble sorting O(n^2) Easy
-   - Selection sorting O(n^2) Easy
-   - Merge sorting O(n\*log(n)) Difficult
+   Implement bubble sort.
 
 2. `countingSort.js`
 
    Implment counting sort.
+
+3. `mergeSort.js`
+
+   Implement merge sort.
+
+4. `selectionSort.js`
+
+   Implement selection sort.
+
+5. `fradulentActivityNotice.js`
+
+   Fradulent activity notice. An application in counting sort.
 
 ## Searching
 
