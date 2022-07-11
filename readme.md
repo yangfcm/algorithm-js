@@ -347,6 +347,10 @@ JS natively implements severl data structures. But you still need to be familiar
 
    Fradulent activity notice. An application in counting sort.
 
+6. `countInversions.js`
+
+   Count how many inversions required to sort an unordered array.
+
 ## Searching
 
 `/searching` - Solutions to find out a given element from an array.
