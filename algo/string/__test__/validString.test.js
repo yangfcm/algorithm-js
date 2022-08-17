@@ -1,15 +1,15 @@
-const validString = require("../validString");
+const { solution } = require("../validString");
 
 describe("Test validString.js", () => {
   test("The strings are checked as valid(true).", () => {
-    expect(validString("abcd")).toBe(true);
-    expect(validString("abcdefghhgfedecba")).toBe(true);
-    expect(validString("aaabbbccccddd")).toBe(true);
+    expect(solution("abcd")).toBe(true);
+    expect(solution("abcdefghhgfedecba")).toBe(true);
+    expect(solution("aaabbbccccddd")).toBe(true);
   });
 
   test("The strings are checked as invalid(false).", () => {
-    expect(validString("aabbcd")).toBe(false);
-    expect(validString("aabbccddeefghi")).toBe(false);
-    expect(validString("aaabbbbcccdddd")).toBe(false);
+    expect(solution("aabbcd")).toBe(false);
+    expect(solution("aabbccddeefghi")).toBe(false);
+    expect(solution("aaabbbbcccdddd")).toBe(false);
   });
 });

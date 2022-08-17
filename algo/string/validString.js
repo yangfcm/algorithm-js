@@ -10,7 +10,7 @@
  * @param {string} str The string to check
  * @returns {boolean} True if s is a valid string, false otherwise
  */
-function validString(str) {
+function solution(str) {
   const charCountMap = {};
   for (let char of str) {
     // Create an object where its key is the character in string, value is the count of character.
@@ -32,4 +32,4 @@ function validString(str) {
   return false;
 }
 
-module.exports = validString;
+module.exports = { solution };
