@@ -9,6 +9,11 @@
  * s = abccc -> invalid.
  * @param {string} str The string to check
  * @returns {boolean} True if s is a valid string, false otherwise
+ * @solution Iterate through the string and count each character. Use an object to store the counts for each character in the string.
+ * Sort the count as an array and if the string is valid, the array should have one of characteristics below:
+ * 1. All numbers are the same i.e. the last number equals to the first number.
+ * 2. Only the first number is 1 and the rest numbers are the same.
+ * 3. The first number is more than 1 and the last number is just bigger than the second last number by 1, and the second last number equals to the first number.
  */
 function solution(str) {
   const charCountMap = {};
@@ -20,14 +25,11 @@ function solution(str) {
   countValues.sort(); // Sort the count for each character.
   const first = countValues[0];
   const last = countValues[countValues.length - 1];
+  const secondLast = countValues[countValues.length - 2];
 
   if (first === last) return true; // All characters appear the same, like 'aabbcc'
   if (first === 1 && countValues[1] === last) return true; // All characters appear the same except for one character which just appears once, like 'abbbccc'
-  if (
-    first != 1 &&
-    last - first <= 1 &&
-    countValues[countValues.length - 2] === first
-  )
+  if (first != 1 && last - secondLast === 1 && secondLast === first)
     return true;
   return false;
 }
