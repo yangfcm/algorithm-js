@@ -175,19 +175,23 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
     Reverse a string
 
-14. `stringCompression.js`
+14. `specialString.js`
+
+    Find out how many special strings
+
+15. `stringCompression.js`
 
     Compress a string
 
-15. `stringRotation.js`
+16. `stringRotation.js`
 
     Check if one string is the rotation of the other string, using isSubString function
 
-16. `validString.js`
+17. `validString.js`
 
     Check if a string is valid as per a certain rule
 
-17. `vowels.js`
+18. `vowels.js`
 
     Count the number of vowels used in a string
 
