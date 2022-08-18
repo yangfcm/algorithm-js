@@ -90,6 +90,10 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
    Follow up the previous problem: return all the ways to construct the target string by concatenating elements of the strings array.
 
+8. `commonChild.js`
+
+   Find out the longest common 'child' string of two given strings.
+
 `/math` - Algorithm to solve math problems.
 
 1. `fibonacci.js`
