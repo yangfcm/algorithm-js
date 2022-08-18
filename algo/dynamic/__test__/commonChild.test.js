@@ -13,8 +13,8 @@ const testCases = [
 
 describe("Test commonChild.js", () => {
   test("Find out the length of the longest of common child string", () => {
-    testCases.forEach((el) => {
-      expect(solution(el[0], el[1])).toBe(el[2]);
+    testCases.forEach((test) => {
+      expect(solution(test[0], test[1])).toBe(test[2]);
     });
   });
 });
