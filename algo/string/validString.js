@@ -14,6 +14,7 @@
  * 1. All numbers are the same i.e. the last number equals to the first number.
  * 2. Only the first number is 1 and the rest numbers are the same.
  * 3. The first number is more than 1 and the last number is just bigger than the second last number by 1, and the second last number equals to the first number.
+ * @source https://www.hackerrank.com/challenges/sherlock-and-valid-string/
  */
 function solution(str) {
   const charCountMap = {};

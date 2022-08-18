@@ -11,6 +11,7 @@
  * 1. Each character is a special substring, so count them first. It's just the length of the string.
  * 2. Count all substrings that have exact same characters.
  * 3. Count all substrings that have one different letter in the middle and same rest letters on its both sides.
+ * @source https://www.hackerrank.com/challenges/special-palindrome-again
  */
 function solution(str) {
   let count = str.length; // 1. Each single character is a special substring, so our count starts from here.
