@@ -94,6 +94,12 @@ Algorithms, Data Structure problems and solutions written in Javascript, includi
 
    Find out the longest common 'child' string of two given strings.
 
+`/greedy` - Greedy algorithms
+
+1. `minimumAbsoluteDifference.js`
+
+   Find out the minimum absolute difference between any two numbers in a given array.
+
 `/math` - Algorithm to solve math problems.
 
 1. `fibonacci.js`
