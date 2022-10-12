@@ -9,3 +9,7 @@ Greedy algorithms
 2. `luckBalance.js`
 
    Work out the maximum luck balance by losing contests.
+
+3. `greedyFlorist.js`
+
+   Work out the minimum cost to buy all flowers from a greedy florist.
