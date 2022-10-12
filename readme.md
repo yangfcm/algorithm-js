@@ -63,6 +63,28 @@ How much more processing power/time is required to run your algorithm if we doub
 
 ## How to run
 
+- Environment: NodeJS.
 - Under project directory.
-- Run `npm install` to install packages required.
-- Run `npm run test` or `npm run test:watch` to run the test cases. You can write your own testing code to see the results.
+- Install packages
+
+```
+npm install
+```
+
+- Test cases
+
+```
+npm run test
+```
+
+- Test and watch code change
+
+```
+npm run test:watch
+```
+
+- Test one case or cases under one directory
+
+```
+npm run test <file name or directory name>
+```
