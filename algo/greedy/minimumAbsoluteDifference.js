@@ -1,7 +1,7 @@
 /**
  * @name minimumAbsoluteDifference
  * @description Given an array of integers, find the minimum absolute difference between any two elements in the array.
- * @example arr = [1 -3 71 68 17] -> 3 (|71-68|= 3)
+ * @example arr = [1, -3, 71, 68, 17] -> 3 (|71-68|= 3)
  * @solution Sort and iterate through the array.
  * Calculate the absolute difference between the number and its next number and find out the minimum one.
  * @param {array} arr An array of integer numbers.
