@@ -13,3 +13,7 @@ Greedy algorithms
 3. `greedyFlorist.js`
 
    Work out the minimum cost to buy all flowers from a greedy florist.
+
+4. `maxMin.js`
+
+   Find out the minimum unfairness.
