@@ -17,3 +17,7 @@ Greedy algorithms
 4. `maxMin.js`
 
    Find out the minimum unfairness.
+
+5. `reverseShuffleMerge.js`
+
+   Find out the smallest string from certain operations.
