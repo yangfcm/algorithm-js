@@ -2,7 +2,7 @@
  * @name maxMin
  * @description Given an array of integers and a single integer k, create an array of length k from
  * elements of arr such that its difference is minimized.
- * @example arr = [10, 100, 300, 200, 1000, 20, 30], k = 3 -> 3
+ * @example arr = [10, 100, 300, 200, 1000, 20, 30], k = 3 -> 20
  * Choose k = 3 elements from arr: [10, 20, 30] where the maximum is 30 and the minimum is 10 and their difference is 20.
  * @solution Sort the arr, take the above as example: [10, 20, 30, 100, 200, 300, 1000].
  * Imagine there is a "window" of length of k moving along the array,
