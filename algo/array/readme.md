@@ -18,38 +18,42 @@ Problems and solutions about arrays.
 
    Produce a spiral matrix.
 
-5. `missing.js`
+5. `maxSubArraySum.js`
+
+   Given an integer array nums, find the contiguous subarray which has the largest sum.
+
+6. `missing.js`
 
    Take an unsorted array of unique numbers from to n and return the missing number in the sequence.
 
-6. `moveZeroes.js`
+7. `moveZeroes.js`
 
    Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
-7. `plusOne.js`
+8. `plusOne.js`
 
    Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
 
-8. `removeDuplicates.js`
+9. `removeDuplicates.js`
 
    Given an array with sorted numbers, remove duplicated numbers in-place.
 
-9. `rotateArray.js`
+10. `rotateArray.js`
 
-   Given an array, rotate the array to the right by k steps in-place.
+    Given an array, rotate the array to the right by k steps in-place.
 
-10. `rotateImage.js`
+11. `rotateImage.js`
 
     Rotate an image represented by a n\*n array by 90 degrees (clockwise).
 
-11. `sockMerchant.js`
+12. `sockMerchant.js`
 
     Find out how many pairs of socks with matching colors(represented by numbers in an array).
 
-12. `twoSum.js`
+13. `twoSum.js`
 
     Return indices of the two numbers whose sum equals to a target.
 
-13. `validSudoku.js`
+14. `validSudoku.js`
 
     Determine if a 9x9 Sudoku board is valid.
