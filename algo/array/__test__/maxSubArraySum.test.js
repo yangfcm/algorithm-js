@@ -1,4 +1,4 @@
-const { solution1, solution2 } = require("../maxSubArraySum");
+const { solution1, solution2, solution3 } = require("../maxSubArraySum");
 
 const arr1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
 const expected1 = 6;
@@ -11,7 +11,7 @@ const expected3 = 176;
 const arr4 = [-9, -3, 5, -10, 3];
 const expected4 = 5;
 
-describe("Test maxSubArray.js", () => {
+describe("Test maxSubArraySum.js", () => {
   test("Solution 1 should return max sum of subarray", () => {
     expect(solution1(arr1)).toBe(expected1);
     expect(solution1(arr2)).toBe(expected2);
@@ -24,5 +24,12 @@ describe("Test maxSubArray.js", () => {
     expect(solution2(arr2)).toBe(expected2);
     expect(solution2(arr3)).toBe(expected3);
     expect(solution2(arr4)).toBe(expected4);
+  });
+
+  test("Solution 3 should return max sum of subarray", () => {
+    expect(solution3(arr1)).toBe(expected1);
+    expect(solution3(arr2)).toBe(expected2);
+    expect(solution3(arr3)).toBe(expected3);
+    expect(solution3(arr4)).toBe(expected4);
   });
 });

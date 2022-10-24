@@ -39,4 +39,40 @@ function solution2(arr) {
   return maxSoFar;
 }
 
-module.exports = { solution1, solution2 };
+/**
+ * @param {array} arr An array of integer numbers
+ * @return {number} The largest sum of subarray.
+ * @solution Divide and conquer algorithm: https://www.geeksforgeeks.org/maximum-subarray-sum-using-divide-and-conquer-algorithm/
+ */
+function solution3(arr, low = 0, high = arr.length - 1) {
+  if (low > high) return -Infinity;
+  if (low === high) return arr[low];
+  let mid = parseInt((low + high) / 2, 10);
+
+  return Math.max(
+    solution3(arr, low, mid - 1),
+    solution3(arr, mid + 1, high),
+    maxCrossingSum(arr, low, mid, high)
+  );
+}
+
+function maxCrossingSum(arr, low, mid, high) {
+  let sum = 0;
+  let leftSum = -Infinity;
+  for (let i = mid; i >= low; i--) {
+    sum += arr[i];
+    if (sum > leftSum) leftSum = sum;
+  }
+
+  sum = 0;
+  let rightSum = -Infinity;
+  for (let i = mid; i <= high; i++) {
+    sum += arr[i];
+    if (sum > rightSum) rightSum = sum;
+  }
+  console.log(leftSum + rightSum - arr[mid], leftSum, rightSum);
+
+  return Math.max(leftSum + rightSum - arr[mid], leftSum, rightSum);
+}
+
+module.exports = { solution1, solution2, solution3 };
