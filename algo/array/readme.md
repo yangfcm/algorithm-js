@@ -20,7 +20,7 @@ Problems and solutions about arrays.
 
 5. `maxSubArrayModSum.js`
 
-   Given an integer array nums and an integer m, find the contiguous subarray which has the largest sum mod m.
+   **[H]** Given an integer array nums and an integer m, find the contiguous subarray which has the largest sum mod m.
 
 6. `maxSubArraySum.js`
 
