@@ -21,9 +21,39 @@ function solution1(arr, m) {
   return maxSum;
 }
 
+/**
+ *
+ * @param {array} arr
+ * @param {number} m
+ * @solution Can't understand this solution, though.
+ */
 function solution2(arr, m) {
-  let maxSum = -Infinity;
-  // @TODO: implement solution.
+  let maxSum = 0;
+  let minDiff = m;
+  let sum = 0;
+  const sumArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+    sumArr.push({
+      index: i,
+      sum: sum % m,
+    });
+    maxSum = Math.max(maxSum, sumArr[i].sum % m);
+  }
+
+  sumArr.sort((a, b) => a.sum - b.sum);
+
+  for (let i = 1; i < sumArr.length; i++) {
+    if (
+      sumArr[i].sum > sumArr[i - 1].sum &&
+      sumArr[i].index < sumArr[i - 1].index
+    ) {
+      minDiff = Math.min(minDiff, sumArr[i].sum - sumArr[i - 1].sum);
+    }
+  }
+
+  maxSum = Math.max(maxSum, m - minDiff);
+
   return maxSum;
 }
 

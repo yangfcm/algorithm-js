@@ -1,4 +1,4 @@
-const { solution1 } = require("../maxSubArrayModSum");
+const { solution1, solution2 } = require("../maxSubArrayModSum");
 
 const arr1 = [3, 3, 9, 9, 5];
 const m1 = 7;
@@ -18,9 +18,30 @@ const arr2 = [
 const m2 = 1804289384;
 const expected2 = 1802192837;
 
+const arr3 = [
+  412776092, 1424268981, 1911759957, 749241874, 137806863, 42999171, 982906997,
+  135497282, 511702306, 2084420926, 1937477085, 1827336328, 572660337,
+  1159126506, 805750847, 1632621730, 1100661314, 1433925858, 1141616125,
+  84353896, 939819583, 2001100546, 1998898815, 1548233368, 610515435,
+  1585990365, 1374344044, 760313751, 1477171088, 356426809, 945117277,
+  1889947179, 1780695789, 709393585, 491705404, 1918502652, 752392755,
+  1474612400, 2053999933, 1264095061, 1411549677, 1843993369, 943947740,
+  1984210013, 855636227, 1749698587, 1469348095, 1956297540, 1036140796,
+  463480571,
+];
+const m3 = 184803527;
+const expected3 = 184770427;
+
 describe("Test maxSubArrayModSum.js", () => {
   test("Solution 1 should return the max mod sum of subarray", () => {
     expect(solution1(arr1, m1)).toBe(expected1);
     expect(solution1(arr2, m2)).toBe(expected2);
+    expect(solution1(arr3, m3)).toBe(expected3);
+  });
+
+  test("Solution 2 should return the max mod sum of subarray", () => {
+    expect(solution2(arr1, m1)).toBe(expected1);
+    expect(solution2(arr2, m2)).toBe(expected2);
+    expect(solution2(arr3, m3)).toBe(expected3);
   });
 });

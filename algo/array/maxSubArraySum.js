@@ -70,7 +70,6 @@ function maxCrossingSum(arr, low, mid, high) {
     sum += arr[i];
     if (sum > rightSum) rightSum = sum;
   }
-  console.log(leftSum + rightSum - arr[mid], leftSum, rightSum);
 
   return Math.max(leftSum + rightSum - arr[mid], leftSum, rightSum);
 }
