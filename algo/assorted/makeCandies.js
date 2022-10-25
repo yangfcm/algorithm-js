@@ -33,22 +33,23 @@ function solution(m, w, p, n) {
     return max;
   }
 
+  if (n <= p) return Math.ceil(n / (m * w));
+  // Edge case: If target(n) is bigger than p, we will have to always produce without investment until reaching the target.
   let days = 0;
   let invest = 0;
   let production = 0;
   let netProduction = 0;
+  let ans = Infinity;
 
   do {
+    ans = Math.min(ans, days + Math.ceil((n - production) / (m * w)));
     days++;
-    if (production * 2 >= n) {
-      break;
-    }
     production = maxProduction(invest) + netProduction;
     invest = Math.floor(production / p); // ?
     netProduction = production - invest * p;
   } while (production < n);
 
-  return days;
+  return Math.min(ans, days);
 }
 
 module.exports = { solution };
