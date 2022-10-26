@@ -14,23 +14,17 @@ function solution(m, w, p, n) {
   // m - machine, w - workers, n - addition
   // find out the addition such that the production can achieve the most.
   // i.e. production = (m + add) * (w + (n - add)) add >= 0 and add <= n production is the maximum
-  function maxProduction(n = 0) {
-    let newM = m;
-    let newW = w;
-    let max = m * w;
-    for (let add = 0; add <= n; add++) {
-      const addedM = m + add;
-      const addedW = w + n - add;
-      const newProduction = addedM * addedW;
-      if (newProduction > max) {
-        max = newProduction;
-        newM = addedM;
-        newW = addedW;
-      }
+  function maxProduction(invest = 0) {
+    const total = m + w + invest;
+    const half = Math.ceil(total / 2);
+    if (m > w) {
+      m = Math.max(m, half);
+      w = total - m;
+    } else {
+      w = Math.max(w, half);
+      m = total - w;
     }
-    m = newM;
-    w = newW;
-    return max;
+    return w * m;
   }
 
   if (n <= p) return Math.ceil(n / (m * w));
