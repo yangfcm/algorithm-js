@@ -1,8 +1,10 @@
 const Node = require("./bst");
 const { inOrderTraverse } = require("./bTreeTraverse");
+const { listOfDepthsAlt: listOfDepths } = rquire("./listOfDepths");
 
 /**
  * @name swapNodes
+ * @description For detailed description and examples, refer to the below link
  * @resources https://www.hackerrank.com/challenges/swap-nodes-algo/problem
  */
 
@@ -56,11 +58,26 @@ function buildTree(indexes) {
 }
 
 function swapNodes(indexes, queries) {
+  const traversalResults = [];
   const tree = buildTree(indexes);
-  const traversalBeforeSwap = inOrderTraverse(tree);
-  // Do swap
+  const levelsList = listOfDepths(tree);
+  const depths = levelsList.length;
+  for (let q of queries) {
+    let k = 1;
+    let level = k * q;
+    while (level <= depths) {
+      const levelNodes = levelsList[level - 1];
+      for (let node of levelNodes) {
+        [node.left, node.right] = [node.right, node.left];
+      }
+      k++;
+      level = k * q;
+    }
+    const traversalAfterSwap = inOrderTraverse(tree);
+    traversalResults.push(traversalAfterSwap);
+  }
 
-  const traversalAfterSwap = inOrderTraverse(tree);
+  return traversalResults;
 }
 
-module.exports = { buildTree };
+module.exports = { swapNodes };
