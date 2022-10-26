@@ -18,10 +18,14 @@ Problems and solutions associated with **trees**
 
    Validate the binary search tree
 
-5. `minimalTree.js`
+5. `bstTraverse.js`
+
+   Use three ways(Inorder, Preorder and Postorder) to traverse a binary search tree
+
+6. `minimalTree.js`
 
    Create a binary search tree with minimal height based on a ascend-sorted array
 
-6. `listOfDepths.js`
+7. `listOfDepths.js`
 
    Create an array of all the nodes at each depth.

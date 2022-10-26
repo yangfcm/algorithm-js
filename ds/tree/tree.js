@@ -47,7 +47,7 @@ class Tree {
       const node = treeArr.shift();
       treeArr.unshift(...node.children);
       // Very similar to BFS, but instead of put children's elements at the end of the array,
-      // DFS puth children's elements at the head.
+      // DFS put children's elements at the head.
       fn(node);
     }
   }
