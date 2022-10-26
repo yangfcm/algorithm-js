@@ -29,3 +29,5 @@ Problems and solutions associated with **trees**
 7. `listOfDepths.js`
 
    Create an array of all the nodes at each depth.
+
+8. `swapNodes.js`
