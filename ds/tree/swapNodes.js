@@ -64,7 +64,7 @@ function swapNodes(indexes, queries) {
   const depths = levelsList.length;
   for (let q of queries) {
     let k = 1;
-    let level = k * q;
+    let level = k * q; // For each q, swap the nodes at level q, 2*q, 3*q ... until it reaches the end of the tree.
     while (level <= depths) {
       const levelNodes = levelsList[level - 1];
       for (let node of levelNodes) {
