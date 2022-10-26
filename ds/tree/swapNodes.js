@@ -1,6 +1,6 @@
 const Node = require("./bst");
 const { inOrderTraverse } = require("./bTreeTraverse");
-const { listOfDepthsAlt: listOfDepths } = rquire("./listOfDepths");
+const { listOfDepthsAlt: listOfDepths } = require("./listOfDepths");
 
 /**
  * @name swapNodes
@@ -57,6 +57,17 @@ function buildTree(indexes) {
   return nodesMap[1];
 }
 
+/**
+ * @param {array} indexes
+ * @param {array} queries
+ * @returns An array of inorder traversal of the tree after each swap.
+ * @solution It actually involves a number of child problems.
+ * 1. Need to create a b-tree from indexes (buildTree)
+ * 2. Create an array for each level of the tree (listOfDepths)
+ * 3. Inorder traverse a tree (inOrderTraverse)
+ * With the above three problems solved, the swap operation itself is easy.
+ * Just iterate nodes throughout a level and swap each node's left child and right child.
+ */
 function swapNodes(indexes, queries) {
   const traversalResults = [];
   const tree = buildTree(indexes);
