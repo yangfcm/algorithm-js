@@ -54,10 +54,14 @@ Problems and solutions about arrays.
 
     Find out how many pairs of socks with matching colors(represented by numbers in an array).
 
-14. `twoSum.js`
+14. `tripleSum.js`
+
+    Given 3 arrays of a, b, c of different sizes, find the number of distinct triplets (p, q, r), where p is from a, q from b, r from c, satisfying the criteria: p <= q and q >= r.
+
+15. `twoSum.js`
 
     Return indices of the two numbers whose sum equals to a target.
 
-15. `validSudoku.js`
+16. `validSudoku.js`
 
     Determine if a 9x9 Sudoku board is valid.
