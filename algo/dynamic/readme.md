@@ -33,3 +33,7 @@ Problems and solutions associated with recursive calls.
 8. `commonChild.js`
 
    Find out the longest common 'child' string of two given strings.
+
+9. `permutations.js`
+
+   Return all the possible of permutations of an array of numbers.
