@@ -16,3 +16,7 @@ Algorithm to solve math problems.
 3. `isprime.js`
 
    Test if a given number is a prime(质数)
+
+4. `permutations.js`
+
+   Return all the possible of permutations of an array of numbers.
