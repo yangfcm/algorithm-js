@@ -1,5 +1,3 @@
-const { solution: findPermutations } = require("../math/permutations");
-
 /**
  * @name crosswordPuzzle
  * @description Given a 10 x 10 crossword grid and an array of words. 
@@ -19,16 +17,16 @@ const { solution: findPermutations } = require("../math/permutations");
       '++++++++++',
     ];
     The printed solution is like this: 
-      ++++++I+++
-      ++MEXICO++
-      ++++++E+++
-      ++++++L+++
-      +++PANAMA+
-      ++++++N+L+
-      ++++++D+M+
-      ++++++++A+
-      ++++++++T+
-      ++++++++Y+
+      '++++++++++'
+      '+POLAND+++'
+      '+++H++++++'
+      '+++A++++++'
+      '+++SPAIN++'
+      '+++A++N+++'
+      '++++++D+++'
+      '++++++I+++'
+      '++++++A+++'
+      '++++++++++'
  * @source https://www.hackerrank.com/challenges/crossword-puzzle/problem
  */
 function solution(crossword, words) {
