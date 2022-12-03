@@ -89,4 +89,31 @@ describe("Test crosswordPuzzle.js", () => {
     expect(console.log.mock.calls[8][0]).toBe("++++++++T+");
     expect(console.log.mock.calls[9][0]).toBe("++++++++Y+");
   });
+
+  test("Test case four", () => {
+    const words = ["LONDON", "DELHI", "ICELAND", "ANKARA"];
+    const crossword = [
+      "+-++++++++",
+      "+-++++++++",
+      "+-++++++++",
+      "+-----++++",
+      "+-+++-++++",
+      "+-+++-++++",
+      "+++++-++++",
+      "++------++",
+      "+++++-++++",
+      "+++++-++++",
+    ];
+    solution(crossword, words);
+    expect(console.log.mock.calls[0][0]).toBe("+L++++++++");
+    expect(console.log.mock.calls[1][0]).toBe("+O++++++++");
+    expect(console.log.mock.calls[2][0]).toBe("+N++++++++");
+    expect(console.log.mock.calls[3][0]).toBe("+DELHI++++");
+    expect(console.log.mock.calls[4][0]).toBe("+O+++C++++");
+    expect(console.log.mock.calls[5][0]).toBe("+N+++E++++");
+    expect(console.log.mock.calls[6][0]).toBe("+++++L++++");
+    expect(console.log.mock.calls[7][0]).toBe("++ANKARA++");
+    expect(console.log.mock.calls[8][0]).toBe("+++++N++++");
+    expect(console.log.mock.calls[9][0]).toBe("+++++D++++");
+  });
 });

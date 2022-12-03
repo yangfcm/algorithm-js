@@ -30,9 +30,114 @@
  * @source https://www.hackerrank.com/challenges/crossword-puzzle/problem
  */
 function solution(crossword, words) {
+  /**
+ * Helper function: Given wordPlaces array created by function createWordPlaces() and a possible solution,
+ * returns false if the solution can't match the wordPlaces, return a word map if it is the solution to find.
+ * @param {array} solution
+ * @example
+ * wordPlaces = [
+   [ '1-1', '1-2', '1-3', '1-4', '1-5', '1-6' ],
+    [ '4-3', '4-4', '4-5', '4-6', '4-7' ],
+    [ '1-3', '2-3', '3-3', '4-3', '5-3' ],
+    [ '4-6', '5-6', '6-6', '7-6', '8-6' ]]
+  solution = ['POLAND', 'SPAIN', 'LHASA', 'INDIA']
+  returns => {
+    '1-1': 'P',
+    '1-2': 'O',
+    '1-3': 'L',
+    '1-4': 'A',
+    '1-5': 'N',
+    '1-6': 'D',
+    '4-3': 'S',
+    '4-4': 'P',
+    '4-5': 'A',
+    '4-6': 'I',
+    '4-7': 'N',
+    '2-3': 'H',
+    '3-3': 'A',
+    '5-3': 'A',
+    '5-6': 'N',
+    '6-6': 'D',
+    '7-6': 'I',
+    '8-6': 'A'
+  }
+ * @returns
+ */
+  function checkSolution(solution) {
+    if (
+      !Array.isArray(wordPlaces) ||
+      !Array.isArray(solution) ||
+      wordPlaces.length !== solution.length
+    ) {
+      // Check the validitiy of arguments.
+      return false;
+    }
+    const wordMap = {};
+    for (let i = 0; i < solution.length; i++) {
+      const word = solution[i];
+      const spaces = wordPlaces[i];
+      // console.log(word, spaces);
+      if (word.length !== spaces.length) return false;
+      for (let j = 0; j < spaces.length; j++) {
+        const mapKey = spaces[j];
+        if (wordMap[mapKey] && wordMap[mapKey] !== word[j]) return false;
+        wordMap[mapKey] = word[j];
+      }
+    }
+    return wordMap;
+  }
+
+  /**
+   * Find all possible permutations of the words list and match the wordPlaces.
+   * If matched, return the solution and if not, continue looking.
+   * It uses recursive algorithm.
+   * @param {array} arr
+   * @returns
+   */
+  function findSolution(solutions) {
+    const permutationsArr = [];
+    if (solutions.length === 0) return [];
+    if (solutions.length === 1) return [solutions];
+
+    for (let i = 0; i < solutions.length; i++) {
+      const current = solutions[i];
+      const remaining = [...solutions.slice(0, i), ...solutions.slice(i + 1)];
+      const remainingPermuted = findSolution(remaining);
+      for (let j = 0; j < remainingPermuted.length; j++) {
+        const possibleSolution = [current, ...remainingPermuted[j]];
+        if (possibleSolution.length === words.length) {
+          const result = checkSolution(possibleSolution);
+          if (result) return result;
+        }
+        permutationsArr.push(possibleSolution);
+      }
+    }
+    return permutationsArr;
+  }
+
+  /**
+   * Given the crossword board and its corresponding solution, print the solution on console.
+   * @param {array} solution
+   * @param {array} crossword
+   */
+  function printSolution(solution) {
+    for (let i = 0; i < crossword.length; i++) {
+      let line = "";
+      for (let j = 0; j < crossword[i].length; j++) {
+        const key = `${i}-${j}`;
+        if (solution[key] && crossword[i][j] === "-") {
+          line += solution[key];
+        } else {
+          line += crossword[i][j];
+        }
+      }
+      console.log(line);
+    }
+  }
+
   const wordPlaces = createWordPlaces(crossword, words);
-  const solution = findSolution(words, wordPlaces, words);
-  printSolution(solution, crossword);
+  const solution = findSolution(words);
+  printSolution(solution);
 }
 
 /**
@@ -119,114 +224,6 @@ function createWordPlaces(crossword, words) {
     ...createWordPlacesOnXDirection(crossword, words),
     ...createWordPlacesOnYDirection(crossword, words),
   ];
-}
-
-/**
- * Given wordPlaces array created by function createWordPlaces() and a possible solution,
- * returns false if the solution can't match the wordPlaces, return a word map if it is the solution to find.
- * @param {array} wordPlaces
- * @param {array} solution
- * @example
- * wordPlaces = [
-   [ '1-1', '1-2', '1-3', '1-4', '1-5', '1-6' ],
-    [ '4-3', '4-4', '4-5', '4-6', '4-7' ],
-    [ '1-3', '2-3', '3-3', '4-3', '5-3' ],
-    [ '4-6', '5-6', '6-6', '7-6', '8-6' ]]
-  solution = ['POLAND', 'SPAIN', 'LHASA', 'INDIA']
-  returns => {
-    '1-1': 'P',
-    '1-2': 'O',
-    '1-3': 'L',
-    '1-4': 'A',
-    '1-5': 'N',
-    '1-6': 'D',
-    '4-3': 'S',
-    '4-4': 'P',
-    '4-5': 'A',
-    '4-6': 'I',
-    '4-7': 'N',
-    '2-3': 'H',
-    '3-3': 'A',
-    '5-3': 'A',
-    '5-6': 'N',
-    '6-6': 'D',
-    '7-6': 'I',
-    '8-6': 'A'
-  }
- * @returns
- */
-function checkSolution(wordPlaces, solution) {
-  if (
-    !Array.isArray(wordPlaces) ||
-    !Array.isArray(solution) ||
-    wordPlaces.length !== solution.length
-  ) {
-    // Check the validitiy of arguments.
-    return false;
-  }
-  const wordMap = {};
-  for (let i = 0; i < solution.length; i++) {
-    const word = solution[i];
-    const spaces = wordPlaces[i];
-    // console.log(word, spaces);
-    if (word.length !== spaces.length) return false;
-    for (let j = 0; j < spaces.length; j++) {
-      const mapKey = spaces[j];
-      if (wordMap[mapKey] && wordMap[mapKey] !== word[j]) return false;
-      wordMap[mapKey] = word[j];
-    }
-  }
-  return wordMap;
-}
-
-/**
- * Find all possible permutations of the words list and match the wordPlaces.
- * If matched, return the solution and if not, continue looking.
- * It uses recursive algorithm.
- * @param {array} arr
- * @param {array} wordPlaces
- * @param {array} words
- * @returns
- */
-function findSolution(arr, wordPlaces, words) {
-  const permutationsArr = [];
-  if (arr.length === 0) return [];
-  if (arr.length === 1) return [arr];
-
-  for (let i = 0; i < arr.length; i++) {
-    const current = arr[i];
-    const remaining = [...arr.slice(0, i), ...arr.slice(i + 1)];
-    const remainingPermuted = findSolution(remaining, wordPlaces, words);
-    for (let j = 0; j < remainingPermuted.length; j++) {
-      const possibleSolution = [current, ...remainingPermuted[j]];
-      if (possibleSolution.length === words.length) {
-        const result = checkSolution(wordPlaces, possibleSolution);
-        if (result) return result;
-      }
-      permutationsArr.push(possibleSolution);
-    }
-  }
-  return permutationsArr;
-}
-
-/**
- * Given the crossword board and its corresponding solution, print the solution on console.
- * @param {array} solution
- * @param {array} crossword
- */
-function printSolution(solution, crossword) {
-  for (let i = 0; i < crossword.length; i++) {
-    let line = "";
-    for (let j = 0; j < crossword[i].length; j++) {
-      const key = `${i}-${j}`;
-      if (solution[key] && crossword[i][j] === "-") {
-        line += solution[key];
-      } else {
-        line += crossword[i][j];
-      }
-    }
-    console.log(line);
-  }
 }
 
 module.exports = { solution };
