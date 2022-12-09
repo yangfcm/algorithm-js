@@ -33,3 +33,7 @@ Problems and solutions associated with **stacks and queues**
 8. `setOfStacks.js`
 
    Implement a stack of plates
+
+9. `isbalanced2.js`
+
+   Test if a string has balanced brackets.
