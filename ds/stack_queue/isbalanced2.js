@@ -13,7 +13,6 @@
 function solution(str) {
   const bracketsArr = [];
   for (let ch of str) {
-    console.log(ch);
     if (ch === "(" || ch === "{" || ch === "[") {
       bracketsArr.unshift(ch);
     }
