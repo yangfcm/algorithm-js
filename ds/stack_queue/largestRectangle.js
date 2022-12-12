@@ -9,8 +9,8 @@
  *     |+|+|  _
  *  _  |+|+|_| |
  * | |_|+|+| | |
- * |2|1|5|6|2|3|
- * -------------
+ * | | |+|+| | |
+ * -2-1-5-6-2-3-
  * The above is the a histogram where width of each bar is 1.
  * The largest rectangle is the one created by 5 and 6, which has an area of 2 * 5 = 10 units.
  * @param {array} heights
