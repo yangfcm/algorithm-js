@@ -17,6 +17,33 @@
  * @returns The area of the largest rectangle.
  * @source https://leetcode.com/problems/largest-rectangle-in-histogram/description/
  */
-function solution(heights) {}
+function solution(heights) {
+  const stack = [];
+  let maxArea = 0;
+  let index = 0;
+  while (index < heights.length) {
+    if (
+      stack.length === 0 ||
+      heights[stack[stack.length - 1]] <= heights[index]
+    ) {
+      stack.push(index);
+      index++;
+    } else {
+      let top = stack.pop();
+      let area =
+        heights[top] *
+        (stack.length > 0 ? index - stack[stack.length - 1] - 1 : index);
+      maxArea = Math.max(maxArea, area);
+    }
+  }
+  while (stack.length > 0) {
+    let top = stack.pop();
+    let area =
+      heights[top] *
+      (stack.length > 0 ? index - stack[stack.length - 1] - 1 : index);
+    maxArea = Math.max(maxArea, area);
+  }
+  return maxArea;
+}
 
 module.exports = { solution };

@@ -37,3 +37,7 @@ Problems and solutions associated with **stacks and queues**
 9. `isbalanced2.js`
 
    Test if a string has balanced brackets.
+
+10. `largestRectangle.js`
+
+Return the area of the largest rectangle in the histogram.
