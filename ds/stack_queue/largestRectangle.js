@@ -17,6 +17,7 @@
  * @returns The area of the largest rectangle.
  * @solution Iterate through the heights array, for each bar(height), calculate the area with
  * this element as the smallest bar in the rectangle. Then, we can calculate the such area for every bar and find out the maximum of all such areas.
+ * The worst time complexity is O(n^2)
  * @source https://leetcode.com/problems/largest-rectangle-in-histogram/description/
  */
 function solution1(heights) {
@@ -38,7 +39,8 @@ function solution1(heights) {
   return maxArea;
 }
 
-// This solution uses the idea of stacks to improve the above algorithm
+// This solution uses the idea of stacks to improve the above algorithm.
+// The time complexity is improved to O(n)
 function solution2(heights) {
   const stack = [];
   let maxArea = 0;
