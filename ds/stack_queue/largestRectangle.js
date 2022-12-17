@@ -17,6 +17,8 @@
  * @returns The area of the largest rectangle.
  * @solution Iterate through the heights array, for each bar(height), calculate the area with
  * this element as the smallest bar in the rectangle. Then, we can calculate the such area for every bar and find out the maximum of all such areas.
+ * To be specific, for each bar, look at its neighbouring (including left and right) bars until it hits a lower bar or the boundary of the array.
+ * Then, the area of this rectangle is just the maximum area for this bar.
  * The worst time complexity is O(n^2)
  * @source https://leetcode.com/problems/largest-rectangle-in-histogram/description/
  */
@@ -26,10 +28,12 @@ function solution1(heights) {
     const height = heights[i];
     let width = 1;
     for (let j = i - 1; j >= 0; j--) {
+      // Expand to left
       if (heights[j] >= height) width++;
       else break;
     }
     for (let k = i + 1; k < heights.length; k++) {
+      // Expand to right
       if (heights[k] >= height) width++;
       else break;
     }
@@ -41,6 +45,7 @@ function solution1(heights) {
 
 // This solution uses the idea of stacks to improve the above algorithm.
 // The time complexity is improved to O(n)
+// This blog explains the solution well: https://www.danielleskosky.com/largest-rectangle-in-histogram/
 function solution2(heights) {
   const stack = [];
   let maxArea = 0;
@@ -70,4 +75,35 @@ function solution2(heights) {
   return maxArea;
 }
 
-module.exports = { solution1, solution2 };
+// This solution uses the exact the same logic as solution2 but in a more readable way and written based on the understanding of the algorithm.
+function solution3(heights) {
+  let maxArea = 0;
+  const stack = [];
+  for (let i = 0; i < heights.length; i++) {
+    const height = heights[i];
+    if (stack.length === 0 || height >= heights[stack[0]]) {
+      stack.unshift(i);
+    } else {
+      while (heights[stack[0]] > height) {
+        const top = stack.shift();
+        const rightBoundary = i;
+        const leftBoundary = stack.length > 0 ? stack[0] : -1;
+        const area = heights[top] * (rightBoundary - leftBoundary - 1);
+        maxArea = Math.max(maxArea, area);
+      }
+      stack.unshift(i);
+    }
+  }
+
+  while (stack.length > 0) {
+    // This one and the above whilel oop actually has the same logic. Consider separate it as a helper function.
+    const top = stack.shift();
+    const rightBoundary = heights.length;
+    const leftBoundary = stack.length > 0 ? stack[0] : -1;
+    const area = heights[top] * (rightBoundary - leftBoundary - 1);
+    maxArea = Math.max(maxArea, area);
+  }
+  return maxArea;
+}
+
+module.exports = { solution1, solution2, solution3 };
