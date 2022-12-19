@@ -27,15 +27,13 @@ function solution1(heights) {
   for (let i = 0; i < heights.length; i++) {
     const height = heights[i];
     let width = 1;
-    for (let j = i - 1; j >= 0; j--) {
+    for (let j = i - 1; j >= 0 && heights[j] >= height; j--) {
       // Expand to left
-      if (heights[j] >= height) width++;
-      else break;
+      width++;
     }
-    for (let k = i + 1; k < heights.length; k++) {
+    for (let k = i + 1; k < heights.length && heights[k] >= height; k++) {
       // Expand to right
-      if (heights[k] >= height) width++;
-      else break;
+      width++;
     }
     const area = height * width;
     if (area > maxArea) maxArea = area;
@@ -86,9 +84,9 @@ function solution3(heights) {
     } else {
       while (heights[stack[0]] > height) {
         const top = stack.shift();
-        const rightBoundary = i;
-        const leftBoundary = stack.length > 0 ? stack[0] : -1;
-        const area = heights[top] * (rightBoundary - leftBoundary - 1);
+        const high = i;
+        const low = stack.length > 0 ? stack[0] : -1;
+        const area = heights[top] * (high - low - 1);
         maxArea = Math.max(maxArea, area);
       }
       stack.unshift(i);
@@ -98,9 +96,9 @@ function solution3(heights) {
   while (stack.length > 0) {
     // This one and the above whilel oop actually has the same logic. Consider separate it as a helper function.
     const top = stack.shift();
-    const rightBoundary = heights.length;
-    const leftBoundary = stack.length > 0 ? stack[0] : -1;
-    const area = heights[top] * (rightBoundary - leftBoundary - 1);
+    const high = heights.length;
+    const low = stack.length > 0 ? stack[0] : -1;
+    const area = heights[top] * (high - low - 1);
     maxArea = Math.max(maxArea, area);
   }
   return maxArea;
