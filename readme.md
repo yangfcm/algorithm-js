@@ -62,3 +62,9 @@ npm run test:watch
 ```
 npm run test <file name or directory name>
 ```
+
+## Solutions in other languages:
+
+- [C#](https://github.com/yangfcm/algorithm-csharp)
+- [Java](https://github.com/yangfcm/algorithm-java)
+- [Python](https://github.com/yangfcm/algorithm-python)
