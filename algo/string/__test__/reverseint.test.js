@@ -1,4 +1,4 @@
-const { solution } = require("../reverseInt");
+const { solution } = require("../reverseint");
 
 describe("Test reverseint.js", () => {
   test("solution function exists", () => {
