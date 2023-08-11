@@ -13,6 +13,7 @@
  * @solution Remove spaces, punctuations from strings(use regular expression) and covert strings to lower case.
  * Create two character maps(object) of both strings, where the key is the character of the string and value is the occurrence of the character in the string.
  * If str1 is the anagram of str2, the two character maps should have exact same key-value pairs.
+ * @source https://leetcode.com/problems/valid-anagram/
  */
 function solution1(str1, str2) {
   const charMap1 = strToCharMap(str1);

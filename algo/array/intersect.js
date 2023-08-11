@@ -11,6 +11,7 @@
  * @return {number[]} Intersection of nums1 and nums2
  * @solution Iterate one of the array. If the element in the array can be found in the other array,
  * It is exactly the element in intersection and meanwhile remove the element from the other array to avoid futher duplication
+ * @source https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
  */
 function solution(nums1, nums2) {
   const interscetArr = [];

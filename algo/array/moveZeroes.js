@@ -6,6 +6,7 @@
  * @param {number[]} nums An array of numbers
  * @return {undefined} Not return anything, modify nums in-place instead.
  * @solution The solution is straightforward, just iterating the array and if the element is 0, move it to the end of array.
+ * @source https://leetcode.com/problems/move-zeroes/
  */
 function solution(nums) {
   let trailingZero = true;

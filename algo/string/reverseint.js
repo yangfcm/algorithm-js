@@ -7,6 +7,7 @@
  * @solution It looks easy, but there are a couple of edge cases to consider:
  * 1. You must keep the sign of the original number, like -521.
  * 2. Consider the number which has trailing zeros, like 1200.
+ * @source https://leetcode.com/problems/reverse-integer/
  */
 function solution(int) {
   try {

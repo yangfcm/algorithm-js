@@ -5,6 +5,7 @@
  * @param {string} str
  * @returns {string} A reversed string
  * @solution Split the string to an array, reverse the array, join the reversed array back to a string.
+ * @source https://leetcode.com/problems/reverse-string/
  */
 function solution1(str) {
   return str.split("").reverse().join("");

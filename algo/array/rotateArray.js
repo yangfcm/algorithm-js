@@ -8,6 +8,7 @@
  * @param {number[]} nums An array of numbers
  * @param {number} k The steps to rotate
  * @return {undefined} The array is rotated to the right by k steps
+ * @source https://leetcode.com/problems/rotate-array/
  */
 function solution1(nums, k) {
   if (k < 0) {

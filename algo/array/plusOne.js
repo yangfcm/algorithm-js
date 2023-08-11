@@ -7,6 +7,7 @@
  * @param {number[]} digits An array of numbers that represent an integer.
  * @return {number[]} An array of numbers that represent the number in parameter added by 1.
  * @solution Need to especially pay attention to the case when the 'integer' ends with 9.
+ * @source https://leetcode.com/problems/plus-one/
  */
 function solution(digits) {
   for (let i = digits.length - 1; i >= 0; i--) {

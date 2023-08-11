@@ -19,6 +19,7 @@
  * Iterate the array. For each number(price), check if the next number is bigger than the current number. If it's bigger and you are not holding a stock, buy it.
  * If the next number is smaller than the current number and if you're holding the stock, sell it.
  * Accumulate the profit every time you sell a stock and this is the max profit you can get.
+ * @source https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  */
 function solution(prices) {
   let profit = 0;
