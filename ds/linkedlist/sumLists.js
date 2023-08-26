@@ -11,6 +11,7 @@ const { LinkedList, Node } = require("./linkedlist");
  * @param {LinkedList} list1
  * @param {LinkedList} list2
  * @returns {LinkedList}
+ * @source https://leetcode.com/problems/add-two-numbers/description/
  */
 const sumLists = (list1, list2) => {
   const sumList = new LinkedList();
