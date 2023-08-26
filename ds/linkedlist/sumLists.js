@@ -15,11 +15,11 @@ const { LinkedList, Node } = require("./linkedlist");
  */
 const sumLists = (list1, list2) => {
   const sumList = new LinkedList();
-  size1 = list1.size();
-  size2 = list2.size();
-  maxSize = size1 > size2 ? size1 : size2;
-  node1 = list1.head;
-  node2 = list2.head;
+  const size1 = list1.size();
+  const size2 = list2.size();
+  const maxSize = size1 > size2 ? size1 : size2;
+  let node1 = list1.head;
+  let node2 = list2.head;
 
   for (let i = 0; i < maxSize; i++) {
     digit1 = node1 ? node1.data : 0;
