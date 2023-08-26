@@ -1,4 +1,4 @@
-const { LinkedList } = require("./linkedlist");
+const { LinkedList, Node } = require("./linkedlist");
 
 /**
  * @name sumLists
@@ -37,4 +37,26 @@ const sumLists = (list1, list2) => {
   return sumList;
 };
 
-module.exports = sumLists;
+/**
+ * @name sumListNodes
+ * @description The above solution makes use of the methods of LinkedList.
+ * This solution would just use the Node class.
+ * @param {Node} node1
+ * @param {Node} node2
+ * @returns {Node}
+ */
+const sumListNodes = (node1, node2) => {
+  const sumNode = new Node();
+  let carry = 0;
+  let cursor = sumNode;
+  while (node1 || node2 || carry) {
+    const sum = (node1?.data || 0) + (node2?.data || 0) + carry;
+    carry = Math.floor(sum / 10);
+    cursor.next = new Node(sum % 10);
+    cursor = cursor.next;
+    node1 = node1?.next;
+    node2 = node2?.next;
+  }
+  return sumNode.next;
+};
+module.exports = { sumListNodes, sumLists };

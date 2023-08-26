@@ -1,5 +1,5 @@
-const { LinkedList } = require("../../linkedlist/linkedlist");
-const sumLists = require("../../linkedlist/sumLists");
+const { LinkedList, Node } = require("../../linkedlist/linkedlist");
+const { sumLists, sumListNodes } = require("../../linkedlist/sumLists");
 
 describe("Test sumLists", () => {
   let list1 = new LinkedList();
@@ -53,4 +53,21 @@ describe("Test sumLists", () => {
     expect(sumList.getAt(2).data).toBe(0);
     expect(sumList.getAt(3).data).toBe(1);
   });
+});
+
+describe("Test sumListNodes", () => {
+  // node1 = 7 -> 1 -> 6
+  // node2 = 5 -> 9 -> 2
+  // sum   = 2 -> 1 -> 9
+  const node1 = new Node(7);
+  node1.next = new Node(1);
+  node1.next.next = new Node(6);
+
+  const node2 = new Node(5);
+  node2.next = new Node(9);
+  node2.next.next = new Node(2);
+  const sum = sumListNodes(node1, node2);
+  expect(sum.data).toBe(2);
+  expect(sum.next.data).toBe(1);
+  expect(sum.next.next.data).toBe(9);
 });
