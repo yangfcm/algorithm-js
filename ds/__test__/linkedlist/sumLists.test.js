@@ -56,18 +56,60 @@ describe("Test sumLists", () => {
 });
 
 describe("Test sumListNodes", () => {
-  // node1 = 7 -> 1 -> 6
-  // node2 = 5 -> 9 -> 2
-  // sum   = 2 -> 1 -> 9
-  const node1 = new Node(7);
-  node1.next = new Node(1);
-  node1.next.next = new Node(6);
+  test("sumListNodes should return correct sum linked list - case 1", () => {
+    // node1 = 7 -> 1 -> 6
+    // node2 = 5 -> 9 -> 2
+    // sum   = 2 -> 1 -> 9
+    const node1 = new Node(7);
+    node1.next = new Node(1);
+    node1.next.next = new Node(6);
 
-  const node2 = new Node(5);
-  node2.next = new Node(9);
-  node2.next.next = new Node(2);
-  const sum = sumListNodes(node1, node2);
-  expect(sum.data).toBe(2);
-  expect(sum.next.data).toBe(1);
-  expect(sum.next.next.data).toBe(9);
+    const node2 = new Node(5);
+    node2.next = new Node(9);
+    node2.next.next = new Node(2);
+    const sum = sumListNodes(node1, node2);
+    expect(sum.data).toBe(2);
+    expect(sum.next.data).toBe(1);
+    expect(sum.next.next.data).toBe(9);
+    expect(sum.next.next.next).toBeFalsy();
+  });
+
+  test("sumListNodes should return correct sum linked list - case 2", () => {
+    // node1 = 9 -> 9 -> 9 -> 9
+    // node2 = 1
+    // sum   = 0 -> 0 -> 0 -> 0 -> 1
+    const node1 = new Node(9);
+    node1.next = new Node(9);
+    node1.next.next = new Node(9);
+    node1.next.next.next = new Node(9);
+
+    const node2 = new Node(1);
+    const sum = sumListNodes(node1, node2);
+    expect(sum.data).toBe(0);
+    expect(sum.next.data).toBe(0);
+    expect(sum.next.next.data).toBe(0);
+    expect(sum.next.next.next.data).toBe(0);
+    expect(sum.next.next.next.next.data).toBe(1);
+    expect(sum.next.next.next.next.next).toBeFalsy();
+  });
+
+  test("sumListNodes should return correct sum linked list - case 3", () => {
+    // node1 = 9 -> 8
+    // node2 = 9 -> 9 -> 9
+    // sum   = 8 -> 8 -> 0 -> 1
+    const node1 = new Node(9);
+    node1.next = new Node(8);
+
+    const node2 = new Node(9);
+    node2.next = new Node(9);
+    node2.next.next = new Node(9);
+
+    const sum = sumListNodes(node1, node2);
+
+    expect(sum.data).toBe(8);
+    expect(sum.next.data).toBe(8);
+    expect(sum.next.next.data).toBe(0);
+    expect(sum.next.next.next.data).toBe(1);
+    expect(sum.next.next.next.next).toBeFalsy();
+  });
 });
