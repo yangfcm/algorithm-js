@@ -2,82 +2,86 @@
 
 Problems and solutions about string manipulation.
 
-1. `anagrams.js`
+1.  `anagrams.js`
 
-   Check if two strings are anagrams of each other
+    Check if two strings are anagrams of each other
 
-2. `capitalize.js`
+2.  `capitalize.js`
 
-   Capitalize each word in a string
+    Capitalize each word in a string
 
-3. `checkPermutation.js`
+3.  `checkPermutation.js`
 
-   Check two strings are permutation
+    Check two strings are permutation
 
-4. `defangingIP.js`
+4.  `defangingIP.js`
 
-   Defang an IP address.
+    Defang an IP address.
 
-5. `firstUniqueChar.js`
+5.  `firstUniqueChar.js`
 
-   Find the first non-repeating character in a string.
+    Find the first non-repeating character in a string.
 
-6. `isbalanced.js`
+6.  `isbalanced.js`
 
-   Test if curly braces in a string is matched
+    Test if curly braces in a string is matched
 
-7. `isUnique.js`
+7.  `isUnique.js`
 
-   Determine if a string has all unique characters
+    Determine if a string has all unique characters.
 
-8. `makeAnagrams.js`
+8.  `longestSubstring.js`
 
-   Determine the minimum number of characters deletions required to make two strings anagrams.
+    Find the length of the longest substring without repeating characters.
 
-9. `maxchar.js`
+9.  `makeAnagrams.js`
 
-   Get the character that most commonly appears in a given string
+    Determine the minimum number of characters deletions required to make two strings anagrams.
 
-10. `oneAway.js`
+10. `maxchar.js`
+
+    Get the character that most commonly appears in a given string
+
+11. `oneAway.js`
 
     Check if one string is one edit away from the other string
 
-11. `palindrome.js`
+12. `palindrome.js`
 
     Test a string is a palindrome(its reversed string is exactly the same as itself)
 
-12. `palindromePermutation.js`
+13. `palindromePermutation.js`
 
     Check if a string is a permutation of a palindrome
 
-13. `removeVowels.js`
+14. `removeVowels.js`
 
     Remove vowels of a string
 
-14. `reverseint.js`
+15. `reverseint.js`
 
     Reverse an integer
 
-15. `reversestring.js`
+16. `reversestring.js`
 
     Reverse a string
 
-16. `specialString.js`
+17. `specialString.js`
 
     Find out how many special strings
 
-17. `stringCompression.js`
+18. `stringCompression.js`
 
     Compress a string
 
-18. `stringRotation.js`
+19. `stringRotation.js`
 
     Check if one string is the rotation of the other string, using isSubString function
 
-19. `validString.js`
+20. `validString.js`
 
     Check if a string is valid as per a certain rule
 
-20. `vowels.js`
+21. `vowels.js`
 
     Count the number of vowels used in a string
