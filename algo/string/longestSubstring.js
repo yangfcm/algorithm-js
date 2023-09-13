@@ -44,3 +44,5 @@ function solution(str) {
   }
   return maxLength;
 }
+
+module.exports = { solution };
