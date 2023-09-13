@@ -24,4 +24,4 @@ function solution(nums1, nums2) {
   }
 }
 
-module.exports(solution);
+module.exports = { solution };
