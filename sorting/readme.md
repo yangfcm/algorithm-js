@@ -10,18 +10,22 @@ Solutions to sort an array.
 
    Implment counting sort.
 
-3. `mergeSort.js`
+3. `countInversions.js`
 
-   Implement merge sort.
+   Count how many inversions required to sort an unordered array.
 
-4. `selectionSort.js`
-
-   Implement selection sort.
-
-5. `fradulentActivityNotice.js`
+4. `fradulentActivityNotice.js`
 
    Fradulent activity notice. An application in counting sort.
 
-6. `countInversions.js`
+5. `medianSorted.js`
 
-   Count how many inversions required to sort an unordered array.
+   Get the median of the two sorted arrays.
+
+6. `mergeSort.js`
+
+   Implement merge sort.
+
+7. `selectionSort.js`
+
+   Implement selection sort.

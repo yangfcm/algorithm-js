@@ -1,4 +1,4 @@
-const mergeSort = require("../mergeSort");
+const { mergeSort } = require("../mergeSort");
 
 describe("Test mergeSort.js", () => {
   let arr, sortedArr;
