@@ -2,22 +2,26 @@
 
 Implement JS built-in functions.
 
-1. `events.js`
+1. `debounce.js`
 
-   Create an event library out of the Events class
+   Implment debounce function.
 
-2. `filter.js`
+2. `events.js`
 
-   Implement Array.prototype.filter method
+   Create an event library out of the Events class.
 
-3. `reduce.js`
+3. `filter.js`
 
-   Implement Array.prototype.reduce method
+   Implement Array.prototype.filter method.
 
-4. `indexof.js`
+4. `reduce.js`
 
-   Implement Array.prototype.indexOf method
+   Implement Array.prototype.reduce method.
 
-5. `typeUtilities.js`
+5. `indexof.js`
+
+   Implement Array.prototype.indexOf method.
+
+6. `typeUtilities.js`
 
    Implement type checking utility functions.
