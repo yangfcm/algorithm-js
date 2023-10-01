@@ -1,7 +1,11 @@
 /**
- * Implement a debounce function which accepts a callback function and a wait duration.
+ * @name debounce
+ * @description Implement a debounce function which accepts a callback function and a wait duration.
  * Calling debounce() returns a function which has debounced invocations of the callback function
  * following the behavior described above.
+ * @param {fn}
+ * @param {wait}
+ * @returns {Function}
  */
 function debounce(fn, wait = 0) {
   let timeout;
