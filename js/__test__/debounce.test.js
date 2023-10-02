@@ -23,8 +23,10 @@ describe("Test debounce.js", () => {
     expect(fn).toHaveBeenCalledTimes(1);
   });
 
-  test("Debounced function should be called after a certain amount of time.", () => {
+  test("Debounced function should be called after a certain amount of time and only be called once.", () => {
     const debounced = debounce(fn, 300);
+    debounced();
+    debounced();
     debounced();
 
     expect(fn).not.toBeCalled();
