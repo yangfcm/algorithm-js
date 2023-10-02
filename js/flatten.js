@@ -30,4 +30,31 @@ function flatten1(arr) {
   return flatArr;
 }
 
-module.exports({ flatten1 });
+/**
+ * @param {Array} arr
+ * @returns {Array}
+ * @solution A more concise approach than the above one by using Array.prototype.some.
+ */
+function flatten2(arr) {
+  while (arr.some(Array.isArray)) {
+    arr = [].concat(...arr);
+  }
+  return arr;
+}
+
+/**
+ * @param {Array} arr
+ * @solution Rather than return a new array, this solution mutate the input array in-place
+ * so it doesn't consume extra memory with a constant O(1) space complexity.
+ */
+function flatten3(arr) {
+  for (let i = 0; i < arr.length; ) {
+    if (Array.isArray(arr[i])) {
+      arr.splice(i, 1, ...arr[i]);
+    } else {
+      i++;
+    }
+  }
+}
+
+module.exports = { flatten1, flatten2, flatten3 };
