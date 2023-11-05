@@ -14,18 +14,26 @@ Implement JS built-in functions.
 
    Implement Array.prototype.filter method.
 
-4. `flatten.js`
+4. `findIndex.js`
+
+   Implement Array.prototype.findIndex method.
+
+5. `findLastIndex.js`
+
+   Implement Array.prototype.findLastIndex method.
+
+6. `flatten.js`
 
    Flatten an array.
 
-5. `reduce.js`
+7. `reduce.js`
 
    Implement Array.prototype.reduce method.
 
-6. `indexof.js`
+8. `indexof.js`
 
    Implement Array.prototype.indexOf method.
 
-7. `typeUtilities.js`
+9. `typeUtilities.js`
 
    Implement type checking utility functions.
