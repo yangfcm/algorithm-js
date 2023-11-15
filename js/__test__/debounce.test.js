@@ -35,4 +35,19 @@ describe("Test debounce.js", () => {
     jest.advanceTimersByTime(1);
     expect(fn).toHaveBeenCalledTimes(1);
   });
+
+  test("Callback can access 'this'.", () => {
+    const obj = {
+      val: 1,
+      increment: debounce(function (adder) {
+        this.val += adder;
+      }, 10),
+    };
+
+    expect(obj.val).toBe(1);
+    obj.increment(3);
+    expect(obj.val).toBe(1);
+    jest.advanceTimersByTime(10);
+    expect(obj.val).toBe(4);
+  });
 });
