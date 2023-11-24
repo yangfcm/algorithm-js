@@ -30,58 +30,62 @@ Problems and solutions about string manipulation.
 
     Determine if a string has all unique characters.
 
-8.  `longestSubstring.js`
+8.  `longestPalindromeSubstring.js`
+
+    Find the longest palindromic substring in given string.
+
+9.  `longestSubstring.js`
 
     Find the length of the longest substring without repeating characters.
 
-9.  `makeAnagrams.js`
+10. `makeAnagrams.js`
 
     Determine the minimum number of characters deletions required to make two strings anagrams.
 
-10. `maxchar.js`
+11. `maxchar.js`
 
     Get the character that most commonly appears in a given string
 
-11. `oneAway.js`
+12. `oneAway.js`
 
     Check if one string is one edit away from the other string
 
-12. `palindrome.js`
+13. `palindrome.js`
 
     Test a string is a palindrome(its reversed string is exactly the same as itself)
 
-13. `palindromePermutation.js`
+14. `palindromePermutation.js`
 
     Check if a string is a permutation of a palindrome
 
-14. `removeVowels.js`
+15. `removeVowels.js`
 
     Remove vowels of a string
 
-15. `reverseint.js`
+16. `reverseint.js`
 
     Reverse an integer
 
-16. `reversestring.js`
+17. `reversestring.js`
 
     Reverse a string
 
-17. `specialString.js`
+18. `specialString.js`
 
     Find out how many special strings
 
-18. `stringCompression.js`
+19. `stringCompression.js`
 
     Compress a string
 
-19. `stringRotation.js`
+20. `stringRotation.js`
 
     Check if one string is the rotation of the other string, using isSubString function
 
-20. `validString.js`
+21. `validString.js`
 
     Check if a string is valid as per a certain rule
 
-21. `vowels.js`
+22. `vowels.js`
 
     Count the number of vowels used in a string
