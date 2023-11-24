@@ -6,10 +6,10 @@
  * @returns {number}
  */
 function findLastIndex(array, predicate) {
-  if (!typeof predicate !== "function") {
+  if (typeof predicate !== "function") {
     throw new TypeError("Callback must be a function.");
   }
-  for (let i = length - 1; i >= 0; i--) {
+  for (let i = array.length - 1; i >= 0; i--) {
     if (predicate(array[i])) return i;
   }
 

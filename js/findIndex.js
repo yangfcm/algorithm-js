@@ -6,7 +6,7 @@
  * @returns {number}
  */
 function findIndex(array, predicate) {
-  if (!typeof predicate !== "function") {
+  if (typeof predicate !== "function") {
     throw new TypeError("Callback must be a function.");
   }
   for (let i = 0; i < array.length; i++) {
