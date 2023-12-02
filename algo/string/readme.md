@@ -82,14 +82,18 @@ Problems and solutions about string manipulation.
 
     Check if one string is the rotation of the other string, using isSubString function.
 
-21. `validString.js`
+21. `stringToInteger.js`
+
+    Convert string to integer.
+
+22. `validString.js`
 
     Check if a string is valid as per a certain rule.
 
-22. `vowels.js`
+23. `vowels.js`
 
     Count the number of vowels used in a string.
 
-23. `zigzagConversion.js`
+24. `zigzagConversion.js`
 
     Zigzag convert a string.
