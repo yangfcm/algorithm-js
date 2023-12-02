@@ -16,6 +16,29 @@
  * @source https://leetcode.com/problems/string-to-integer-atoi/description/
  */
 
-function solution(str) {}
+const MAX_INTEGER = Math.pow(2, 31) - 1;
+const MIN_INTEGER = -1 * Math.pow(2, 31);
 
-module.exports = { solution };
+/**
+ * @param {string} str
+ * @returns The integer number represented by the string.
+ */
+function solution(str) {
+  let sign = 1;
+  let result = 0;
+  let start = 0;
+  str = str.trim();
+  if (str[start] === "-") sign = -1;
+  if (str[start] === "-" || str[start] === "+") start++;
+  for (let i = start; i < str.length; i++) {
+    const num = Number(str[i]);
+    if (isNaN(num) || str[i] === " ") break;
+    result = result * 10 + num;
+    if (result > MAX_INTEGER) {
+      return sign > 0 ? MAX_INTEGER : MIN_INTEGER;
+    }
+  }
+  return sign * result;
+}
+
+module.exports = { solution, MAX_INTEGER, MIN_INTEGER };
