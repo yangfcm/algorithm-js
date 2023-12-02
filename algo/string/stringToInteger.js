@@ -12,7 +12,11 @@
  * @example "42" -> 42
  * "    -42" -> -42
  * "4193 with words" -> 4193
- * @solution
+ * @solution 1. Remove the leading and trailing spaces.
+ * 2. Look at the first character to determine the sign ('-' or '+')
+ * 3. Iterate through the string until hitting the first non-number character.
+ * 4. Check the result is within the range of a valid integer.
+ * 5. Return the result.
  * @source https://leetcode.com/problems/string-to-integer-atoi/description/
  */
 
