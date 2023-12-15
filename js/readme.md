@@ -26,14 +26,18 @@ Implement JS built-in functions.
 
    Flatten an array.
 
-7. `reduce.js`
+7. `indexof.js`
+
+   Implement Array.prototyp.indexOf method.
+
+8. `promiseAll.js`
+
+   Implement Promise.all method.
+
+9. `reduce.js`
 
    Implement Array.prototype.reduce method.
 
-8. `indexof.js`
+10. `typeUtilities.js`
 
-   Implement Array.prototype.indexOf method.
-
-9. `typeUtilities.js`
-
-   Implement type checking utility functions.
+    Implement type checking utility functions.
