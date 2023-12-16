@@ -34,10 +34,18 @@ Implement JS built-in functions.
 
    Implement Promise.all method.
 
-9. `reduce.js`
+9. `promiseAllSettled.js`
 
-   Implement Array.prototype.reduce method.
+   Implement Promise.allSettled method.
 
-10. `typeUtilities.js`
+10. `promiseAny.js`
+
+    Implement Promise.any method.
+
+11. `reduce.js`
+
+    Implement Array.prototype.reduce method.
+
+12. `typeUtilities.js`
 
     Implement type checking utility functions.
