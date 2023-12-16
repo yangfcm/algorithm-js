@@ -42,10 +42,14 @@ Implement JS built-in functions.
 
     Implement Promise.any method.
 
-11. `reduce.js`
+11. `PromiseRace.js`
+
+    Implement Promise.race method.
+
+12. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-12. `typeUtilities.js`
+13. `typeUtilities.js`
 
     Implement type checking utility functions.

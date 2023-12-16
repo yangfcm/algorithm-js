@@ -1,5 +1,5 @@
 /**
- * @param {promiseAny} iterable
+ * @name promiseAny
  * @description Implement Promise.any() function
  * The Promise.any() static method takes an iterable of promises as input and returns a single Promise.
  * This returned promise fulfills when any of the input's promises fulfills, with this first fulfillment value.
