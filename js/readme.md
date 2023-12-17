@@ -30,38 +30,34 @@ Implement JS built-in functions.
 
    Implement Function.prototype.apply method.
 
-8. `functionBind.js`
-
-   Implement Function.prototype.bind method.
-
-9. `functionCall.js`
+8. `functionCall.js`
 
    Implement Function.prototype.call method.
 
-10. `indexof.js`
+9. `indexof.js`
 
-    Implement Array.prototyp.indexOf method.
+   Implement Array.prototyp.indexOf method.
 
-11. `promiseAll.js`
+10. `promiseAll.js`
 
     Implement Promise.all method.
 
-12. `promiseAllSettled.js`
+11. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-13. `promiseAny.js`
+12. `promiseAny.js`
 
     Implement Promise.any method.
 
-14. `PromiseRace.js`
+13. `PromiseRace.js`
 
     Implement Promise.race method.
 
-15. `reduce.js`
+14. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-16. `typeUtilities.js`
+15. `typeUtilities.js`
 
     Implement type checking utility functions.

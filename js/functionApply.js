@@ -10,7 +10,7 @@
  */
 function functionApply(func, thisArg, argsArray) {
   if (typeof func !== "function") {
-    throw new Error("thisArg is not a function.");
+    throw new Error("func argument is not a function.");
   }
   thisArg = thisArg || (typeof window !== "undefined" ? window : global);
 
