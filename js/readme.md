@@ -58,30 +58,34 @@ Implement JS built-in functions.
 
     Implement Lodash intersectionBy method.
 
-15. `once.js`
+15. `intersectionWith`
+
+    Implement Lodash intersectionWith method.
+
+16. `once.js`
 
     Implement Lodash once method.
 
-16. `promiseAll.js`
+17. `promiseAll.js`
 
     Implement Promise.all method.
 
-17. `promiseAllSettled.js`
+18. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-18. `promiseAny.js`
+19. `promiseAny.js`
 
     Implement Promise.any method.
 
-19. `PromiseRace.js`
+20. `PromiseRace.js`
 
     Implement Promise.race method.
 
-20. `reduce.js`
+21. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-21. `typeUtilities.js`
+22. `typeUtilities.js`
 
     Implement type checking utility functions.
