@@ -20,4 +20,4 @@ function debounce(fn, wait = 0) {
   };
 }
 
-module.exports = { debounce };
+module.exports = debounce;
