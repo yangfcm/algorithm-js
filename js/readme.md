@@ -10,58 +10,62 @@ Implement JS built-in functions.
 
    Implment debounce function.
 
-3. `events.js`
+3. `deepClone.js`
+
+   Implement deepClone function.
+
+4. `events.js`
 
    Create an event library out of the Events class.
 
-4. `filter.js`
+5. `filter.js`
 
    Implement Array.prototype.filter method.
 
-5. `findIndex.js`
+6. `findIndex.js`
 
    Implement Array.prototype.findIndex method.
 
-6. `findLastIndex.js`
+7. `findLastIndex.js`
 
    Implement Array.prototype.findLastIndex method.
 
-7. `flatten.js`
+8. `flatten.js`
 
    Flatten an array.
 
-8. `functionApply.js`
+9. `functionApply.js`
 
    Implement Function.prototype.apply method.
 
-9. `functionCall.js`
+10. `functionCall.js`
 
-   Implement Function.prototype.call method.
+    Implement Function.prototype.call method.
 
-10. `indexof.js`
+11. `indexof.js`
 
     Implement Array.prototyp.indexOf method.
 
-11. `promiseAll.js`
+12. `promiseAll.js`
 
     Implement Promise.all method.
 
-12. `promiseAllSettled.js`
+13. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-13. `promiseAny.js`
+14. `promiseAny.js`
 
     Implement Promise.any method.
 
-14. `PromiseRace.js`
+15. `PromiseRace.js`
 
     Implement Promise.race method.
 
-15. `reduce.js`
+16. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-16. `typeUtilities.js`
+17. `typeUtilities.js`
 
     Implement type checking utility functions.
