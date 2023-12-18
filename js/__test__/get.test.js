@@ -30,6 +30,12 @@ describe("Test get.js", () => {
     expect(get(user, ["address", "country"])).toBe("US");
     expect(get(user, ["hobbies", "0"])).toBe("fishing");
     expect(get(user, ["friends", "1", "name"])).toBe("Mike");
+    expect(get(user, ["address"])).toEqual({
+      number: "3",
+      street: "View St.",
+      city: "New York",
+      country: "US",
+    });
   });
 
   test("Get value from string path", () => {
@@ -37,6 +43,12 @@ describe("Test get.js", () => {
     expect(get(user, "address.country")).toBe("US");
     expect(get(user, "hobbies.0")).toBe("fishing");
     expect(get(user, "friends.1.name")).toBe("Mike");
+    expect(get(user, "address")).toEqual({
+      number: "3",
+      street: "View St.",
+      city: "New York",
+      country: "US",
+    });
   });
 
   test("Return default value when path does not exist", () => {

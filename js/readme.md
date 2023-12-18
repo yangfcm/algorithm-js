@@ -50,26 +50,30 @@ Implement JS built-in functions.
 
     Implement Array.prototyp.indexOf method.
 
-13. `promiseAll.js`
+13. `once.js`
+
+    Implement Loadash once method.
+
+14. `promiseAll.js`
 
     Implement Promise.all method.
 
-14. `promiseAllSettled.js`
+15. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-15. `promiseAny.js`
+16. `promiseAny.js`
 
     Implement Promise.any method.
 
-16. `PromiseRace.js`
+17. `PromiseRace.js`
 
     Implement Promise.race method.
 
-17. `reduce.js`
+18. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-18. `typeUtilities.js`
+19. `typeUtilities.js`
 
     Implement type checking utility functions.
