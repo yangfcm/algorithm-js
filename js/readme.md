@@ -44,36 +44,40 @@ Implement JS built-in functions.
 
 11. `get.js`
 
-    Implement Loadash get method.
+    Implement Lodash get method.
 
-12. `indexof.js`
+12. `groupBy.js`
+
+    Implement Lodash groupBy method.
+
+13. `indexof.js`
 
     Implement Array.prototyp.indexOf method.
 
-13. `once.js`
+14. `once.js`
 
-    Implement Loadash once method.
+    Implement Lodash once method.
 
-14. `promiseAll.js`
+15. `promiseAll.js`
 
     Implement Promise.all method.
 
-15. `promiseAllSettled.js`
+16. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-16. `promiseAny.js`
+17. `promiseAny.js`
 
     Implement Promise.any method.
 
-17. `PromiseRace.js`
+18. `PromiseRace.js`
 
     Implement Promise.race method.
 
-18. `reduce.js`
+19. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-19. `typeUtilities.js`
+20. `typeUtilities.js`
 
     Implement type checking utility functions.
