@@ -6,86 +6,90 @@ Implement JS built-in functions.
 
    Implement Lodash function: countBy.
 
-2. `debounce.js`
+2. `curry.js`
+
+   Implement Lodash curry function.
+
+3. `debounce.js`
 
    Implment debounce function.
 
-3. `deepClone.js`
+4. `deepClone.js`
 
    Implement deepClone function.
 
-4. `events.js`
+5. `events.js`
 
    Create an event library out of the Events class.
 
-5. `filter.js`
+6. `filter.js`
 
    Implement Array.prototype.filter method.
 
-6. `findIndex.js`
+7. `findIndex.js`
 
    Implement Array.prototype.findIndex method.
 
-7. `findLastIndex.js`
+8. `findLastIndex.js`
 
    Implement Array.prototype.findLastIndex method.
 
-8. `flatten.js`
+9. `flatten.js`
 
    Flatten an array.
 
-9. `functionApply.js`
+10. `functionApply.js`
 
-   Implement Function.prototype.apply method.
+    Implement Function.prototype.apply method.
 
-10. `functionCall.js`
+11. `functionCall.js`
 
     Implement Function.prototype.call method.
 
-11. `get.js`
+12. `get.js`
 
     Implement Lodash get method.
 
-12. `groupBy.js`
+13. `groupBy.js`
 
     Implement Lodash groupBy method.
 
-13. `indexof.js`
+14. `indexof.js`
 
     Implement Array.prototyp.indexOf method.
 
-14. `intersectionBy`
+15. `intersectionBy`
 
     Implement Lodash intersectionBy method.
 
-15. `intersectionWith`
+16. `intersectionWith`
 
     Implement Lodash intersectionWith method.
 
-16. `once.js`
+17. `once.js`
 
     Implement Lodash once method.
 
-17. `promiseAll.js`
+18. `promiseAll.js`
 
     Implement Promise.all method.
 
-18. `promiseAllSettled.js`
+19. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-19. `promiseAny.js`
+20. `promiseAny.js`
 
     Implement Promise.any method.
 
-20. `PromiseRace.js`
+21. `PromiseRace.js`
 
     Implement Promise.race method.
 
-21. `reduce.js`
+22. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-22. `typeUtilities.js`
+23. `typeUtilities.js`
 
     Implement type checking utility functions.
