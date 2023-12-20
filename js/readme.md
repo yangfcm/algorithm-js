@@ -2,94 +2,98 @@
 
 Implement JS built-in functions.
 
-1. `countBy.js`
+1. `arrayAt.js`
+
+   Implement Array.prototype.at method.
+
+2. `countBy.js`
 
    Implement Lodash function: countBy.
 
-2. `curry.js`
+3. `curry.js`
 
    Implement Lodash curry function.
 
-3. `debounce.js`
+4. `debounce.js`
 
    Implment debounce function.
 
-4. `deepClone.js`
+5. `deepClone.js`
 
    Implement deepClone function.
 
-5. `events.js`
+6. `events.js`
 
    Create an event library out of the Events class.
 
-6. `filter.js`
+7. `filter.js`
 
    Implement Array.prototype.filter method.
 
-7. `findIndex.js`
+8. `findIndex.js`
 
    Implement Array.prototype.findIndex method.
 
-8. `findLastIndex.js`
+9. `findLastIndex.js`
 
    Implement Array.prototype.findLastIndex method.
 
-9. `flatten.js`
+10. `flatten.js`
 
-   Flatten an array.
+    Flatten an array.
 
-10. `functionApply.js`
+11. `functionApply.js`
 
     Implement Function.prototype.apply method.
 
-11. `functionCall.js`
+12. `functionCall.js`
 
     Implement Function.prototype.call method.
 
-12. `get.js`
+13. `get.js`
 
     Implement Lodash get method.
 
-13. `groupBy.js`
+14. `groupBy.js`
 
     Implement Lodash groupBy method.
 
-14. `indexof.js`
+15. `indexof.js`
 
     Implement Array.prototyp.indexOf method.
 
-15. `intersectionBy`
+16. `intersectionBy`
 
     Implement Lodash intersectionBy method.
 
-16. `intersectionWith`
+17. `intersectionWith`
 
     Implement Lodash intersectionWith method.
 
-17. `once.js`
+18. `once.js`
 
     Implement Lodash once method.
 
-18. `promiseAll.js`
+19. `promiseAll.js`
 
     Implement Promise.all method.
 
-19. `promiseAllSettled.js`
+20. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-20. `promiseAny.js`
+21. `promiseAny.js`
 
     Implement Promise.any method.
 
-21. `PromiseRace.js`
+22. `PromiseRace.js`
 
     Implement Promise.race method.
 
-22. `reduce.js`
+23. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-23. `typeUtilities.js`
+24. `typeUtilities.js`
 
     Implement type checking utility functions.
