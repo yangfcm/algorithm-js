@@ -6,94 +6,98 @@ Implement JS built-in functions.
 
    Implement Array.prototype.at method.
 
-2. `countBy.js`
+2. `arrayMap.js`
+
+   Implement Array.prototype.map method.
+
+3. `countBy.js`
 
    Implement Lodash function: countBy.
 
-3. `curry.js`
+4. `curry.js`
 
    Implement Lodash curry function.
 
-4. `debounce.js`
+5. `debounce.js`
 
    Implment debounce function.
 
-5. `deepClone.js`
+6. `deepClone.js`
 
    Implement deepClone function.
 
-6. `events.js`
+7. `events.js`
 
    Create an event library out of the Events class.
 
-7. `filter.js`
+8. `filter.js`
 
    Implement Array.prototype.filter method.
 
-8. `findIndex.js`
+9. `findIndex.js`
 
    Implement Array.prototype.findIndex method.
 
-9. `findLastIndex.js`
+10. `findLastIndex.js`
 
-   Implement Array.prototype.findLastIndex method.
+    Implement Array.prototype.findLastIndex method.
 
-10. `flatten.js`
+11. `flatten.js`
 
     Flatten an array.
 
-11. `functionApply.js`
+12. `functionApply.js`
 
     Implement Function.prototype.apply method.
 
-12. `functionCall.js`
+13. `functionCall.js`
 
     Implement Function.prototype.call method.
 
-13. `get.js`
+14. `get.js`
 
     Implement Lodash get method.
 
-14. `groupBy.js`
+15. `groupBy.js`
 
     Implement Lodash groupBy method.
 
-15. `indexof.js`
+16. `indexof.js`
 
     Implement Array.prototyp.indexOf method.
 
-16. `intersectionBy`
+17. `intersectionBy`
 
     Implement Lodash intersectionBy method.
 
-17. `intersectionWith`
+18. `intersectionWith`
 
     Implement Lodash intersectionWith method.
 
-18. `once.js`
+19. `once.js`
 
     Implement Lodash once method.
 
-19. `promiseAll.js`
+20. `promiseAll.js`
 
     Implement Promise.all method.
 
-20. `promiseAllSettled.js`
+21. `promiseAllSettled.js`
 
     Implement Promise.allSettled method.
 
-21. `promiseAny.js`
+22. `promiseAny.js`
 
     Implement Promise.any method.
 
-22. `PromiseRace.js`
+23. `PromiseRace.js`
 
     Implement Promise.race method.
 
-23. `reduce.js`
+24. `reduce.js`
 
     Implement Array.prototype.reduce method.
 
-24. `typeUtilities.js`
+25. `typeUtilities.js`
 
     Implement type checking utility functions.
