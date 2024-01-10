@@ -65,6 +65,8 @@ npm run test <file name or directory name>
 
 ## Run in Docker
 
+Under project directory:
+
 - Build image
 
 ```
@@ -76,6 +78,24 @@ docker build -t js-algo-docker .
 ```
 docker run js-algo-docker
 ```
+
+## Run with Docker compose
+
+This is useful for dev and tests.
+
+Under project directory:
+
+```
+docker compose watch
+```
+
+To view the test results, you can either use Docker desktop or run
+
+```
+docker logs <container-name> -f
+```
+
+Any changes made locally will trigger the re-run of test cases.
 
 ## Solutions in other languages:
 
