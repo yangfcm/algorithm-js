@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch --onlyChanged",
-    "test:coverage": "jest --coverage"
+    "watch": "jest --watchAll",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,14 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    develop:
+      watch:
+        - path: ./package.json
+          action: rebuild
+        - path: ./package.json
+          action: rebuild
+        - path: .
+          target: /app
+          action: sync
