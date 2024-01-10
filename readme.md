@@ -63,6 +63,20 @@ npm run test:watch
 npm run test <file name or directory name>
 ```
 
+## Run in Docker
+
+- Build image
+
+```
+docker build -t js-algo-docker .
+```
+
+- Run test cases
+
+```
+docker run js-algo-docker
+```
+
 ## Solutions in other languages:
 
 - [C#](https://github.com/yangfcm/algorithm-csharp)
