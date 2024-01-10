@@ -7,8 +7,8 @@ services:
       watch:
         - path: ./package.json
           action: rebuild
-        - path: ./package.json
-          action: rebuild
         - path: .
           target: /app
           action: sync
+          ignore:
+            - node_modules/
