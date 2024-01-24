@@ -54,7 +54,7 @@ npm run test
 - Test and watch code change
 
 ```
-npm run test:watch
+npm run watch
 ```
 
 - Test one case or cases under one directory

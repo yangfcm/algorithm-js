@@ -20,3 +20,7 @@ Algorithm to solve math problems.
 4. `permutations.js`
 
    Return all the possible of permutations of an array of numbers.
+
+5. `symmetricDiff.js`
+
+   Return symmetric difference of given arrays.
