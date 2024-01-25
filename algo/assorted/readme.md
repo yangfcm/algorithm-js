@@ -22,6 +22,10 @@ Find out minimum days required to produce n candies.
 
    Pyramid: Print a pyramid shape with n levels using # character and space on its left and right side.
 
-6. `steps.js`
+6. `openedDoors`
+
+   Get how many doors are opened after several time passes.
+
+7. `steps.js`
 
    Steps: Print a step shape with n levels using # character and space(s) on the right.
