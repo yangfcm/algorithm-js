@@ -63,7 +63,7 @@ npm run watch
 npm run test <file name or directory name>
 ```
 
-## Run in Docker
+### Run in Docker
 
 Under project directory:
 
@@ -79,7 +79,7 @@ docker build -t js-algo-docker .
 docker run js-algo-docker
 ```
 
-## Run with Docker compose
+### Run with Docker compose
 
 This is useful for dev and tests.
 
@@ -96,6 +96,20 @@ docker logs <container-name> -f
 ```
 
 Any changes made locally will trigger the re-run of test cases.
+
+## Comment format
+
+```js
+/**
+ * @name
+ * @description
+ * @example
+ * @param
+ * @returns
+ * @solution
+ * @source
+ */
+```
 
 ## Solutions in other languages:
 
