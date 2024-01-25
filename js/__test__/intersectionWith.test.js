@@ -13,7 +13,6 @@ describe("Test intersecitonWith.js", () => {
       arr4,
       (a, b) => a.x === b.x
     );
-    console.log(result);
     expect(result).toEqual([{ x: 2 }, { x: 4 }]);
   });
 });
