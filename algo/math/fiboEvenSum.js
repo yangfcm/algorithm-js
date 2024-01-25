@@ -9,6 +9,7 @@
  * @param {number} n
  * @returns {number} The sum of even numbers that do not exceed n in a Fibonacci sequence.
  * @solution Generate a Fibonacci sequence and add up the even numbers that do not exceed n.
+ * @source https://www.freecodecamp.org/learn/project-euler/project-euler-problems-1-to-100/problem-2-even-fibonacci-numbers
  */
 function solution(n) {
   if (!n >= 1) {
