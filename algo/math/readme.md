@@ -2,6 +2,10 @@
 
 Algorithm to solve math problems.
 
+1. `factorial.js`
+
+   Calculate the factorial of a given number n (n!)
+
 1. `fiboEvenSum.js`
 
    Find the sum of the even-valued terms of a Fibonacci sequence.
