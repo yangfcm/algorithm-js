@@ -25,3 +25,7 @@ Find out minimum days required to produce n candies.
 6. `steps.js`
 
    Steps: Print a step shape with n levels using # character and space(s) on the right.
+
+7. `updateInventory.js`
+
+   Update inventory.
