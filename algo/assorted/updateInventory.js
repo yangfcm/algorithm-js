@@ -43,3 +43,5 @@ function solution(arr1, arr2) {
   updatedInventoryArr.sort((a, b) => (a[1] < b[1] ? -1 : 1));
   return updatedInventoryArr.sort((a, b) => a[0] > b[0]);
 }
+
+module.exports = { solution };
