@@ -11,6 +11,8 @@ const { solution: doPermutations } = require("./permutations");
  * @returns {number} The number of no repeated consecutive permutations.
  * @solution It is based on the problem: permutations. First work out the permutations of the array.
  * Then filter out the permutations that have repeated consecutive numbers.
+ * There is a better solution that utilizes the knowledge of permutations and combinations to work out the count
+ * without really calculating all permutations. But I haven't figured out how to implement it in code.
  * @source https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/no-repeats-please
  */
 function solution(arr) {
