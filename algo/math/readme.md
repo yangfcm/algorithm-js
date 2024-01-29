@@ -21,6 +21,10 @@ Algorithm to solve math problems.
 
    Test if a given number is a prime(质数)
 
+1. `noRepeatPermutations.js`
+
+   Return the number of permutations of an array of number that don't have repeated consecutive numbers.
+
 1. `permutations.js`
 
    Return all the possible of permutations of an array of numbers.
