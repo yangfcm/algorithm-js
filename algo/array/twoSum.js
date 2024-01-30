@@ -9,7 +9,7 @@
  * @param {number} target The target number.
  * @returns {array} The array of two indices of the two numbers in nums array which sum up to target.
  * @solution Loop through each element and see if there is another element that add up to target number.
- * Easy and straightforward. Time complexity: O(n2)
+ * Easy and straightforward. Time complexity: O(n^2)
  * @source https://leetcode.com/problems/two-sum/
  */
 function solution1(nums, target) {

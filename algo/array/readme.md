@@ -62,6 +62,10 @@ Problems and solutions about arrays.
 
     Return indices of the two numbers whose sum equals to a target.
 
-16. `validSudoku.js`
+16. `twoSum1.js`
+
+    Return the sum of indices of the two numbers whose sum equals to a target.
+
+17. `validSudoku.js`
 
     Determine if a 9x9 Sudoku board is valid.
