@@ -18,14 +18,18 @@ Solutions to sort an array.
 
    Fradulent activity notice. An application in counting sort.
 
-5. `medianSorted.js`
+5. `insertionSort.js`
+
+   Implement insertion sort.
+
+6. `medianSorted.js`
 
    Get the median of the two sorted arrays.
 
-6. `mergeSort.js`
+7. `mergeSort.js`
 
    Implement merge sort.
 
-7. `selectionSort.js`
+8. `selectionSort.js`
 
    Implement selection sort.
