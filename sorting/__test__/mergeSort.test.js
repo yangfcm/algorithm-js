@@ -8,7 +8,7 @@ describe("Test mergeSort.js", () => {
     sortedArr = [-124, -40, 0, 7, 21, 100, 500];
   });
 
-  test("Bubble sort an array", () => {
+  test("Should return sorted array with merge sort.", () => {
     expect(mergeSort(arr)).toEqual(sortedArr);
   });
 });

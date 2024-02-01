@@ -30,6 +30,10 @@ Solutions to sort an array.
 
    Implement merge sort.
 
-8. `selectionSort.js`
+8. `quickSort.js`
+
+   Implement quick sort.
+
+9. `selectionSort.js`
 
    Implement selection sort.
