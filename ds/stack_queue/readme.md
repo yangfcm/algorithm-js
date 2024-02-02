@@ -6,38 +6,46 @@ Problems and solutions associated with **stacks and queues**
 
    Implement a queue, which has enqueuing(equivalent to array.unshift())and dequeuing(equivalent to array.pop()) operation
 
-2. `stack.js`
+1. `priorityQueue.js`
+
+   Implement priority queue.
+
+1. `circularQueue.js`
+
+   Implement circular queue.
+
+1. `stack.js`
 
    Implement a stack, which has methods equivalent to array.push() and array.pop()
 
-3. `weave.js`
+1. `weave.js`
 
    Combine two queues into one
 
-4. `qfroms.js`
+1. `qfroms.js`
 
    Create a queue using two stacks, instead of arrays
 
-5. `getMin.js`
+1. `getMin.js`
 
    Get the minimum number in a stack
 
-6. `sortStack.js`
+1. `sortStack.js`
 
    Sort a stack
 
-7. `animalQueue.js`
+1. `animalQueue.js`
 
    Implement an animal queue
 
-8. `setOfStacks.js`
+1. `setOfStacks.js`
 
    Implement a stack of plates
 
-9. `isbalanced2.js`
+1. `isbalanced2.js`
 
    Test if a string has balanced brackets.
 
-10. `largestRectangle.js`
+1. `largestRectangle.js`
 
-Return the area of the largest rectangle in the histogram.
+   Return the area of the largest rectangle in the histogram.
