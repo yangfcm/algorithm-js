@@ -35,6 +35,7 @@ class CircularQueue {
     this.queue.fill(null);
     this.read = 0;
     this.write = 0;
+    this.size = size;
   }
 
   enqueue(item) {
@@ -51,4 +52,10 @@ class CircularQueue {
     this.read++;
     return item;
   }
+
+  getQueue() {
+    return this.queue;
+  }
 }
+
+module.exports = CircularQueue;
