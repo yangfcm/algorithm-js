@@ -48,4 +48,12 @@ describe("Test priorityQueue.js", () => {
     expect(q.dequeue()).toBe("d");
     expect(q.dequeue()).toBe("e");
   });
+
+  test("New item should be enqueued correctly if priority is the same", () => {
+    expect(q.enqueue(["e", 30]));
+    expect(q.dequeue()).toBe("c");
+    expect(q.dequeue()).toBe("a");
+    expect(q.dequeue()).toBe("b");
+    expect(q.dequeue()).toBe("e"); // e and b have same priority, but e comes after b because b is enqueued first.
+  });
 });
