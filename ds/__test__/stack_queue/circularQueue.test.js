@@ -43,7 +43,7 @@ describe("Test circularQueue", () => {
     expect(q.getQueue()).toEqual(["a", "b", "c", "d", "e"]); // Write pointer overwrite the elements that haven't been read.
   });
 
-  test("Can be enqueued in a circular way", () => {
+  test("Can be enqueued and dequeued in a circular way", () => {
     q.dequeue(); // Dequeue 'a'.
     q.dequeue(); // Dequeue 'b'.
     q.enqueue("d"); // Enqueue 'd'
@@ -55,5 +55,11 @@ describe("Test circularQueue", () => {
 
     q.enqueue("g"); // Enqueue 'g'
     expect(q.getQueue()).toEqual(["f", "g", "c", "d", "e"]);
+
+    expect(q.dequeue()).toBe("c");
+    expect(q.dequeue()).toBe("d");
+    expect(q.dequeue()).toBe("e");
+    expect(q.dequeue()).toBe("f");
+    expect(q.dequeue()).toBe("g");
   });
 });

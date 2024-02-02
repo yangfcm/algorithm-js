@@ -46,7 +46,7 @@ class CircularQueue {
   }
 
   dequeue() {
-    if (this.read >= this.write) return null;
+    if (this.read > this.write) return null;
     const item = this.queue[this.read % this.size];
     this.queue[this.read % this.size] = null;
     this.read++;
