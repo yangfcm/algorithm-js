@@ -3,6 +3,7 @@ const Set = require("../../set/set");
 describe("Test Set class", () => {
   let set;
   let anotherSet;
+  let superSet;
   beforeEach(() => {
     set = new Set();
     set.add("a");
@@ -14,6 +15,13 @@ describe("Test Set class", () => {
     anotherSet.add("c");
     anotherSet.add("x");
     anotherSet.add("y");
+
+    superSet = new Set();
+    superSet.add("a");
+    superSet.add("b");
+    superSet.add("c");
+    superSet.add("d");
+    superSet.add("e");
   });
 
   test("Should return correct values of set", () => {
@@ -68,5 +76,16 @@ describe("Test Set class", () => {
     expect(intersectSet.size()).toBe(2);
     expect(intersectSet.values()).toContain("a");
     expect(intersectSet.values()).toContain("c");
+  });
+
+  test("Should be able to do difference with another set", () => {
+    const diffSet = set.difference(anotherSet);
+    expect(diffSet.size()).toBe(1);
+    expect(diffSet.values()).toContain("b");
+  });
+
+  test("Should check one set is the subset of another set", () => {
+    expect(set.isSubsetOf(anotherSet)).toBe(false);
+    expect(set.isSubsetOf(superSet)).toBe(true);
   });
 });

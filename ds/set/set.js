@@ -4,7 +4,7 @@
  * A set is like an array, but it cannot contain duplicate values.
  * The typical use for a set is to simply check for the presence of an item.
  * The set should have the methods: 'add', 'remove', 'size', 'values', 'has'.
- * Add more method for set operations: 'union', 'intersection'
+ * Add more method for set operations: 'union', 'intersection', 'difference', 'isSubsetOf'
  * @example
  * const s = new Set();
  * s.add('a')  // returns true
@@ -68,6 +68,23 @@ class Set {
       }
     }
     return newSet;
+  }
+
+  difference(setB) {
+    const newSet = new Set();
+    for (let el of this.values()) {
+      if (!setB.has(el)) {
+        newSet.add(el);
+      }
+    }
+    return newSet;
+  }
+
+  isSubsetOf(set) {
+    for (let el of this.values()) {
+      if (!set.has(el)) return false;
+    }
+    return true;
   }
 }
 
