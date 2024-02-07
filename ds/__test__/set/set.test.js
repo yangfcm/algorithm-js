@@ -2,11 +2,18 @@ const Set = require("../../set/set");
 
 describe("Test Set class", () => {
   let set;
+  let anotherSet;
   beforeEach(() => {
     set = new Set();
     set.add("a");
     set.add("b");
     set.add("c");
+
+    anotherSet = new Set();
+    anotherSet.add("a");
+    anotherSet.add("c");
+    anotherSet.add("x");
+    anotherSet.add("y");
   });
 
   test("Should return correct values of set", () => {
@@ -44,5 +51,15 @@ describe("Test Set class", () => {
   test("Should be not able to remove a non-existent element", () => {
     expect(set.remove("d")).toBe(false);
     expect(set.size()).toBe(3);
+  });
+
+  test("Should be able to union another set", () => {
+    const unionedSet = set.union(anotherSet);
+    expect(unionedSet.size()).toBe(5);
+    expect(unionedSet.values()).toContain("a");
+    expect(unionedSet.values()).toContain("b");
+    expect(unionedSet.values()).toContain("c");
+    expect(unionedSet.values()).toContain("x");
+    expect(unionedSet.values()).toContain("y");
   });
 });
