@@ -48,3 +48,5 @@ class Set {
     return true;
   }
 }
+
+module.exports = Set;
