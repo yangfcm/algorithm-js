@@ -62,4 +62,11 @@ describe("Test Set class", () => {
     expect(unionedSet.values()).toContain("x");
     expect(unionedSet.values()).toContain("y");
   });
+
+  test("Should be able to intersection another set", () => {
+    const intersectSet = set.intersection(anotherSet);
+    expect(intersectSet.size()).toBe(2);
+    expect(intersectSet.values()).toContain("a");
+    expect(intersectSet.values()).toContain("c");
+  });
 });
