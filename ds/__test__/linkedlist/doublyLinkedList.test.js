@@ -45,4 +45,9 @@ describe("Test doublyLinkedList.js", () => {
     // Attempt to remove a non-existent element.
     expect(dll.remove(9)).toBe(undefined);
   });
+
+  test("Should reverse a doubly linked list", () => {
+    dll.reverse();
+    expect(dll.getAll()).toEqual([100, 10, 5, 1]);
+  });
 });
