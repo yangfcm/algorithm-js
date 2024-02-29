@@ -5,7 +5,7 @@
  * Implement a function that takes a string of four digits as its argument,
  * with each digit from 1 to 9 (inclusive) with repetitions allowed,
  * and returns an arithmetic expression that evaluates to the number 24.
- * If no such solution exists, return "no solution exists".
+ * If no such solution exists, return an empty string ''.
  * @example solve24("4878") ->	(7-8/8)*4
             solve24("1234") ->	3*1*4*2
             solve24("6789") ->	(6*8)/(9-7)
@@ -24,4 +24,31 @@
  * So there are 24 * 12 * 7 = 10752 different possible equations. Test each equation and return the one whose result is evaluated as 24.
  * @source https://www.freecodecamp.org/learn/rosetta-code/rosetta-code-challenges/24-game
  */
-function solution(arg) {}
+function solution(arg) {
+  // Get four numbers from argument and validate the numbers.
+  let isValidArg = true;
+  if (typeof arg !== "string") {
+    throw new Error("Invalid argument");
+  }
+  const numbers = arg.split("").map((n) => parseInt(n));
+  if (numbers.length !== 4) {
+    isValidArg = false;
+  } else {
+    for (const number of numbers) {
+      if (isNaN(number)) {
+        isValidArg = false;
+        break;
+      }
+      if (!(number >= 1 && number <= 9)) {
+        isValidArg = false;
+        break;
+      }
+    }
+  }
+  if (!isValidArg) {
+    throw new Error("Invalid argument");
+  }
+  return "";
+}
+
+module.exports = { solution };
