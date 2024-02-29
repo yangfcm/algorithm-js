@@ -25,9 +25,14 @@ describe("Test solve24", () => {
     const result4 = solution("1127");
     expect(result4).toBe("(1+2)*(1+7)");
     expect(eval(result4)).toBe(24);
+  });
 
-    const result5 = solution("8383");
-    expect(result5).toBe("8/(3-8/3)");
+  test("Can solve some tricky 24 problems", () => {
+    const result1 = solution("3388");
+    expect(result1).toBe("8/(3-8/3)");
+
+    const result2 = solution("5551");
+    expect(result2).toBe("5*(5-1/5)");
   });
 
   test("Should return empty string if there's no solution to 24", () => {
