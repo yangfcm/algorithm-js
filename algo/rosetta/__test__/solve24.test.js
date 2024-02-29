@@ -9,7 +9,26 @@ describe("Test solve24", () => {
     expect(() => solution("0394")).toThrow("Invalid argument");
   });
 
-  test("test", () => {
-    expect(solution("1234")).toBe("");
+  test("Can return a string whose value is evaluated as 24", () => {
+    const result1 = solution("4878");
+    expect(eval(result1)).toBe(24);
+    expect(result1).toBe("(4-8+7)*8");
+
+    const result2 = solution("1234");
+    expect(result2).toBe("(1+2+3)*4");
+    expect(eval(result2)).toBe(24);
+
+    const result3 = solution("6789");
+    expect(result3).toBe("6*8/(9-7)");
+    expect(eval(result3)).toBe(24);
+
+    const result4 = solution("1127");
+    expect(result4).toBe("(1+2)*(1+7)");
+    expect(eval(result4)).toBe(24);
+  });
+
+  test("Should return empty string if there's no solution to 24", () => {
+    expect(solution("9999")).toBe("");
+    expect(solution("8787")).toBe("");
   });
 });

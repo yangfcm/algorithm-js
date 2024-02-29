@@ -1,4 +1,5 @@
 const { solution: permutations } = require("../math/permutations");
+const { solution: combinations } = require("../math/combinations");
 /**
  * @name solve24
  * @description The 24 Game tests a person's mental arithmetic.
@@ -50,7 +51,6 @@ function solution(arg) {
     throw new Error("Invalid argument");
   }
 
-  const operators = ["+", "-", "*", "/"];
   // Find out all UNIQUE combinations for four numbers.
   const numberCombinations = permutations(numbers).filter(
     (combination, index, combinations) => {
@@ -63,16 +63,111 @@ function solution(arg) {
     }
   );
 
-  // @TODO: get operators combinations.
+  const operators = ["+", "-", "*", "/"];
+  const operatorCombinations = combinations(operators, 3);
 
-  for (const combination of numberCombinations) {
-    let equation = "";
-    for (const number of combination) {
-      for (const operator of operators) {
+  let equation = "";
+  for (const numbers of numberCombinations) {
+    for (const operators of operatorCombinations) {
+      equation =
+        numbers[0] +
+        operators[0] +
+        numbers[1] +
+        operators[1] +
+        numbers[2] +
+        operators[2] +
+        numbers[3];
+      if (eval(equation) === 24) {
+        return equation;
       }
-      equation = !!equation ? equation + "+" + number : number;
+
+      // Change orders with parentheses
+      equation =
+        "(" +
+        numbers[0] +
+        operators[0] +
+        numbers[1] +
+        ")" +
+        operators[1] +
+        numbers[2] +
+        operators[2] +
+        numbers[3];
+      if (eval(equation) === 24) {
+        return equation;
+      }
+
+      equation =
+        "(" +
+        numbers[0] +
+        operators[0] +
+        numbers[1] +
+        operators[1] +
+        numbers[2] +
+        ")" +
+        operators[2] +
+        numbers[3];
+      if (eval(equation) === 24) {
+        return equation;
+      }
+
+      equation =
+        numbers[0] +
+        operators[0] +
+        "(" +
+        numbers[1] +
+        operators[1] +
+        numbers[2] +
+        ")" +
+        operators[2] +
+        numbers[3];
+      if (eval(equation) === 24) {
+        return equation;
+      }
+
+      equation =
+        numbers[0] +
+        operators[0] +
+        "(" +
+        numbers[1] +
+        operators[1] +
+        numbers[2] +
+        operators[2] +
+        numbers[3] +
+        ")";
+      if (eval(equation) === 24) {
+        return equation;
+      }
+
+      equation =
+        numbers[0] +
+        operators[0] +
+        numbers[1] +
+        operators[1] +
+        "(" +
+        numbers[2] +
+        operators[2] +
+        numbers[3] +
+        ")";
+      if (eval(equation) === 24) {
+        return equation;
+      }
+
+      equation =
+        "(" +
+        numbers[0] +
+        operators[0] +
+        numbers[1] +
+        ")" +
+        operators[1] +
+        "(" +
+        numbers[2] +
+        operators[2] +
+        numbers[3] +
+        ")";
+      if (eval(equation) === 24) {
+        return equation;
+      }
     }
-    console.log(equation, eval(equation));
   }
   return "";
 }
