@@ -27,6 +27,11 @@ const { solution: combinations } = require("../math/combinations");
  * @source https://www.freecodecamp.org/learn/rosetta-code/rosetta-code-challenges/24-game
  */
 function solution(arg) {
+  function areAlmostEqual(number1, number2) {
+    const ACCEPTABLE_DIFF = 0.000001;
+    return Math.abs(number1 - number2) < ACCEPTABLE_DIFF;
+  }
+
   // Get four numbers from argument and validate the numbers.
   let isValidArg = true;
   if (typeof arg !== "string") {
@@ -77,7 +82,7 @@ function solution(arg) {
         numbers[2] +
         operators[2] +
         numbers[3];
-      if (eval(equation) === 24) {
+      if (areAlmostEqual(eval(equation), 24)) {
         return equation;
       }
 
@@ -92,7 +97,7 @@ function solution(arg) {
         numbers[2] +
         operators[2] +
         numbers[3];
-      if (eval(equation) === 24) {
+      if (areAlmostEqual(eval(equation), 24)) {
         return equation;
       }
 
@@ -106,7 +111,7 @@ function solution(arg) {
         ")" +
         operators[2] +
         numbers[3];
-      if (eval(equation) === 24) {
+      if (areAlmostEqual(eval(equation), 24)) {
         return equation;
       }
 
@@ -120,7 +125,7 @@ function solution(arg) {
         ")" +
         operators[2] +
         numbers[3];
-      if (eval(equation) === 24) {
+      if (areAlmostEqual(eval(equation), 24)) {
         return equation;
       }
 
@@ -134,7 +139,7 @@ function solution(arg) {
         operators[2] +
         numbers[3] +
         ")";
-      if (eval(equation) === 24) {
+      if (areAlmostEqual(eval(equation), 24)) {
         return equation;
       }
 
@@ -148,7 +153,7 @@ function solution(arg) {
         operators[2] +
         numbers[3] +
         ")";
-      if (eval(equation) === 24) {
+      if (areAlmostEqual(eval(equation), 24)) {
         return equation;
       }
 
@@ -164,7 +169,7 @@ function solution(arg) {
         operators[2] +
         numbers[3] +
         ")";
-      if (eval(equation) === 24) {
+      if (areAlmostEqual(eval(equation), 24)) {
         return equation;
       }
     }
