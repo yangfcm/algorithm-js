@@ -2,6 +2,10 @@
 
 Algorithm to solve math problems.
 
+1. `combinations.js`
+
+   Return all possible combinations of an array of numbers.
+
 1. `factorial.js`
 
    Calculate the factorial of a given number n (n!)

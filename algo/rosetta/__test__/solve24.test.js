@@ -8,4 +8,8 @@ describe("Test solve24", () => {
     expect(() => solution("12345")).toThrow("Invalid argument");
     expect(() => solution("0394")).toThrow("Invalid argument");
   });
+
+  test("test", () => {
+    expect(solution("1234")).toBe("");
+  });
 });

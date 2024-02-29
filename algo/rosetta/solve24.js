@@ -1,3 +1,4 @@
+const { solution: permutations } = require("../math/permutations");
 /**
  * @name solve24
  * @description The 24 Game tests a person's mental arithmetic.
@@ -30,11 +31,11 @@ function solution(arg) {
   if (typeof arg !== "string") {
     throw new Error("Invalid argument");
   }
-  const numbers = arg.split("").map((n) => parseInt(n));
+  const numbers = arg.split("");
   if (numbers.length !== 4) {
     isValidArg = false;
   } else {
-    for (const number of numbers) {
+    for (const number of numbers.map((n) => parseInt(n))) {
       if (isNaN(number)) {
         isValidArg = false;
         break;
@@ -47,6 +48,31 @@ function solution(arg) {
   }
   if (!isValidArg) {
     throw new Error("Invalid argument");
+  }
+
+  const operators = ["+", "-", "*", "/"];
+  // Find out all UNIQUE combinations for four numbers.
+  const numberCombinations = permutations(numbers).filter(
+    (combination, index, combinations) => {
+      return !combinations.slice(0, index).some((anotherCombination) => {
+        return (
+          combination.length === anotherCombination.length &&
+          combination.every((element, i) => element === anotherCombination[i])
+        );
+      });
+    }
+  );
+
+  // @TODO: get operators combinations.
+
+  for (const combination of numberCombinations) {
+    let equation = "";
+    for (const number of combination) {
+      for (const operator of operators) {
+      }
+      equation = !!equation ? equation + "+" + number : number;
+    }
+    console.log(equation, eval(equation));
   }
   return "";
 }
