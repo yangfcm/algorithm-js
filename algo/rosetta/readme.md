@@ -7,3 +7,7 @@ Programming tasks from the classic Rosetta Code library.
 1. `openedDoors`
 
    Get how many doors are opened after several time passes.
+
+1. `solve24.js`
+
+   Solve 24 game.
