@@ -6,8 +6,8 @@
  * n = 3 -> 3, 2 + 1, 1 + 1 + 1
  * n = 4 -> 4, 3 + 1, 2 + 2, 2 + 1 + 1, 1 + 1 + 1 + 1
  * n = 5 -> 5, 4 + 1, 3 + 2, 3 + 1 + 1, 2 + 2 + 1, 2 + 1 + 1 + 1, 1 + 1 + 1 + 1 + 1
- * @param {number} n
  * @solution Use dynamic programming.
+ * @param {number} n
  * @returns {array} An array of integers who can sum up to n.
  */
 function solution(n) {

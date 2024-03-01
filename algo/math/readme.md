@@ -6,6 +6,10 @@ Algorithm to solve math problems.
 
    Return all possible combinations of an array of numbers.
 
+1. `countIntegerPartitions.js`
+
+   Given an integer, return how many partitions it has.
+
 1. `factorial.js`
 
    Calculate the factorial of a given number n (n!)
