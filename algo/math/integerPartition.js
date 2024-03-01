@@ -7,10 +7,32 @@
  * n = 4 -> 4, 3 + 1, 2 + 2, 2 + 1 + 1, 1 + 1 + 1 + 1
  * n = 5 -> 5, 4 + 1, 3 + 2, 3 + 1 + 1, 2 + 2 + 1, 2 + 1 + 1 + 1, 1 + 1 + 1 + 1 + 1
  * @param {number} n
- * @solution @TODO
+ * @solution Use dynamic programming.
  * @returns {array} An array of integers who can sum up to n.
- * @solution
  */
-function solution(n) {}
+function solution(n) {
+  const partitions = [];
+
+  function partitionHelper(remaining, currentPartition) {
+    if (remaining === 0) {
+      partitions.push([...currentPartition]);
+      return;
+    }
+
+    for (let i = 1; i <= remaining; i++) {
+      if (
+        i <= currentPartition[currentPartition.length - 1] ||
+        currentPartition.length === 0
+      ) {
+        currentPartition.push(i);
+        partitionHelper(remaining - i, currentPartition);
+        currentPartition.pop();
+      }
+    }
+  }
+
+  partitionHelper(n, []);
+  return partitions;
+}
 
 module.exports = { solution };

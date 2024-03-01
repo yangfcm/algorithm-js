@@ -25,6 +25,10 @@ Algorithm to solve math problems.
    for multiples of 5, print 'buzz';<br>
    for numbers which are multiples of both 3 and 5, print 'fizzbuzz'<br>
 
+1. `integerPartition.js`
+
+   Generate partitions of a given integer.
+
 1. `isprime.js`
 
    Test if a given number is a prime(质数)
