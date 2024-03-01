@@ -38,5 +38,6 @@ describe("Test solve24", () => {
   test("Should return empty string if there's no solution to 24", () => {
     expect(solution("9999")).toBe("");
     expect(solution("8787")).toBe("");
+    expect(solution("1111")).toBe("");
   });
 });

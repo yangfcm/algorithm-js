@@ -1,5 +1,5 @@
-const { solution: permutations } = require("../math/permutations");
-const { solution: combinations } = require("../math/combinations");
+const { solution: permutations } = require("./permutations");
+const { solution: combinations } = require("./combinations");
 /**
  * @name solve24
  * @description The 24 Game tests a person's mental arithmetic.

@@ -37,6 +37,10 @@ Algorithm to solve math problems.
 
    Return all the possible of permutations of an array of numbers.
 
+1. `solve24.js`
+
+   Write algorithm to solve 24 game.
+
 1. `symmetricDiff.js`
 
    Return symmetric difference of given arrays.
