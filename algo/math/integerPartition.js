@@ -19,6 +19,7 @@ function solution(n) {
       return;
     }
 
+    /** @TODO Understand the code. */
     for (let i = 1; i <= remaining; i++) {
       if (
         i <= currentPartition[currentPartition.length - 1] ||

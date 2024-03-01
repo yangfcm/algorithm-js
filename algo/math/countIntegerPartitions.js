@@ -16,6 +16,7 @@
 function solution(n) {
   const partitions = new Array(n + 1).fill(0);
   partitions[0] = 1;
+  /** @TODO Understand the code. */
   for (let i = 1; i <= n; i++) {
     for (let j = i; j <= n; j++) {
       partitions[j] += partitions[j - i];
