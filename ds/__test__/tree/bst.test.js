@@ -36,4 +36,12 @@ describe("Test bst.js", () => {
   test("Contain returns null if value not found", () => {
     expect(testTree.contain(9999)).toEqual(null);
   });
+
+  test("Can find min data in tree", () => {
+    expect(testTree.findMin()).toBe(-5);
+  });
+
+  test("Can find max data in tree", () => {
+    expect(testTree.findMax()).toBe(20);
+  });
 });

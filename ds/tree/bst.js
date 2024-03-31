@@ -9,6 +9,7 @@
  * 3. Implement the 'contain' method for the Node class.
  * Contain should accept a 'data' argument and return the Node in the tree with the same value
  * If the value isn't in the tree, return null.
+ * 4. Implement 'findMin' and 'findMax' to find out the min and max value in the tree.
  */
 
 class Node {
@@ -42,6 +43,22 @@ class Node {
     }
 
     return null;
+  }
+
+  findMin() {
+    let current = this;
+    while (current.left) {
+      current = current.left;
+    }
+    return current.data;
+  }
+
+  findMax() {
+    let current = this;
+    while (current.right) {
+      current = current.right;
+    }
+    return current.data;
   }
 }
 
