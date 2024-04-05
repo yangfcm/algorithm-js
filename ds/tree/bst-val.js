@@ -8,27 +8,26 @@
  * @returns {boolean}
  */
 
-// function bstVal(tree) {
-function bstVal(node, min = null, max = null) {
-  if (!node) return true;
-  if (max !== null && node.data > max) {
-    return false;
-  }
-  if (min !== null && node.data < min) {
-    return false;
-  }
+function bstVal(tree) {
+  function isBinarySubTree(node, min = null, max = null) {
+    if (!node) return true;
+    if (max !== null && node.data > max) {
+      return false;
+    }
+    if (min !== null && node.data < min) {
+      return false;
+    }
 
-  if (node.left && !bstVal(node.left, min, node.data)) {
-    return false;
-  }
-  if (node.right && !bstVal(node.right, node.data, max)) {
-    return false;
-  }
+    if (node.left && !isBinarySubTree(node.left, min, node.data)) {
+      return false;
+    }
+    if (node.right && !isBinarySubTree(node.right, node.data, max)) {
+      return false;
+    }
 
-  return true;
+    return true;
+  }
+  return isBinarySubTree(tree.root);
 }
-
-// return isBinarySubTree(tree.root);
-// }
 
 module.exports = bstVal;

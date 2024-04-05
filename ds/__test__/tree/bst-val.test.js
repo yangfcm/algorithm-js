@@ -11,7 +11,7 @@ describe("Test bstVal.js", () => {
     tree.insert(0);
     tree.insert(20);
 
-    expect(bstVal(tree.root)).toEqual(true);
+    expect(bstVal(tree)).toEqual(true);
   });
 
   test("Validate recognizes an invalid BST", () => {
@@ -23,12 +23,12 @@ describe("Test bstVal.js", () => {
     tree.insert(20);
     tree.root.left.left.right = new Node(99999);
 
-    expect(bstVal(tree.root)).toEqual(false);
+    expect(bstVal(tree)).toEqual(false);
   });
 
   test("Empty tree is considered to be a valid BST", () => {
     const tree = new BinarySearchTree();
 
-    expect(bstVal(tree.root)).toBe(true);
+    expect(bstVal(tree)).toBe(true);
   });
 });
