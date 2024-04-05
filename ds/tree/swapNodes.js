@@ -1,4 +1,4 @@
-const Node = require("./bst");
+const { Node } = require("./bst");
 const { inOrderTraverse } = require("./bTreeTraverse");
 const { listOfDepthsAlt: listOfDepths } = require("./listOfDepths");
 

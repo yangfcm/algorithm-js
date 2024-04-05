@@ -1,10 +1,10 @@
 /**
  * @name bst-val
- * @description Given a node, validate if it is a binary search tree,
+ * @description Given a tree, validate if it is a binary search tree,
  * ensuring that every node's left hand child is
  * less than the parent node's value and that every
  * node's right hand child is larger than the parent
- * @param {Node} node
+ * @param {Tree} tree
  * @returns {boolean}
  */
 

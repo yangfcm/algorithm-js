@@ -1,4 +1,4 @@
-const Node = require("../../tree/bst");
+const { Node } = require("../../tree/bst");
 const { listOfDepths, listOfDepthsAlt } = require("../../tree/listOfDepths");
 
 describe("Test listOfDepths", () => {
