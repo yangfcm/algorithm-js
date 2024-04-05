@@ -104,3 +104,5 @@ class BinarySearchTree {
 }
 
 module.exports = BinarySearchTree;
+
+module.exports.Node = Node;

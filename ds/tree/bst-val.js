@@ -8,6 +8,7 @@
  * @returns {boolean}
  */
 
+// function bstVal(tree) {
 function bstVal(node, min = null, max = null) {
   if (max !== null && node.data > max) {
     return false;
@@ -25,5 +26,8 @@ function bstVal(node, min = null, max = null) {
 
   return true;
 }
+
+// return isBinarySubTree(tree.root);
+// }
 
 module.exports = bstVal;

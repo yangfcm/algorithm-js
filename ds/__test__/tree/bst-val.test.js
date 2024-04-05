@@ -1,25 +1,28 @@
 const bstVal = require("../../tree/bst-val");
-const Node = require("../../tree/bst");
+const BinarySearchTree = require("../../tree/bst");
+const { Node } = require("../../tree/bst");
 
 describe("Test bstVal.js", () => {
   test("Validate recognizes a valid BST", () => {
-    const n = new Node(10);
-    n.insert(5);
-    n.insert(15);
-    n.insert(0);
-    n.insert(20);
+    const tree = new BinarySearchTree();
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(0);
+    tree.insert(20);
 
-    expect(bstVal(n)).toEqual(true);
+    expect(bstVal(tree.root)).toEqual(true);
   });
 
   test("Validate recognizes an invalid BST", () => {
-    const n = new Node(10);
-    n.insert(5);
-    n.insert(15);
-    n.insert(0);
-    n.insert(20);
-    n.left.left.right = new Node(999);
+    const tree = new BinarySearchTree();
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(0);
+    tree.insert(20);
+    tree.root.left.left.right = new Node(99999);
 
-    expect(bstVal(n)).toEqual(false);
+    expect(bstVal(tree.root)).toEqual(false);
   });
 });
