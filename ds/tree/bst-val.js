@@ -10,6 +10,7 @@
 
 // function bstVal(tree) {
 function bstVal(node, min = null, max = null) {
+  if (!node) return true;
   if (max !== null && node.data > max) {
     return false;
   }

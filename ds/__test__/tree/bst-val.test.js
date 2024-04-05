@@ -25,4 +25,10 @@ describe("Test bstVal.js", () => {
 
     expect(bstVal(tree.root)).toEqual(false);
   });
+
+  test("Empty tree is considered to be a valid BST", () => {
+    const tree = new BinarySearchTree();
+
+    expect(bstVal(tree.root)).toBe(true);
+  });
 });
