@@ -11,23 +11,46 @@
  * If the value isn't in the tree, return null.
  * 4. Implement 'findMin' and 'findMax' to find out the min and max value in the tree.
  */
-
 class Node {
   constructor(data) {
     this.data = data;
     this.left = null;
     this.right = null;
   }
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
 
   insert(data) {
-    if (data < this.data && this.left) {
-      this.left.insert(data);
-    } else if (data < this.data) {
-      this.left = new Node(data);
-    } else if (data > this.data && this.right) {
-      this.right.insert(data);
-    } else if (data > this.data) {
-      this.right = new Node(data);
+    const newNode = new Node(data);
+    if (!this.root) {
+      return (this.root = newNode);
+    }
+
+    let currentNode = this.root;
+    while (currentNode) {
+      // If the data exists in the BST, return null;
+      if (currentNode.data === data) {
+        return null;
+      }
+      if (data < currentNode.data) {
+        if (currentNode.left) {
+          currentNode = currentNode.left;
+        } else {
+          currentNode.left = newNode;
+        }
+      }
+
+      if (data > currentNode.data) {
+        if (currentNode.right) {
+          currentNode = currentNode.right;
+        } else {
+          currentNode.right = newNode;
+        }
+      }
     }
   }
 
@@ -46,7 +69,9 @@ class Node {
   }
 
   findMin() {
-    let current = this;
+    if (!this.root) return null;
+
+    let current = this.root;
     while (current.left) {
       current = current.left;
     }
@@ -54,7 +79,9 @@ class Node {
   }
 
   findMax() {
-    let current = this;
+    if (!this.root) return null;
+
+    let current = this.root;
     while (current.right) {
       current = current.right;
     }
@@ -62,4 +89,4 @@ class Node {
   }
 }
 
-module.exports = Node;
+module.exports = BinarySearchTree;
