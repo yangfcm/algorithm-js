@@ -54,18 +54,32 @@ class BinarySearchTree {
     }
   }
 
+  // Check if the given data exists in the BST.
   contain(data) {
-    if (this.data === data) {
-      return this;
-    }
+    if (!this.root) return false;
 
-    if (this.data < data && this.right) {
-      return this.right.contain(data);
-    } else if (this.data > data && this.left) {
-      return this.left.contain(data);
-    }
+    let currentNode = this.root;
 
-    return null;
+    while (currentNode) {
+      if (currentNode.data === data) {
+        return true;
+      }
+      if (data < currentNode.data) {
+        if (currentNode.left) {
+          currentNode = currentNode.left;
+        } else {
+          return false;
+        }
+      }
+      if (data > currentNode.data) {
+        if (currentNode.right) {
+          currentNode = currentNode.right;
+        } else {
+          return false;
+        }
+      }
+    }
+    return false;
   }
 
   findMin() {

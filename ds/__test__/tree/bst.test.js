@@ -1,10 +1,11 @@
-const Node = require("../../tree/bst");
+const BinarySearchTree = require("../../tree/bst");
 
 describe("Test bst.js", () => {
   let testTree;
 
   beforeEach(() => {
-    testTree = new Node(10);
+    testTree = new BinarySearchTree();
+    testTree.insert(10);
     testTree.insert(5);
     testTree.insert(15);
     testTree.insert(20);
@@ -14,27 +15,27 @@ describe("Test bst.js", () => {
   });
 
   test("Node is a constructor", () => {
-    expect(typeof Node.prototype.constructor).toEqual("function");
+    expect(typeof BinarySearchTree.prototype.constructor).toEqual("function");
   });
 
   test("Node can insert correctly", () => {
-    const node = new Node(10);
-    node.insert(5);
-    node.insert(15);
-    node.insert(17);
+    const tree = new BinarySearchTree();
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(15);
+    tree.insert(17);
 
-    expect(node.left.data).toEqual(5);
-    expect(node.right.data).toEqual(15);
-    expect(node.right.right.data).toEqual(17);
+    expect(tree.root.left.data).toEqual(5);
+    expect(tree.root.right.data).toEqual(15);
+    expect(tree.root.right.right.data).toEqual(17);
   });
 
   test("Contain returns node with the same data", () => {
-    const three = testTree.left.left.right;
-    expect(testTree.contain(3)).toEqual(three);
+    expect(testTree.contain(3)).toBe(true);
   });
 
   test("Contain returns null if value not found", () => {
-    expect(testTree.contain(9999)).toEqual(null);
+    expect(testTree.contain(9999)).toBe(false);
   });
 
   test("Can find min data in tree", () => {
