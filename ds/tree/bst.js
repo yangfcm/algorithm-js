@@ -101,6 +101,42 @@ class BinarySearchTree {
     }
     return current.data;
   }
+
+  // Get the shortest route from the root to its leaf. Return the number of the level.
+  findMinHeight() {
+    if (!this.root) return -1;
+
+    function findNodeMinHeight(node) {
+      if (!node) return 0;
+
+      return (
+        1 +
+        Math.min(findNodeMinHeight(node.left), findNodeMinHeight(node.right))
+      );
+    }
+
+    return findNodeMinHeight(this.root) - 1;
+  }
+
+  // Get the longest route from the root to its leaf. Return the number of the level.
+  findMaxHeight() {
+    if (!this.root) return -1;
+
+    function findNodeMaxHeight(node) {
+      if (!node) return 0;
+
+      return (
+        1 +
+        Math.max(findNodeMaxHeight(node.left), findNodeMaxHeight(node.right))
+      );
+    }
+
+    return findNodeMaxHeight(this.root) - 1;
+  }
+
+  isBalanced() {
+    return this.findMaxHeight() === this.findMinHeight();
+  }
 }
 
 module.exports = BinarySearchTree;
