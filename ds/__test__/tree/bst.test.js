@@ -1,3 +1,8 @@
+const {
+  inOrderTraverse,
+  preOrderTraverse,
+  postOrderTraverse,
+} = require("../../tree/bTreeTraverse");
 const BinarySearchTree = require("../../tree/bst");
 
 describe("Test bst.js", () => {
@@ -84,5 +89,18 @@ describe("Test bst.js", () => {
     expect(emptyTree.findMinHeight()).toBe(-1);
     expect(emptyTree.findMaxHeight()).toBe(-1);
     expect(emptyTree.isBalanced()).toBe(true);
+  });
+
+  test("Should be able to remove leaf node from testTree", () => {
+    const removedNode = testTree.remove(3);
+    expect(removedNode.data).toBe(3);
+    expect(testTree.root.left.left.data).toBe(0); // The parent node of node(3), which is node(0).
+    expect(testTree.root.left.left.left.data).toBe(-5); // Its left child is still there.
+    expect(testTree.root.left.left.right).toBe(null); // Its right child is removed.
+  });
+
+  test("Should return null when attempting to remove a non-existent ndoe", () => {
+    const removedNode = testTree.remove(99);
+    expect(removedNode).toBe(null);
   });
 });

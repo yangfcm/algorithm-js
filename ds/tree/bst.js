@@ -137,6 +137,47 @@ class BinarySearchTree {
   isBalanced() {
     return this.findMaxHeight() === this.findMinHeight();
   }
+
+  /**
+   * @name remove
+   * @description Remove a node with the given value from BST.
+   * @param {number} data
+   * @returns The node deleted if the node of value exists, null otherwise.
+   * @solution Remove a node from a BST can be tricky. You need to consider 3 scenarios:
+   * 1. Delete a leaf node. This is the easiest case: just find the node and assign the node as null.
+   * 2. Delete a node with single child. It's also simple: copy the child to the node and delete the node.
+   * 3. Delete a node with two children. It's the trickiest which involves the re-arrangement of the BST.
+   */
+  remove(data) {
+    // Empty tree
+    if (!this.root) return null;
+
+    let parent;
+    let currentNode = this.root;
+
+    while (currentNode && currentNode.data !== data) {
+      parent = currentNode;
+      if (data < currentNode.data) {
+        currentNode = currentNode.left;
+      } else {
+        currentNode = currentNode.right;
+      }
+    }
+
+    if (!currentNode) return null; // Node to remove is not found.
+
+    if (parent.left === currentNode) {
+      const toRemoveNode = { ...currentNode };
+      parent.left = null;
+      return toRemoveNode;
+    }
+
+    if (parent.right === currentNode) {
+      const toRemoveNode = { ...currentNode };
+      parent.right = null;
+      return toRemoveNode;
+    }
+  }
 }
 
 module.exports = BinarySearchTree;
