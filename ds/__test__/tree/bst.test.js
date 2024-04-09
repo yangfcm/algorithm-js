@@ -141,4 +141,67 @@ describe("Test bst.js", () => {
     expect(twoNodeTree.root.left).toBe(null);
     expect(twoNodeTree.root.right).toBe(null);
   });
+
+  test("Should remove the node with two children from bst - 1", () => {
+    /**
+     * Before remove:
+     *          10
+     *          /\
+     *         5 15
+     *        /   \
+     *       0     20
+     *      / \
+     *     -5  3
+     * After remove node 0:
+     *          10
+     *          /\
+     *         5 15
+     *        /   \
+     *       3     20
+     *      /
+     *     -5
+     *
+     */
+    const removedNode = testTree.remove(0);
+    expect(removedNode.data).toBe(0);
+    expect(testTree.root.left.data).toBe(5);
+    expect(testTree.root.left.left.data).toBe(3);
+    expect(testTree.root.left.right).toBe(null);
+    expect(testTree.root.left.left.left.data).toBe(-5);
+    expect(testTree.root.left.left.right).toBe(null);
+  });
+
+  test("Should remove the node with two children from bst - 2 (remove root node)", () => {
+    /**
+     * Before remove:
+     *          10
+     *          /\
+     *         5 15
+     *        /   \
+     *       0     20
+     *      / \
+     *     -5  3
+     * After remove node 10:
+     *
+     *          15
+     *          /\
+     *         5 20
+     *        /
+     *       0
+     *      / \
+     *     -5 3
+     *
+     */
+    const removedNode = testTree.remove(10);
+    expect(removedNode.data).toBe(10);
+    expect(testTree.root.data).toBe(15);
+    expect(testTree.root.left.data).toBe(5);
+    expect(testTree.root.right.data).toBe(20);
+    expect(testTree.root.right.left).toBe(null);
+    expect(testTree.root.right.right).toBe(null);
+    expect(testTree.root.left.left.data).toBe(0);
+    expect(testTree.root.left.right).toBe(null);
+    expect(testTree.root.left.left.left.data).toBe(-5);
+    expect(testTree.root.left.left.right.data).toBe(3);
+  });
 });

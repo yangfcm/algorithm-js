@@ -82,20 +82,20 @@ class BinarySearchTree {
     return false;
   }
 
-  findMin() {
-    if (!this.root) return null;
+  findMin(node = this.root) {
+    if (!node) return null;
 
-    let current = this.root;
+    let current = node;
     while (current.left) {
       current = current.left;
     }
     return current.data;
   }
 
-  findMax() {
-    if (!this.root) return null;
+  findMax(node = this.root) {
+    if (!node) return null;
 
-    let current = this.root;
+    let current = node;
     while (current.right) {
       current = current.right;
     }
@@ -210,7 +210,14 @@ class BinarySearchTree {
     }
 
     // Scenario 3: The node has two children.
+    // In this case, the remove operation literally splits a tree into two sub-trees and what needs to do is connect the two sub-trees into one.
+    // One way to reconnect two sub-trees is to find the minimum node in the right subtree and replace the node to remove with this value.
+    // Once the replacement is done, the replacement node must be removed from the right subtree.
     if (currentNode.left && currentNode.right) {
+      const newChildValue = this.findMin(currentNode.right);
+      this.remove(newChildValue);
+      currentNode.data = newChildValue;
+      return nodeToRemove;
     }
   }
 }
