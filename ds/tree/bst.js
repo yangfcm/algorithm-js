@@ -166,26 +166,24 @@ class BinarySearchTree {
     }
 
     if (!currentNode) return null; // Node to remove is not found.
+    const nodeToRemove = { ...currentNode };
 
     // Scenario 1: Delete leaf node.
     if (!currentNode.left && !currentNode.right) {
       // The case when tree has only one (root) node and what we want to remove is exactly the node.
-      if (!parent) {
-        const toRemoveNode = { ...this.root };
+      if (currentNode === this.root) {
         this.root = null;
-        return toRemoveNode;
+        return nodeToRemove;
       }
 
       if (parent.left === currentNode) {
-        const toRemoveNode = { ...currentNode };
         parent.left = null;
-        return toRemoveNode;
+        return nodeToRemove;
       }
 
       if (parent.right === currentNode) {
-        const toRemoveNode = { ...currentNode };
         parent.right = null;
-        return toRemoveNode;
+        return nodeToRemove;
       }
     }
 
@@ -194,6 +192,21 @@ class BinarySearchTree {
       (currentNode.left && !currentNode.right) ||
       (!currentNode.left && currentNode.right)
     ) {
+      if (currentNode === this.root) {
+        // The case when tree has two nodes(one root node and one left/right child node) and what we want to remove is the root node.
+        this.root = currentNode.left || currentNode.right;
+        return nodeToRemove;
+      }
+
+      if (parent.left === currentNode) {
+        parent.left = currentNode.left || currentNode.right;
+        return nodeToRemove;
+      }
+
+      if (parent.right === currentNode) {
+        parent.right = currentNode.left || currentNode.right;
+        return nodeToRemove;
+      }
     }
 
     // Scenario 3: The node has two children.

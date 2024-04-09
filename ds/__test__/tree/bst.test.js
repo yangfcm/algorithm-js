@@ -91,7 +91,7 @@ describe("Test bst.js", () => {
     expect(emptyTree.isBalanced()).toBe(true);
   });
 
-  test("Should be able to remove leaf node from testTree", () => {
+  test("Should be able to remove leaf node from bst", () => {
     const removedNode = testTree.remove(3);
     expect(removedNode.data).toBe(3);
     expect(testTree.root.left.left.data).toBe(0); // The parent node of node(3), which is node(0).
@@ -116,5 +116,23 @@ describe("Test bst.js", () => {
     const removed = oneNodeTree.remove(5);
     expect(removed.data).toBe(5);
     expect(oneNodeTree.root).toBe(null);
+  });
+
+  test("Should be able to remove a node with one child from bst", () => {
+    const removedNode = testTree.remove(15);
+    expect(removedNode.data).toBe(15);
+    expect(testTree.root.right.data).toBe(20);
+    expect(testTree.root.right.left).toBe(null);
+  });
+
+  test("Should remove the root node from two-node bst", () => {
+    const twoNodeTree = new BinarySearchTree();
+    twoNodeTree.insert(5);
+    twoNodeTree.insert(7);
+    const removed = twoNodeTree.remove(5);
+    expect(removed.data).toBe(5);
+    expect(twoNodeTree.root.data).toBe(7);
+    expect(twoNodeTree.root.left).toBe(null);
+    expect(twoNodeTree.root.right).toBe(null);
   });
 });
