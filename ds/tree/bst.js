@@ -152,6 +152,7 @@ class BinarySearchTree {
     // Empty tree
     if (!this.root) return null;
 
+    // Find the node to delete and its parent node.
     let parent;
     let currentNode = this.root;
 
@@ -166,23 +167,37 @@ class BinarySearchTree {
 
     if (!currentNode) return null; // Node to remove is not found.
 
-    // The case when tree has only one (root) node and what we want to remove is exactly the node.
-    if (!parent) {
-      const toRemoveNode = { ...this.root };
-      this.root = null;
-      return toRemoveNode;
+    // Scenario 1: Delete leaf node.
+    if (!currentNode.left && !currentNode.right) {
+      // The case when tree has only one (root) node and what we want to remove is exactly the node.
+      if (!parent) {
+        const toRemoveNode = { ...this.root };
+        this.root = null;
+        return toRemoveNode;
+      }
+
+      if (parent.left === currentNode) {
+        const toRemoveNode = { ...currentNode };
+        parent.left = null;
+        return toRemoveNode;
+      }
+
+      if (parent.right === currentNode) {
+        const toRemoveNode = { ...currentNode };
+        parent.right = null;
+        return toRemoveNode;
+      }
     }
 
-    if (parent.left === currentNode) {
-      const toRemoveNode = { ...currentNode };
-      parent.left = null;
-      return toRemoveNode;
+    // Scenario 2: The node has one child.
+    if (
+      (currentNode.left && !currentNode.right) ||
+      (!currentNode.left && currentNode.right)
+    ) {
     }
 
-    if (parent.right === currentNode) {
-      const toRemoveNode = { ...currentNode };
-      parent.right = null;
-      return toRemoveNode;
+    // Scenario 3: The node has two children.
+    if (currentNode.left && currentNode.right) {
     }
   }
 }
