@@ -118,11 +118,17 @@ describe("Test bst.js", () => {
     expect(oneNodeTree.root).toBe(null);
   });
 
-  test("Should be able to remove a node with one child from bst", () => {
+  test("Should be able to remove a node with one child from bst - 1", () => {
     const removedNode = testTree.remove(15);
     expect(removedNode.data).toBe(15);
     expect(testTree.root.right.data).toBe(20);
     expect(testTree.root.right.left).toBe(null);
+  });
+
+  test("Should be able to remove a node with one child from bst - 2", () => {
+    const removedNode = testTree.remove(5);
+    expect(removedNode.data).toBe(5);
+    expect(testTree.root.left.data).toBe(0);
   });
 
   test("Should remove the root node from two-node bst", () => {
