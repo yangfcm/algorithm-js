@@ -103,4 +103,18 @@ describe("Test bst.js", () => {
     const removedNode = testTree.remove(99);
     expect(removedNode).toBe(null);
   });
+
+  test("Should return null when attempting to remove a node from an empty tree", () => {
+    const emptyTree = new BinarySearchTree();
+    const removed = emptyTree.remove(5);
+    expect(removed).toBe(null);
+  });
+
+  test("Should remove the root node if the tree has only one node", () => {
+    const oneNodeTree = new BinarySearchTree();
+    oneNodeTree.insert(5);
+    const removed = oneNodeTree.remove(5);
+    expect(removed.data).toBe(5);
+    expect(oneNodeTree.root).toBe(null);
+  });
 });

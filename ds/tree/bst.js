@@ -166,6 +166,13 @@ class BinarySearchTree {
 
     if (!currentNode) return null; // Node to remove is not found.
 
+    // The case when tree has only one (root) node and what we want to remove is exactly the node.
+    if (!parent) {
+      const toRemoveNode = { ...this.root };
+      this.root = null;
+      return toRemoveNode;
+    }
+
     if (parent.left === currentNode) {
       const toRemoveNode = { ...currentNode };
       parent.left = null;
