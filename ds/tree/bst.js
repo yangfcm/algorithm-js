@@ -10,6 +10,8 @@
  * Contain should accept a 'data' argument and return the Node in the tree with the same value
  * If the value isn't in the tree, return null.
  * 4. Implement 'findMin' and 'findMax' to find out the min and max value in the tree.
+ * 5. Implement 'remove' to remove a node with the given value.
+ * 6. Implement 'invert' to invert a BST.
  */
 class Node {
   constructor(data) {
@@ -219,6 +221,23 @@ class BinarySearchTree {
       currentNode.data = newChildValue;
       return nodeToRemove;
     }
+  }
+
+  /**
+   * @name invert
+   * @description Invert a BST, that is to produce a new tree that is
+   * equivalently the mirror image of the tree.
+   * Running an inorder traversal on an inverted tree will explore the nodes in reverse order 
+   * when compared to the inorder traversal of the original tree. 
+   * @param {BST} node 
+   * @returns 
+   */
+  invert(node = this.root) {
+    if(!node) return null;
+
+    [node.left, node.right] = [node.right, node.left];
+    this.invert(node.left);
+    this.invert(node.right);
   }
 }
 
