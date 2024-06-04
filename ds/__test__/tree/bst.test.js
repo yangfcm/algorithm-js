@@ -204,4 +204,35 @@ describe("Test bst.js", () => {
     expect(testTree.root.left.left.left.data).toBe(-5);
     expect(testTree.root.left.left.right.data).toBe(3);
   });
+
+  test("Should be able to invert a bst", () => {
+    /* After invert, the tree would be like:
+    *          10
+    *          /\
+    *         15 5
+    *          \ /\
+    *          0 20
+    *          /\
+    *         3  -5
+    */
+    testTree.invert();
+    expect(testTree.root.data).toBe(10);
+    expect(testTree.root.left.data).toBe(15);
+    expect(testTree.root.right.data).toBe(5);
+    expect(testTree.root.left.left.data).toBe(20);
+    expect(testTree.root.left.right).toBe(null);
+    expect(testTree.root.right.left).toBe(null);
+    expect(testTree.root.right.right.data).toBe(0);
+    expect(testTree.root.right.right.left.data).toBe(3);
+    expect(testTree.root.right.right.right.data).toBe(-5);
+  });
+
+  test("The order of inorder traverse should be reversed with inverting bst", () => {
+    const order = inOrderTraverse(testTree.root);
+    expect(order).toEqual([-5, 0, 3, 5, 10, 15, 20]);
+    
+    testTree.invert();
+    const orderAfterInvert = inOrderTraverse(testTree.root);
+    expect(orderAfterInvert).toEqual([20, 15, 10, 5, 3, 0, -5]);
+  })
 });
