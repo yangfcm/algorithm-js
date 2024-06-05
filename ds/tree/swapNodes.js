@@ -5,7 +5,7 @@ const { listOfDepthsAlt: listOfDepths } = require("./listOfDepths");
 /**
  * @name swapNodes
  * @description For detailed description and examples, refer to the below link
- * @resources https://www.hackerrank.com/challenges/swap-nodes-algo/problem
+ * @source https://www.hackerrank.com/challenges/swap-nodes-algo/problem
  */
 
 /**

@@ -233,7 +233,7 @@ class BinarySearchTree {
    * @returns 
    */
   invert(node = this.root) {
-    if(!node) return null;
+    if (!node) return null;
 
     [node.left, node.right] = [node.right, node.left];
     this.invert(node.left);
