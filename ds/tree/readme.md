@@ -33,3 +33,7 @@ Problems and solutions associated with **trees**
 8. `swapNodes.js`
 
    Swap nodes of a b-tree.
+
+9. `trie.js`
+
+   Implement a trie.

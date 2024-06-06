@@ -40,12 +40,12 @@ class Trie {
   isWord(word) {
     let currentNode = this.root;
     for (let char of word) {
-      if (!current.keys.get(char)) {
+      if (!currentNode.keys.get(char)) {
         return false;
       }
       currentNode = currentNode.keys.get(char);
     }
-    return current.isEnd();
+    return currentNode.isEnd();
   }
 
   print() {
@@ -66,7 +66,8 @@ class Trie {
     }
 
     search(this.root, "");
-    console.log(words);
     return words;
   }
 }
+
+module.exports = { Trie };
