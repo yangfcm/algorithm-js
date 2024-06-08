@@ -1,6 +1,6 @@
-const { MaxHeap } = require("../../heap/maxHeap");
+const { MaxHeap } = require('../../heap/maxHeap');
 
-describe("Test maxHeap.js", () => {
+describe('Test maxHeap.js', () => {
   let heap = new MaxHeap();
 
   beforeEach(() => {
@@ -14,11 +14,11 @@ describe("Test maxHeap.js", () => {
     heap.insert(35);
   });
 
-  test("Should print the elements in maxHeap", () => {
+  test('Should print the elements in maxHeap', () => {
     expect(heap.print()).toEqual([60, 50, 35, 20, 40, 15, 30]);
   });
 
-  test("Should insert and print maxHeap", () => {
+  test('Should insert and print maxHeap', () => {
     const testHeap = new MaxHeap();
 
     testHeap.insert(50);
@@ -41,5 +41,11 @@ describe("Test maxHeap.js", () => {
 
     testHeap.insert(45);
     expect(testHeap.print()).toEqual([60, 50, 55, 25, 30, 40, 45]);
+  });
+
+  test('Should remove and return the max value from maxHeap', () => {
+    const removed = heap.remove();
+    expect(removed).toBe(60);
+    expect(heap.print()).toEqual([50, 40, 35, 20, 30, 15]);
   });
 });
