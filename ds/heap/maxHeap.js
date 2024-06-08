@@ -21,10 +21,7 @@ class MaxHeap {
     while (currentIndex > 0) {
       const parentIndex = this._parent(currentIndex);
       if (this.heap[currentIndex] > this.heap[parentIndex]) {
-        [this.heap[currentIndex], this.heap[parentIndex]] = [
-          this.heap[parentIndex],
-          this.heap[currentIndex],
-        ];
+        [this.heap[currentIndex], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[currentIndex]];
         currentIndex = parentIndex;
       } else {
         break;
