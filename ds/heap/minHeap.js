@@ -38,9 +38,11 @@ class MinHeap {
 
   sort() {
     const sorted = [];
-    while (this._size() >= 0) {
-      const smallest = this.remove();
-      sorted.push(smallest);
+    while (this._size() > 1) {
+      sorted.push(this.remove());
+    }
+    if (this._size() > 0) {
+      sorted.push(this.remove());
     }
     return sorted;
   }
